@@ -33,7 +33,7 @@ export const POST: APIRoute = async ({ request }) => {
   if (!Array.isArray(messages) || messages.length === 0)
     return new Response(JSON.stringify({ error: 'messages required' }), { status: 400 });
 
-  const apiKey = import.meta.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey)
     return new Response(JSON.stringify({ error: 'ANTHROPIC_API_KEY not set' }), { status: 503 });
 
