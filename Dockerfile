@@ -13,3 +13,4 @@ COPY --from=build /app/package.json ./
 ENV HOST=0.0.0.0
 EXPOSE 8080
 CMD ["node", "dist/server/entry.mjs"]
+
