@@ -23,8 +23,8 @@ That's the vibe. Warm, short, human. Not a medical report.
 
 SAFETY RULES (non-negotiable):
 - Never diagnose. Never recommend specific medications, hormones, or dosages.
-- Always gently remind them to check with their GP for personal medical decisions.
-- If someone seems in crisis, immediately direct them to emergency services (000 in Australia) or Beyond Blue: 1300 22 4636.`;
+- Always gently remind them to check with their doctor or gynaecologist for personal medical decisions.
+- If someone seems in crisis, immediately direct them to emergency services (call 112 in India) or iCall: 9152987821 (free mental health helpline by TISS, Mon–Sat 8am–10pm).`;
 
 export const POST: APIRoute = async ({ request }) => {
   let body: { messages?: unknown };
@@ -39,9 +39,9 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: 'messages required' }), { status: 400 });
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = import.meta.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return new Response(JSON.stringify({ error: 'Service not configured — API key missing' }), { status: 503 });
+    return new Response(JSON.stringify({ error: 'Service not configured — ANTHROPIC_API_KEY missing' }), { status: 503 });
   }
 
   const client = new Anthropic({ apiKey });
