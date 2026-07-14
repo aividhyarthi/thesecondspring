@@ -141,6 +141,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"7-day-indian-perimenopause-meal-plan.md": {
+	id: "7-day-indian-perimenopause-meal-plan.md";
+  slug: "7-day-indian-perimenopause-meal-plan";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "anovulation-perimenopause-link.md": {
 	id: "anovulation-perimenopause-link.md";
   slug: "anovulation-perimenopause-link";
@@ -155,9 +162,37 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"are-blood-clots-during-period-normal.md": {
+	id: "are-blood-clots-during-period-normal.md";
+  slug: "are-blood-clots-during-period-normal";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"balancing-hormones-perimenopause-pregnancy.md": {
+	id: "balancing-hormones-perimenopause-pregnancy.md";
+  slug: "balancing-hormones-perimenopause-pregnancy";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"best-exercise-for-perimenopause.md": {
+	id: "best-exercise-for-perimenopause.md";
+  slug: "best-exercise-for-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "blood-clots-periods-perimenopause.md": {
 	id: "blood-clots-periods-perimenopause.md";
   slug: "blood-clots-periods-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"body-odour-changes-perimenopause.md": {
+	id: "body-odour-changes-perimenopause.md";
+  slug: "body-odour-changes-perimenopause";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -225,9 +260,135 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"clumsiness-coordination-perimenopause.md": {
+	id: "clumsiness-coordination-perimenopause.md";
+  slug: "clumsiness-coordination-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cold-flashes-chills-perimenopause.md": {
+	id: "cold-flashes-chills-perimenopause.md";
+  slug: "cold-flashes-chills-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"coping-emotionally-perimenopause.md": {
+	id: "coping-emotionally-perimenopause.md";
+  slug: "coping-emotionally-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"does-perimenopause-cause-water-retention.md": {
+	id: "does-perimenopause-cause-water-retention.md";
+  slug: "does-perimenopause-cause-water-retention";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"does-perimenopause-make-you-hornier.md": {
+	id: "does-perimenopause-make-you-hornier.md";
+  slug: "does-perimenopause-make-you-hornier";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"dry-itchy-eyes-perimenopause.md": {
+	id: "dry-itchy-eyes-perimenopause.md";
+  slug: "dry-itchy-eyes-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"early-premature-menopause-before-45.md": {
+	id: "early-premature-menopause-before-45.md";
+  slug: "early-premature-menopause-before-45";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"egg-freezing-during-perimenopause.md": {
+	id: "egg-freezing-during-perimenopause.md";
+  slug: "egg-freezing-during-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"electric-shock-sensations-perimenopause.md": {
+	id: "electric-shock-sensations-perimenopause.md";
+  slug: "electric-shock-sensations-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"facial-hair-chin-hair-perimenopause.md": {
+	id: "facial-hair-chin-hair-perimenopause.md";
+  slug: "facial-hair-chin-hair-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"false-positive-pregnancy-test-perimenopause.md": {
+	id: "false-positive-pregnancy-test-perimenopause.md";
+  slug: "false-positive-pregnancy-test-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "first-signs-of-perimenopause.md": {
 	id: "first-signs-of-perimenopause.md";
   slug: "first-signs-of-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"foods-to-avoid-during-perimenopause.md": {
+	id: "foods-to-avoid-during-perimenopause.md";
+  slug: "foods-to-avoid-during-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"formication-crawling-skin-perimenopause.md": {
+	id: "formication-crawling-skin-perimenopause.md";
+  slug: "formication-crawling-skin-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"frequent-periods-every-two-weeks-perimenopause.md": {
+	id: "frequent-periods-every-two-weeks-perimenopause.md";
+  slug: "frequent-periods-every-two-weeks-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"frozen-shoulder-perimenopause.md": {
+	id: "frozen-shoulder-perimenopause.md";
+  slug: "frozen-shoulder-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"get-doctor-take-perimenopause-seriously.md": {
+	id: "get-doctor-take-perimenopause-seriously.md";
+  slug: "get-doctor-take-perimenopause-seriously";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"heart-health-after-menopause-india.md": {
+	id: "heart-health-after-menopause-india.md";
+  slug: "heart-health-after-menopause-india";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"heart-palpitations-perimenopause.md": {
+	id: "heart-palpitations-perimenopause.md";
+  slug: "heart-palpitations-perimenopause";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -239,9 +400,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"hormonal-headaches-migraines-perimenopause.md": {
+	id: "hormonal-headaches-migraines-perimenopause.md";
+  slug: "hormonal-headaches-migraines-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "hormonal-symptom-treatments-perimenopause.md": {
 	id: "hormonal-symptom-treatments-perimenopause.md";
   slug: "hormonal-symptom-treatments-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"hormone-fluctuations-perimenopause.md": {
+	id: "hormone-fluctuations-perimenopause.md";
+  slug: "hormone-fluctuations-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"hormone-replacement-therapy-after-menopause.md": {
+	id: "hormone-replacement-therapy-after-menopause.md";
+  slug: "hormone-replacement-therapy-after-menopause";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -260,6 +442,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-long-hormonal-fluctuations-perimenopause.md": {
+	id: "how-long-hormonal-fluctuations-perimenopause.md";
+  slug: "how-long-hormonal-fluctuations-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "how-to-test-for-perimenopause.md": {
 	id: "how-to-test-for-perimenopause.md";
   slug: "how-to-test-for-perimenopause";
@@ -267,9 +456,72 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-to-track-perimenopause-symptom-diary.md": {
+	id: "how-to-track-perimenopause-symptom-diary.md";
+  slug: "how-to-track-perimenopause-symptom-diary";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"how-to-treat-vaginal-dryness.md": {
+	id: "how-to-treat-vaginal-dryness.md";
+  slug: "how-to-treat-vaginal-dryness";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"indian-diet-perimenopause.md": {
+	id: "indian-diet-perimenopause.md";
+  slug: "indian-diet-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"insomnia-sleep-problems-perimenopause.md": {
+	id: "insomnia-sleep-problems-perimenopause.md";
+  slug: "insomnia-sleep-problems-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"interpret-perimenopause-hormone-graph.md": {
+	id: "interpret-perimenopause-hormone-graph.md";
+  slug: "interpret-perimenopause-hormone-graph";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"is-hrt-safe-benefits-risks.md": {
+	id: "is-hrt-safe-benefits-risks.md";
+  slug: "is-hrt-safe-benefits-risks";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"is-spotting-common-in-perimenopause.md": {
+	id: "is-spotting-common-in-perimenopause.md";
+  slug: "is-spotting-common-in-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"joint-pain-muscle-aches-perimenopause.md": {
+	id: "joint-pain-muscle-aches-perimenopause.md";
+  slug: "joint-pain-muscle-aches-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "lifestyle-changes-perimenopause-symptoms.md": {
 	id: "lifestyle-changes-perimenopause-symptoms.md";
   slug: "lifestyle-changes-perimenopause-symptoms";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"low-oestrogen-symptoms-perimenopause.md": {
+	id: "low-oestrogen-symptoms-perimenopause.md";
+  slug: "low-oestrogen-symptoms-perimenopause";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -288,9 +540,93 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"metallic-taste-burning-mouth-perimenopause.md": {
+	id: "metallic-taste-burning-mouth-perimenopause.md";
+  slug: "metallic-taste-burning-mouth-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-anxiety.md": {
+	id: "natural-remedies-perimenopause-anxiety.md";
+  slug: "natural-remedies-perimenopause-anxiety";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-brain-fog.md": {
+	id: "natural-remedies-perimenopause-brain-fog.md";
+  slug: "natural-remedies-perimenopause-brain-fog";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-depression.md": {
+	id: "natural-remedies-perimenopause-depression.md";
+  slug: "natural-remedies-perimenopause-depression";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-fatigue.md": {
+	id: "natural-remedies-perimenopause-fatigue.md";
+  slug: "natural-remedies-perimenopause-fatigue";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-hair-loss.md": {
+	id: "natural-remedies-perimenopause-hair-loss.md";
+  slug: "natural-remedies-perimenopause-hair-loss";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-heavy-bleeding.md": {
+	id: "natural-remedies-perimenopause-heavy-bleeding.md";
+  slug: "natural-remedies-perimenopause-heavy-bleeding";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-hot-flashes.md": {
+	id: "natural-remedies-perimenopause-hot-flashes.md";
+  slug: "natural-remedies-perimenopause-hot-flashes";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-mood-swings.md": {
+	id: "natural-remedies-perimenopause-mood-swings.md";
+  slug: "natural-remedies-perimenopause-mood-swings";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"natural-remedies-perimenopause-weight-gain.md": {
+	id: "natural-remedies-perimenopause-weight-gain.md";
+  slug: "natural-remedies-perimenopause-weight-gain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "natural-remedies-perimenopause.md": {
 	id: "natural-remedies-perimenopause.md";
   slug: "natural-remedies-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"nausea-perimenopause.md": {
+	id: "nausea-perimenopause.md";
+  slug: "nausea-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"oestrogen-rich-foods-menopause.md": {
+	id: "oestrogen-rich-foods-menopause.md";
+  slug: "oestrogen-rich-foods-menopause";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -302,9 +638,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"ovulation-during-perimenopause.md": {
+	id: "ovulation-during-perimenopause.md";
+  slug: "ovulation-during-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"partners-guide-to-perimenopause.md": {
+	id: "partners-guide-to-perimenopause.md";
+  slug: "partners-guide-to-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "perimenopausal-bleeding-evaluation-tests.md": {
 	id: "perimenopausal-bleeding-evaluation-tests.md";
   slug: "perimenopausal-bleeding-evaluation-tests";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-abdominal-pain.md": {
+	id: "perimenopause-abdominal-pain.md";
+  slug: "perimenopause-abdominal-pain";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -316,9 +673,114 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"perimenopause-allergy-flare-ups.md": {
+	id: "perimenopause-allergy-flare-ups.md";
+  slug: "perimenopause-allergy-flare-ups";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-and-alcohol.md": {
+	id: "perimenopause-and-alcohol.md";
+  slug: "perimenopause-and-alcohol";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-and-pcos.md": {
+	id: "perimenopause-and-pcos.md";
+  slug: "perimenopause-and-pcos";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "perimenopause-anxiety-mood-swings.md": {
 	id: "perimenopause-anxiety-mood-swings.md";
   slug: "perimenopause-anxiety-mood-swings";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-anxiety-triggers-easily.md": {
+	id: "perimenopause-anxiety-triggers-easily.md";
+  slug: "perimenopause-anxiety-triggers-easily";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-breast-pain.md": {
+	id: "perimenopause-breast-pain.md";
+  slug: "perimenopause-breast-pain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-breast-tenderness.md": {
+	id: "perimenopause-breast-tenderness.md";
+  slug: "perimenopause-breast-tenderness";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-ear-pain.md": {
+	id: "perimenopause-ear-pain.md";
+  slug: "perimenopause-ear-pain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-flushed-cheeks.md": {
+	id: "perimenopause-flushed-cheeks.md";
+  slug: "perimenopause-flushed-cheeks";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-heavy-bleeding-extreme-hunger.md": {
+	id: "perimenopause-heavy-bleeding-extreme-hunger.md";
+  slug: "perimenopause-heavy-bleeding-extreme-hunger";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-hip-pain.md": {
+	id: "perimenopause-hip-pain.md";
+  slug: "perimenopause-hip-pain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-joint-pain.md": {
+	id: "perimenopause-joint-pain.md";
+  slug: "perimenopause-joint-pain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-nipple-pain.md": {
+	id: "perimenopause-nipple-pain.md";
+  slug: "perimenopause-nipple-pain";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-painful-ovulation.md": {
+	id: "perimenopause-painful-ovulation.md";
+  slug: "perimenopause-painful-ovulation";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-sex-painful-intercourse.md": {
+	id: "perimenopause-sex-painful-intercourse.md";
+  slug: "perimenopause-sex-painful-intercourse";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-skin-ageing-dryness-collagen.md": {
+	id: "perimenopause-skin-ageing-dryness-collagen.md";
+  slug: "perimenopause-skin-ageing-dryness-collagen";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -351,6 +813,34 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"perimenopause-symptoms-between-periods.md": {
+	id: "perimenopause-symptoms-between-periods.md";
+  slug: "perimenopause-symptoms-between-periods";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-thyroid-difference.md": {
+	id: "perimenopause-thyroid-difference.md";
+  slug: "perimenopause-thyroid-difference";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-vaginal-dryness.md": {
+	id: "perimenopause-vaginal-dryness.md";
+  slug: "perimenopause-vaginal-dryness";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"perimenopause-vs-menopause-difference.md": {
+	id: "perimenopause-vs-menopause-difference.md";
+  slug: "perimenopause-vs-menopause-difference";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "perimenopause-weight-gain-belly-fat.md": {
 	id: "perimenopause-weight-gain-belly-fat.md";
   slug: "perimenopause-weight-gain-belly-fat";
@@ -365,9 +855,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"prepare-bones-perimenopause.md": {
+	id: "prepare-bones-perimenopause.md";
+  slug: "prepare-bones-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "reliable-information-menopause-perimenopause.md": {
 	id: "reliable-information-menopause-perimenopause.md";
   slug: "reliable-information-menopause-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"restless-legs-perimenopause.md": {
+	id: "restless-legs-perimenopause.md";
+  slug: "restless-legs-perimenopause";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -393,9 +897,86 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"supplements-for-perimenopause.md": {
+	id: "supplements-for-perimenopause.md";
+  slug: "supplements-for-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"surgical-menopause-hysterectomy.md": {
+	id: "surgical-menopause-hysterectomy.md";
+  slug: "surgical-menopause-hysterectomy";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"talking-to-husband-perimenopause-india.md": {
+	id: "talking-to-husband-perimenopause-india.md";
+  slug: "talking-to-husband-perimenopause-india";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"tinnitus-ringing-ears-perimenopause.md": {
+	id: "tinnitus-ringing-ears-perimenopause.md";
+  slug: "tinnitus-ringing-ears-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"urinary-symptoms-perimenopause.md": {
+	id: "urinary-symptoms-perimenopause.md";
+  slug: "urinary-symptoms-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vaginal-atrophy-atrophic-vaginitis.md": {
+	id: "vaginal-atrophy-atrophic-vaginitis.md";
+  slug: "vaginal-atrophy-atrophic-vaginitis";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"vulvar-itching-irritation-perimenopause.md": {
+	id: "vulvar-itching-irritation-perimenopause.md";
+  slug: "vulvar-itching-irritation-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-age-does-a-woman-stop-getting-wet.md": {
+	id: "what-age-does-a-woman-stop-getting-wet.md";
+  slug: "what-age-does-a-woman-stop-getting-wet";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-causes-hair-loss-in-perimenopause.md": {
+	id: "what-causes-hair-loss-in-perimenopause.md";
+  slug: "what-causes-hair-loss-in-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "what-does-progesterone-do-perimenopause.md": {
 	id: "what-does-progesterone-do-perimenopause.md";
   slug: "what-does-progesterone-do-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-does-vaginal-dryness-feel-like.md": {
+	id: "what-does-vaginal-dryness-feel-like.md";
+  slug: "what-does-vaginal-dryness-feel-like";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"what-happens-to-fibroids-during-perimenopause.md": {
+	id: "what-happens-to-fibroids-during-perimenopause.md";
+  slug: "what-happens-to-fibroids-during-perimenopause";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -417,6 +998,20 @@ declare module 'astro:content' {
 "when-to-see-doctor-perimenopause.md": {
 	id: "when-to-see-doctor-perimenopause.md";
   slug: "when-to-see-doctor-perimenopause";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-am-i-suddenly-dry-down-there.md": {
+	id: "why-am-i-suddenly-dry-down-there.md";
+  slug: "why-am-i-suddenly-dry-down-there";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-urinate-more-perimenopause.md": {
+	id: "why-urinate-more-perimenopause.md";
+  slug: "why-urinate-more-perimenopause";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
