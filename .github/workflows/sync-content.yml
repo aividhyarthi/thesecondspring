@@ -1,0 +1,53 @@
+name: Sync content from staging
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 */6 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout thesecondspring
+        uses: actions/checkout@v4
+
+      - name: Download staging content
+        run: |
+          curl -fsSL "https://codeload.github.com/aividhyarthi/grievance-insight-engine/tar.gz/refs/heads/claude/perimenopause-chat-app-kgml4" -o repo.tar.gz
+          mkdir extracted
+          tar xzf repo.tar.gz -C extracted --strip-components=1
+
+      - name: Sanity check
+        run: |
+          head -1 extracted/tmp/blog/blood-clots-periods-perimenopause.md | grep -q '^---' || (echo "Corrupt download, aborting" && exit 1)
+
+      - name: Copy files into place
+        run: |
+          cp extracted/tmp/ss-layout.astro src/layouts/Layout.astro
+          cp extracted/tmp/ss-symptoms-cards.astro src/pages/symptoms.astro
+          cp extracted/tmp/ss-check.astro src/pages/check.astro
+          rm -f src/pages/voices.astro
+          mkdir -p src/pages/voices
+          cp extracted/tmp/ss-voices-index.astro "src/pages/voices/index.astro"
+          cp extracted/tmp/ss-voices-slug.astro "src/pages/voices/[slug].astro"
+          cp extracted/tmp/ss-blog-categories.ts src/lib/blog-categories.ts
+          mkdir -p public
+          cp extracted/tmp/ss-ads.txt public/ads.txt
+          mkdir -p src/content/blog
+          cp extracted/tmp/blog/*.md src/content/blog/
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "Content Sync Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Auto-sync content from staging"
+            git push
+          fi
