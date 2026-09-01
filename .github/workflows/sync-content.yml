@@ -36,6 +36,7 @@ jobs:
           cp /tmp/extracted/tmp/ss-blog-categories.ts src/lib/blog-categories.ts
           mkdir -p public
           cp /tmp/extracted/tmp/ss-ads.txt public/ads.txt
+          cp /tmp/extracted/tmp/ss-favicon.svg public/favicon.svg
           mkdir -p src/content/blog
           cp /tmp/extracted/tmp/blog/*.md src/content/blog/
           rm -rf /tmp/extracted /tmp/repo.tar.gz
@@ -44,7 +45,7 @@ jobs:
         run: |
           git config user.name "Content Sync Bot"
           git config user.email "actions@github.com"
-          git add src/layouts/Layout.astro src/pages/symptoms.astro src/pages/check.astro src/pages/quiz.astro src/pages/voices src/lib/blog-categories.ts public/ads.txt src/content/blog
+          git add src/layouts/Layout.astro src/pages/symptoms.astro src/pages/check.astro src/pages/quiz.astro src/pages/voices src/lib/blog-categories.ts public/ads.txt public/favicon.svg src/content/blog
           if git diff --cached --quiet; then
             echo "No changes to publish."
           else
