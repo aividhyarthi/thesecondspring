@@ -1,0 +1,52 @@
+name: Sync content from staging
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout thesecondspring
+        uses: actions/checkout@v4
+
+      - name: Download staging content
+        run: |
+          curl -fsSL "https://codeload.github.com/aividhyarthi/grievance-insight-engine/tar.gz/refs/heads/claude/perimenopause-chat-app-kgml4" -o /tmp/repo.tar.gz
+          mkdir /tmp/extracted
+          tar xzf /tmp/repo.tar.gz -C /tmp/extracted --strip-components=1
+
+      - name: Sanity check
+        run: |
+          head -1 /tmp/extracted/tmp/blog/blood-clots-periods-perimenopause.md | grep -q '^---' || (echo "Corrupt download, aborting" && exit 1)
+
+      - name: Copy files into place
+        run: |
+          cp /tmp/extracted/tmp/ss-layout.astro src/layouts/Layout.astro
+          cp /tmp/extracted/tmp/ss-symptoms-cards.astro src/pages/symptoms.astro
+          cp /tmp/extracted/tmp/ss-check.astro src/pages/check.astro
+          rm -f src/pages/voices.astro
+          mkdir -p src/pages/voices
+          cp /tmp/extracted/tmp/ss-voices-index.astro "src/pages/voices/index.astro"
+          cp /tmp/extracted/tmp/ss-voices-slug.astro "src/pages/voices/[slug].astro"
+          cp /tmp/extracted/tmp/ss-blog-categories.ts src/lib/blog-categories.ts
+          mkdir -p public
+          cp /tmp/extracted/tmp/ss-ads.txt public/ads.txt
+          mkdir -p src/content/blog
+          cp /tmp/extracted/tmp/blog/*.md src/content/blog/
+          rm -rf /tmp/extracted /tmp/repo.tar.gz
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "Content Sync Bot"
+          git config user.email "actions@github.com"
+          git add src/layouts/Layout.astro src/pages/symptoms.astro src/pages/check.astro src/pages/voices src/lib/blog-categories.ts public/ads.txt src/content/blog
+          if git diff --cached --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "Auto-sync content from staging"
+            git push
+          fi
