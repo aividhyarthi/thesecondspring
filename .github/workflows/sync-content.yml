@@ -28,6 +28,7 @@ jobs:
           cp /tmp/extracted/tmp/ss-layout.astro src/layouts/Layout.astro
           cp /tmp/extracted/tmp/ss-symptoms-cards.astro src/pages/symptoms.astro
           cp /tmp/extracted/tmp/ss-check.astro src/pages/check.astro
+          cp /tmp/extracted/tmp/ss-quiz.astro src/pages/quiz.astro
           rm -f src/pages/voices.astro
           mkdir -p src/pages/voices
           cp /tmp/extracted/tmp/ss-voices-index.astro "src/pages/voices/index.astro"
@@ -43,7 +44,7 @@ jobs:
         run: |
           git config user.name "Content Sync Bot"
           git config user.email "actions@github.com"
-          git add src/layouts/Layout.astro src/pages/symptoms.astro src/pages/check.astro src/pages/voices src/lib/blog-categories.ts public/ads.txt src/content/blog
+          git add src/layouts/Layout.astro src/pages/symptoms.astro src/pages/check.astro src/pages/quiz.astro src/pages/voices src/lib/blog-categories.ts public/ads.txt src/content/blog
           if git diff --cached --quiet; then
             echo "No changes to publish."
           else
