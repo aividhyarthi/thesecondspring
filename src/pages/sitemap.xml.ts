@@ -6,7 +6,8 @@ const SITE = 'https://www.thesecondspring.org';
 
 // Static pages with their priority and change frequency
 const staticPages = [
-  { path: '/',                          changefreq: 'weekly',  priority: '1.0' },
+  { path: '/',                          changefreq: 'weekly',  priority: '0.9' },
+  { path: '/spring',                    changefreq: 'weekly',  priority: '1.0' },
   { path: '/perimenopause',             changefreq: 'monthly', priority: '0.9' },
   { path: '/perimenopause-explained',   changefreq: 'monthly', priority: '0.8' },
   { path: '/menopause',                 changefreq: 'monthly', priority: '0.8' },
@@ -21,7 +22,6 @@ const staticPages = [
   { path: '/guide/sexual-wellness',     changefreq: 'monthly', priority: '0.7' },
   { path: '/guide/weight',              changefreq: 'monthly', priority: '0.7' },
   { path: '/quiz',                      changefreq: 'monthly', priority: '0.8' },
-  { path: '/chat',                      changefreq: 'monthly', priority: '0.8' },
   { path: '/blog',                      changefreq: 'weekly',  priority: '0.8' },
   { path: '/community',                 changefreq: 'weekly',  priority: '0.7' },
   { path: '/how-it-works',              changefreq: 'monthly', priority: '0.7' },
@@ -64,8 +64,9 @@ function urlEntry(
 export const GET: APIRoute = async () => {
   const today = formatDate(new Date());
 
-  // Fetch all blog posts
-  const posts = await getCollection('blog');
+  // Fetch all blog posts that are actually live (not scheduled for later)
+  const now = new Date();
+  const posts = (await getCollection('blog')).filter(p => p.data.pubDate <= now);
   posts.sort((a, b) =>
     new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
   );
