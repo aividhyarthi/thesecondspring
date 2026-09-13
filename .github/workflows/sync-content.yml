@@ -1,215 +1,158 @@
-name: Sync content from staging
+#!/usr/bin/env bash
+# deploy-all.sh — run this from inside the thesecondspring repo directory
+# Usage: bash deploy-all.sh
+#
+# Downloads the staging repo as ONE tarball (not 90 separate curl calls, which
+# hit GitHub rate limits and saved "400: Invalid request" into the blog files).
 
-on:
-  workflow_dispatch:
-  schedule:
-    # Runs daily at 05:00 UTC (~10:30am IST), a few hours after the automated
-    # blog-writing job pushes each day's new posts to staging, so this pulls
-    # the latest content and deploys it without anyone needing to click Run.
-    - cron: '0 5 * * *'
+set -e
 
-permissions:
-  contents: write
+BRANCH="claude/perimenopause-chat-app-kgml4"
+REPO="aividhyarthi/grievance-insight-engine"
+WORK="$(mktemp -d)"
 
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+echo "=== Deploying The Second Spring updates ==="
+echo "→ Downloading staging repo (single tarball)..."
+curl -fsSL "https://codeload.github.com/$REPO/tar.gz/refs/heads/$BRANCH" -o "$WORK/repo.tar.gz"
 
-      - name: Download staging repo
-        run: |
-          curl -fsSL "https://codeload.github.com/aividhyarthi/grievance-insight-engine/tar.gz/refs/heads/claude/perimenopause-chat-app-kgml4" -o /tmp/repo.tar.gz
-          mkdir -p /tmp/extracted
-          tar xzf /tmp/repo.tar.gz -C /tmp/extracted
-          echo "SRC=/tmp/extracted/$(ls /tmp/extracted)/tmp" >> "$GITHUB_ENV"
+echo "→ Extracting..."
+tar xzf "$WORK/repo.tar.gz" -C "$WORK"
+SRC="$WORK/$(tar tzf "$WORK/repo.tar.gz" | head -1)tmp"
 
-      - name: Sanity check
-        run: |
-          if ! head -1 "$SRC/blog/blood-clots-periods-perimenopause.md" | grep -q "^---"; then
-            echo "ERROR: downloaded blog files look corrupt. Aborting."
-            exit 1
-          fi
+# Sanity check — make sure the blog files are real markdown, not error pages
+if ! head -1 "$SRC/blog/blood-clots-periods-perimenopause.md" | grep -q "^---"; then
+  echo "ERROR: downloaded blog files look corrupt. Aborting."
+  exit 1
+fi
 
-      - name: Copy layout, ads.txt, robots.txt, favicon
-        run: |
-          cp "$SRC/ss-layout.astro" "src/layouts/Layout.astro"
-          mkdir -p public
-          cp "$SRC/ss-ads.txt" "public/ads.txt"
-          cp "$SRC/ss-robots.txt" "public/robots.txt"
-          cp "$SRC/ss-favicon.svg" "public/favicon.svg"
+# 1. Layout — Journal nav dropdown
+echo "→ Layout..."
+cp "$SRC/ss-layout.astro" "src/layouts/Layout.astro"
 
-      - name: Copy symptoms, check, quiz pages
-        run: |
-          cp "$SRC/ss-symptoms-cards.astro" "src/pages/symptoms.astro"
-          cp "$SRC/ss-check.astro" "src/pages/check.astro"
-          cp "$SRC/ss-quiz.astro" "src/pages/quiz.astro"
+# 1b. AdSense ads.txt (served at site root via public/)
+echo "→ ads.txt..."
+mkdir -p public
+cp "$SRC/ss-ads.txt" "public/ads.txt"
 
-      - name: Copy rebranded pages (color fix)
-        run: |
-          mkdir -p src/pages/guide src/pages/community
-          mkdir -p src/pages/spring src/pages/wind src/pages/longevity
-          cp "$SRC/ss-root.astro"                        "src/pages/index.astro"
-          cp "$SRC/ss-spring-index.astro"                "src/pages/spring/index.astro"
-          cp "$SRC/ss-layout-wind.astro"                 "src/layouts/LayoutWind.astro"
-          cp "$SRC/ss-wind-index.astro"                  "src/pages/wind/index.astro"
-          cp "$SRC/ss-wind-quiz.astro"                    "src/pages/wind/quiz.astro"
-          cp "$SRC/ss-favicon-wind.svg"                  "public/favicon-wind.svg"
-          cp "$SRC/ss-layout-longevity.astro"            "src/layouts/LayoutLongevity.astro"
-          cp "$SRC/ss-longevity-index.astro"             "src/pages/longevity/index.astro"
-          cp "$SRC/ss-favicon-longevity.svg"             "public/favicon-longevity.svg"
-          cp "$SRC/ss-page-menopause.astro"              "src/pages/menopause.astro"
-          cp "$SRC/ss-page-guide-sexual-wellness.astro"  "src/pages/guide/sexual-wellness.astro"
-          cp "$SRC/ss-page-guide-hair-skin.astro"        "src/pages/guide/hair-skin.astro"
-          cp "$SRC/ss-page-guide-mood-memory.astro"      "src/pages/guide/mood-memory.astro"
-          cp "$SRC/ss-page-guide-sleep.astro"            "src/pages/guide/sleep.astro"
-          cp "$SRC/ss-page-guide-weight.astro"           "src/pages/guide/weight.astro"
-          cp "$SRC/ss-page-guide-symptoms.astro"         "src/pages/guide/symptoms.astro"
-          cp "$SRC/ss-page-guide-talk-to-doctor.astro"   "src/pages/guide/talk-to-doctor.astro"
-          cp "$SRC/ss-page-myths.astro"                  "src/pages/myths.astro"
-          cp "$SRC/ss-page-community-index.astro"        "src/pages/community/index.astro"
-          cp "$SRC/ss-page-privacy.astro"                "src/pages/privacy.astro"
-          cp "$SRC/ss-page-terms.astro"                  "src/pages/terms.astro"
-          cp "$SRC/ss-page-for-employers.astro"          "src/pages/for-employers.astro"
-          cp "$SRC/ss-page-how-it-works.astro"           "src/pages/how-it-works.astro"
-          mkdir -p src/pages/blog
-          cp "$SRC/ss-page-blog-index.astro"             "src/pages/blog/index.astro"
-          cp "$SRC/ss-sitemap.ts"                        "src/pages/sitemap.xml.ts"
-          cp "$SRC/ss-news-sitemap.ts"                    "src/pages/news-sitemap.xml.ts"
+# 1c. robots.txt (allows all crawlers, points to sitemap + news sitemap)
+echo "→ robots.txt..."
+cp "$SRC/ss-robots.txt" "public/robots.txt"
 
-      - name: Copy Second Wind + Longevity guide pages
-        run: |
-          mkdir -p src/pages/wind/guide src/pages/longevity/guide
-          cp "$SRC/ss-wind-how-it-works.astro"           "src/pages/wind/how-it-works.astro"
-          cp "$SRC/ss-wind-guide-index.astro"            "src/pages/wind/guide/index.astro"
-          cp "$SRC/ss-wind-guide-symptoms.astro"         "src/pages/wind/guide/symptoms.astro"
-          cp "$SRC/ss-wind-guide-energy.astro"           "src/pages/wind/guide/energy.astro"
-          cp "$SRC/ss-wind-guide-muscle.astro"           "src/pages/wind/guide/muscle.astro"
-          cp "$SRC/ss-wind-guide-mood.astro"             "src/pages/wind/guide/mood.astro"
-          cp "$SRC/ss-wind-guide-sleep.astro"            "src/pages/wind/guide/sleep.astro"
-          cp "$SRC/ss-wind-guide-sexual-health.astro"    "src/pages/wind/guide/sexual-health.astro"
-          cp "$SRC/ss-wind-guide-talk-to-doctor.astro"   "src/pages/wind/guide/talk-to-doctor.astro"
-          cp "$SRC/ss-longevity-guide-index.astro"       "src/pages/longevity/guide/index.astro"
-          cp "$SRC/ss-longevity-guide-food.astro"        "src/pages/longevity/guide/food.astro"
-          cp "$SRC/ss-longevity-guide-movement.astro"    "src/pages/longevity/guide/movement.astro"
-          cp "$SRC/ss-longevity-guide-sleep-rhythm.astro" "src/pages/longevity/guide/sleep-rhythm.astro"
-          cp "$SRC/ss-longevity-guide-mind-stress.astro" "src/pages/longevity/guide/mind-stress.astro"
-          cp "$SRC/ss-longevity-guide-ayurveda.astro"    "src/pages/longevity/guide/ayurveda.astro"
+# 2. Symptoms page
+echo "→ Symptoms page..."
+cp "$SRC/ss-symptoms-cards.astro" "src/pages/symptoms.astro"
 
-      - name: Copy Second Wind + Longevity journals
-        run: |
-          mkdir -p src/pages/wind/blog src/pages/longevity/blog
-          cp "$SRC/ss-content-config.ts"                 "src/content/config.ts"
-          cp "$SRC/ss-blog-related.ts"                   "src/lib/blog-related.ts"
-          cp "$SRC/ss-wind-blog-index.astro"             "src/pages/wind/blog/index.astro"
-          cp "$SRC/ss-wind-blog-slug.astro"              "src/pages/wind/blog/[slug].astro"
-          cp "$SRC/ss-longevity-blog-index.astro"        "src/pages/longevity/blog/index.astro"
-          cp "$SRC/ss-longevity-blog-slug.astro"         "src/pages/longevity/blog/[slug].astro"
-          mkdir -p src/content/wind-blog src/content/longevity-blog
-          cp "$SRC"/wind-blog/*.md src/content/wind-blog/ 2>/dev/null || echo "  (no wind-blog posts yet)"
-          cp "$SRC"/longevity-blog/*.md src/content/longevity-blog/ 2>/dev/null || echo "  (no longevity-blog posts yet)"
+# 2b. Interactive body-map check page
+echo "→ Interactive check page..."
+cp "$SRC/ss-check.astro" "src/pages/check.astro"
 
-      - name: Remove chat (costs API credits per message; source kept in staging for later)
-        run: |
-          rm -f src/pages/chat.astro src/pages/api/chat.ts
+# 2c. Symptom quiz page
+echo "→ Quiz page..."
+cp "$SRC/ss-quiz.astro" "src/pages/quiz.astro"
 
-      - name: Copy voices pages
-        run: |
-          rm -f src/pages/voices.astro
-          mkdir -p src/pages/voices
-          cp "$SRC/ss-voices-index.astro" "src/pages/voices/index.astro"
-          cp "$SRC/ss-voices-slug.astro"  "src/pages/voices/[slug].astro"
+# 2d. Favicon
+echo "→ Favicon..."
+cp "$SRC/ss-favicon.svg" "public/favicon.svg"
 
-      - name: Copy blog post template (rebrand fix)
-        run: |
-          cp "$SRC/ss-blog-slug.astro" "src/pages/blog/[slug].astro"
+# 2e. Rebrand fix — pages with page-specific hardcoded colors
+echo "→ Rebranded pages..."
+mkdir -p src/pages/guide src/pages/community
+mkdir -p src/pages/spring src/pages/wind src/pages/longevity
+cp "$SRC/ss-root.astro"                        "src/pages/index.astro"
+cp "$SRC/ss-spring-index.astro"                "src/pages/spring/index.astro"
+cp "$SRC/ss-layout-wind.astro"                 "src/layouts/LayoutWind.astro"
+cp "$SRC/ss-wind-index.astro"                  "src/pages/wind/index.astro"
+cp "$SRC/ss-wind-quiz.astro"                    "src/pages/wind/quiz.astro"
+cp "$SRC/ss-favicon-wind.svg"                  "public/favicon-wind.svg"
+cp "$SRC/ss-layout-longevity.astro"            "src/layouts/LayoutLongevity.astro"
+cp "$SRC/ss-longevity-index.astro"             "src/pages/longevity/index.astro"
+cp "$SRC/ss-favicon-longevity.svg"             "public/favicon-longevity.svg"
 
-      - name: Copy blog categories and posts
-        run: |
-          cp "$SRC/ss-blog-categories.ts" "src/lib/blog-categories.ts"
-          mkdir -p src/content/blog
-          cp "$SRC"/blog/*.md src/content/blog/
+# 2e-2. Second Wind + Longevity guide sections
+echo "→ Second Wind + Longevity guide pages..."
+mkdir -p src/pages/wind/guide src/pages/longevity/guide
+cp "$SRC/ss-wind-how-it-works.astro"           "src/pages/wind/how-it-works.astro"
+cp "$SRC/ss-wind-guide-index.astro"            "src/pages/wind/guide/index.astro"
+cp "$SRC/ss-wind-guide-symptoms.astro"         "src/pages/wind/guide/symptoms.astro"
+cp "$SRC/ss-wind-guide-energy.astro"           "src/pages/wind/guide/energy.astro"
+cp "$SRC/ss-wind-guide-muscle.astro"           "src/pages/wind/guide/muscle.astro"
+cp "$SRC/ss-wind-guide-mood.astro"             "src/pages/wind/guide/mood.astro"
+cp "$SRC/ss-wind-guide-sleep.astro"            "src/pages/wind/guide/sleep.astro"
+cp "$SRC/ss-wind-guide-sexual-health.astro"    "src/pages/wind/guide/sexual-health.astro"
+cp "$SRC/ss-wind-guide-talk-to-doctor.astro"   "src/pages/wind/guide/talk-to-doctor.astro"
+cp "$SRC/ss-longevity-guide-index.astro"       "src/pages/longevity/guide/index.astro"
+cp "$SRC/ss-longevity-guide-food.astro"        "src/pages/longevity/guide/food.astro"
+cp "$SRC/ss-longevity-guide-movement.astro"    "src/pages/longevity/guide/movement.astro"
+cp "$SRC/ss-longevity-guide-sleep-rhythm.astro" "src/pages/longevity/guide/sleep-rhythm.astro"
+cp "$SRC/ss-longevity-guide-mind-stress.astro" "src/pages/longevity/guide/mind-stress.astro"
+cp "$SRC/ss-longevity-guide-ayurveda.astro"    "src/pages/longevity/guide/ayurveda.astro"
 
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+# 2e-3. Second Wind + Longevity journals
+echo "→ Second Wind + Longevity journals..."
+mkdir -p src/pages/wind/blog src/pages/longevity/blog
+cp "$SRC/ss-content-config.ts"                 "src/content/config.ts"
+cp "$SRC/ss-blog-related.ts"                   "src/lib/blog-related.ts"
+cp "$SRC/ss-wind-blog-index.astro"             "src/pages/wind/blog/index.astro"
+cp "$SRC/ss-wind-blog-slug.astro"              "src/pages/wind/blog/[slug].astro"
+cp "$SRC/ss-longevity-blog-index.astro"        "src/pages/longevity/blog/index.astro"
+cp "$SRC/ss-longevity-blog-slug.astro"         "src/pages/longevity/blog/[slug].astro"
+mkdir -p src/content/wind-blog src/content/longevity-blog
+cp "$SRC"/wind-blog/*.md src/content/wind-blog/ 2>/dev/null || echo "  (no wind-blog posts yet)"
+cp "$SRC"/longevity-blog/*.md src/content/longevity-blog/ 2>/dev/null || echo "  (no longevity-blog posts yet)"
 
-          # Add each path individually and tolerate any single one failing
-          # (e.g. a file that was removed and was never actually committed
-          # before, so there's nothing for git to stage a deletion for).
-          # Without this, one bad path aborts the whole job (bash runs with
-          # -e by default in GitHub Actions) and NOTHING syncs, not just
-          # the one broken file.
-          PATHS=(
-            src/layouts/Layout.astro
-            public/ads.txt
-            public/robots.txt
-            public/favicon.svg
-            src/pages/symptoms.astro
-            src/pages/check.astro
-            src/pages/quiz.astro
-            src/pages/index.astro
-            src/pages/spring/index.astro
-            src/layouts/LayoutWind.astro
-            src/pages/wind/index.astro
-            src/pages/wind/quiz.astro
-            public/favicon-wind.svg
-            src/layouts/LayoutLongevity.astro
-            src/pages/longevity/index.astro
-            public/favicon-longevity.svg
-            src/pages/wind/how-it-works.astro
-            src/pages/wind/guide/index.astro
-            src/pages/wind/guide/symptoms.astro
-            src/pages/wind/guide/energy.astro
-            src/pages/wind/guide/muscle.astro
-            src/pages/wind/guide/mood.astro
-            src/pages/wind/guide/sleep.astro
-            src/pages/wind/guide/sexual-health.astro
-            src/pages/wind/guide/talk-to-doctor.astro
-            src/pages/longevity/guide/index.astro
-            src/pages/longevity/guide/food.astro
-            src/pages/longevity/guide/movement.astro
-            src/pages/longevity/guide/sleep-rhythm.astro
-            src/pages/longevity/guide/mind-stress.astro
-            src/pages/longevity/guide/ayurveda.astro
-            src/content/config.ts
-            src/lib/blog-related.ts
-            src/pages/wind/blog/index.astro
-            "src/pages/wind/blog/[slug].astro"
-            src/pages/longevity/blog/index.astro
-            "src/pages/longevity/blog/[slug].astro"
-            src/content/wind-blog
-            src/content/longevity-blog
-            src/pages/menopause.astro
-            src/pages/guide/sexual-wellness.astro
-            src/pages/guide/hair-skin.astro
-            src/pages/guide/mood-memory.astro
-            src/pages/guide/sleep.astro
-            src/pages/guide/weight.astro
-            src/pages/guide/symptoms.astro
-            src/pages/guide/talk-to-doctor.astro
-            src/pages/myths.astro
-            src/pages/community/index.astro
-            src/pages/privacy.astro
-            src/pages/terms.astro
-            src/pages/for-employers.astro
-            src/pages/how-it-works.astro
-            src/pages/blog/index.astro
-            src/pages/sitemap.xml.ts
-            src/pages/news-sitemap.xml.ts
-            src/pages/chat.astro
-            src/pages/api/chat.ts
-            src/pages/voices/index.astro
-            "src/pages/voices/[slug].astro"
-            "src/pages/blog/[slug].astro"
-            src/lib/blog-categories.ts
-            src/content/blog
-          )
-          for p in "${PATHS[@]}"; do
-            git add -- "$p" || echo "  (skipped $p, nothing to stage)"
-          done
+cp "$SRC/ss-page-menopause.astro"              "src/pages/menopause.astro"
+cp "$SRC/ss-page-guide-sexual-wellness.astro"  "src/pages/guide/sexual-wellness.astro"
+cp "$SRC/ss-page-guide-hair-skin.astro"        "src/pages/guide/hair-skin.astro"
+cp "$SRC/ss-page-guide-mood-memory.astro"      "src/pages/guide/mood-memory.astro"
+cp "$SRC/ss-page-guide-sleep.astro"            "src/pages/guide/sleep.astro"
+cp "$SRC/ss-page-guide-weight.astro"           "src/pages/guide/weight.astro"
+cp "$SRC/ss-page-guide-symptoms.astro"         "src/pages/guide/symptoms.astro"
+cp "$SRC/ss-page-guide-talk-to-doctor.astro"   "src/pages/guide/talk-to-doctor.astro"
+cp "$SRC/ss-page-myths.astro"                  "src/pages/myths.astro"
+cp "$SRC/ss-page-community-index.astro"        "src/pages/community/index.astro"
+cp "$SRC/ss-page-privacy.astro"                "src/pages/privacy.astro"
+cp "$SRC/ss-page-terms.astro"                  "src/pages/terms.astro"
+cp "$SRC/ss-page-for-employers.astro"          "src/pages/for-employers.astro"
+cp "$SRC/ss-page-how-it-works.astro"           "src/pages/how-it-works.astro"
+mkdir -p src/pages/blog
+cp "$SRC/ss-page-blog-index.astro"             "src/pages/blog/index.astro"
+cp "$SRC/ss-sitemap.ts"                        "src/pages/sitemap.xml.ts"
+cp "$SRC/ss-news-sitemap.ts"                    "src/pages/news-sitemap.xml.ts"
 
-          git commit -m "Sync content: rebrand fix + latest staging content" || echo "Nothing to commit"
-          git push
+# 2f. Chat removed for now (costs API credits per message, unpredictable
+# under paid marketing traffic). Source kept in staging as ss-chat.astro /
+# ss-chat-api.ts in case it comes back later.
+echo "→ Removing chat page + API..."
+rm -f src/pages/chat.astro src/pages/api/chat.ts
+
+# 3. Voices — remove old flat file to avoid routing conflict, then create subdirectory pages
+echo "→ Voices pages..."
+rm -f src/pages/voices.astro
+mkdir -p src/pages/voices
+cp "$SRC/ss-voices-index.astro" "src/pages/voices/index.astro"
+cp "$SRC/ss-voices-slug.astro"  "src/pages/voices/[slug].astro"
+
+# 3b. Blog post template (rebrand fix — was never wired into this script before)
+echo "→ Blog post template..."
+cp "$SRC/ss-blog-slug.astro" "src/pages/blog/[slug].astro"
+
+# 4. Blog categories — updated with new sections
+echo "→ Blog categories..."
+cp "$SRC/ss-blog-categories.ts" "src/lib/blog-categories.ts"
+
+# 5. All blog posts — copy the whole folder at once
+echo "→ Blog posts ($(ls "$SRC/blog" | wc -l | tr -d ' ') files)..."
+mkdir -p src/content/blog
+cp "$SRC"/blog/*.md src/content/blog/
+
+# Clean up
+rm -rf "$WORK"
+
+echo ""
+echo "=== Committing... ==="
+git add -A
+git commit -m "Deploy all blogs, voices pages, updated layout and categories"
+git push
+
+echo ""
+echo "=== Done! Railway will pick up the push and redeploy. ==="
