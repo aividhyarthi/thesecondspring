@@ -1,12 +1,33 @@
 // Centralised JSON-LD structured-data helpers for The Second Spring.
-// Every builder returns a plain schema.org node (no @context). The Layout
-// collects the global nodes + any page-specific nodes into a single @graph.
+// Every builder returns a plain schema.org node (no @context). Layouts collect
+// global nodes and page-specific nodes into a single @graph.
 
 export const SITE_URL = 'https://www.thesecondspring.org';
 export const SITE_NAME = 'The Second Spring';
 export const SITE_LOGO = `${SITE_URL}/favicon.svg`;
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const SITE_ID = `${SITE_URL}/#website`;
+
+export const PROGRAMS = [
+  {
+    name: 'Her Midlife',
+    url: `${SITE_URL}/spring`,
+    logo: `${SITE_URL}/favicon.svg`,
+    description: 'Education and support about perimenopause, menopause, symptoms, and midlife health for women in India.',
+  },
+  {
+    name: 'His Midlife',
+    url: `${SITE_URL}/wind`,
+    logo: `${SITE_URL}/favicon-wind.svg`,
+    description: 'Education about andropause, age-related hormonal changes, energy, mood, strength, and midlife health for men in India.',
+  },
+  {
+    name: 'Life Begins After 40',
+    url: `${SITE_URL}/longevity`,
+    logo: `${SITE_URL}/favicon-longevity.svg`,
+    description: 'Practical, evidence-aware information about longevity, healthy ageing, food, movement, sleep, and everyday wellbeing.',
+  },
+] as const;
 
 /** Turn a path or absolute URL into an absolute URL on the canonical domain. */
 export function abs(pathOrUrl: string): string {
@@ -15,14 +36,12 @@ export function abs(pathOrUrl: string): string {
   return `${SITE_URL}${pathOrUrl.startsWith('/') ? '' : '/'}${pathOrUrl}`;
 }
 
-/** Strip HTML tags and collapse whitespace — for use inside JSON-LD text fields. */
+/** Strip HTML tags and collapse whitespace for JSON-LD text fields. */
 export function plain(html: string): string {
-  return (html || '')
-    .replace(/<[^>]*>/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return (html || '').replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 }
 
+/** The parent organisation connects the three distinct editorial programmes. */
 export function organizationSchema() {
   return {
     '@type': 'Organization',
@@ -30,10 +49,16 @@ export function organizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: { '@type': 'ImageObject', url: SITE_LOGO },
-    description:
-      "India's first private companion for women navigating perimenopause — honest, science-backed support for Indian women.",
+    description: 'The Second Spring is an India-focused health education platform with three programmes covering women’s midlife health, men’s midlife health, and longevity and healthy ageing. It publishes accessible, evidence-aware information to help people understand life-stage changes and make informed decisions with qualified healthcare professionals.',
     email: 'thesecondspringofficial@gmail.com',
-    areaServed: 'IN',
+    areaServed: { '@type': 'Country', name: 'India' },
+    subOrganization: PROGRAMS.map((program) => ({
+      '@type': 'Organization',
+      '@id': `${program.url}#organization`,
+      name: program.name,
+      url: program.url,
+      description: program.description,
+    })),
   };
 }
 
@@ -86,7 +111,9 @@ export function articleSchema(a: ArticleInput) {
     ...(a.image ? { image: [abs(a.image)] } : {}),
     datePublished: a.datePublished,
     dateModified: a.dateModified || a.datePublished,
-    author: { '@type': 'Organization', name: a.authorName || SITE_NAME, url: SITE_URL },
+    author: a.authorName
+      ? { '@type': 'Person', name: a.authorName }
+      : { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     publisher: { '@id': ORG_ID },
     mainEntityOfPage: { '@type': 'WebPage', '@id': abs(a.url) },
     ...(a.section ? { articleSection: a.section } : {}),
@@ -146,9 +173,7 @@ export function collectionPageSchema(c: CollectionPageInput) {
     url: abs(c.url),
     isPartOf: { '@id': SITE_ID },
     inLanguage: 'en-IN',
-    ...(c.items && c.items.length
-      ? { mainEntity: itemListSchema(c.items) }
-      : {}),
+    ...(c.items && c.items.length ? { mainEntity: itemListSchema(c.items) } : {}),
   };
 }
 
@@ -195,18 +220,14 @@ export function discussionSchema(d: DiscussionInput) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': abs(d.url) },
     isPartOf: { '@id': SITE_ID },
     inLanguage: 'en-IN',
-    ...(typeof d.replyCount === 'number'
-      ? { commentCount: d.replyCount }
-      : {}),
+    ...(typeof d.replyCount === 'number' ? { commentCount: d.replyCount } : {}),
     ...(d.answerText
       ? {
-          comment: [
-            {
-              '@type': 'Comment',
-              text: plain(d.answerText),
-              author: { '@type': 'Organization', name: d.answeredBy || SITE_NAME },
-            },
-          ],
+          comment: [{
+            '@type': 'Comment',
+            text: plain(d.answerText),
+            author: { '@type': 'Organization', name: d.answeredBy || SITE_NAME },
+          }],
         }
       : {}),
   };
