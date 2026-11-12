@@ -1,13 +1,17 @@
 ---
 import Layout from '../../layouts/LayoutLongevity.astro';
+import { webPageSchema, breadcrumbSchema } from '../../lib/schema';
 
 const structuredData = [
-  {
-    '@type': 'WebPage',
+  webPageSchema({
     name: 'Life Begins After 40 – Longevity & Healthy Ageing for India',
     description: 'Longevity guidance for a longer, steadier life: food, Ayurveda, movement, sleep, and daily habits for healthy ageing, practical and rooted in Indian tradition.',
-    url: 'https://www.thesecondspring.org/longevity',
-  },
+    url: '/longevity',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Life Begins After 40', url: '/longevity' },
+  ]),
 ];
 ---
 
