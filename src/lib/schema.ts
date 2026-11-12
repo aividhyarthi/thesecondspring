@@ -230,3 +230,73 @@ export function discussionSchema(d: DiscussionInput) {
       : {}),
   };
 }
+
+
+/**
+ * Extract FAQ pairs from a Markdown article body.
+ * Supports the site's common format:
+ *   ## Frequently Asked Questions
+ *   **Question?**
+ *   Answer paragraph...
+ *
+ * Also supports question headings such as ### Question?
+ */
+export function parseFaqFromBody(body: string | undefined | null): QA[] {
+  if (!body) return [];
+
+  const lines = body.replace(/\r\n?/g, '\n').split('\n');
+  const faqHeadingIndex = lines.findIndex((line) =>
+    /^#{1,6}\s+.*\b(?:frequently\s+asked\s+questions|faqs?)\b/i.test(line.trim())
+  );
+
+  if (faqHeadingIndex === -1) return [];
+
+  const faqLines = lines.slice(faqHeadingIndex + 1);
+  const results: QA[] = [];
+  let currentQuestion = '';
+  let answerLines: string[] = [];
+
+  const cleanMarkdown = (value: string) =>
+    plain(value)
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/[*_`~]/g, '')
+      .replace(/^\s*[-*+]\s+/, '')
+      .trim();
+
+  const saveCurrent = () => {
+    const answer = cleanMarkdown(answerLines.join(' ').replace(/\s+/g, ' '));
+    if (currentQuestion && answer) {
+      results.push({
+        question: cleanMarkdown(currentQuestion),
+        answer,
+      });
+    }
+    currentQuestion = '';
+    answerLines = [];
+  };
+
+  for (const rawLine of faqLines) {
+    const line = rawLine.trim();
+
+    // A new section ends the FAQ block. Question headings are handled below.
+    if (/^#{1,2}\s+/.test(line) && !/^#{3,6}\s+/.test(line)) {
+      saveCurrent();
+      break;
+    }
+
+    const boldQuestion = line.match(/^(?:[-*+]\s*)?(?:\*\*(.+?)\*\*|__(.+?)__)\s*$/);
+    const headingQuestion = line.match(/^#{3,6}\s+(.+?)\s*$/);
+    const candidate = boldQuestion?.[1] || boldQuestion?.[2] || headingQuestion?.[1];
+
+    if (candidate && /\?\s*$/.test(candidate)) {
+      saveCurrent();
+      currentQuestion = candidate;
+      continue;
+    }
+
+    if (currentQuestion && line) answerLines.push(line);
+  }
+
+  saveCurrent();
+  return results;
+}
