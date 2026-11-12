@@ -111,9 +111,7 @@ export function articleSchema(a: ArticleInput) {
     ...(a.image ? { image: [abs(a.image)] } : {}),
     datePublished: a.datePublished,
     dateModified: a.dateModified || a.datePublished,
-    author: a.authorName
-      ? { '@type': 'Person', name: a.authorName }
-      : { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+    author: { '@type': 'Organization', name: a.authorName || SITE_NAME, url: SITE_URL },
     publisher: { '@id': ORG_ID },
     mainEntityOfPage: { '@type': 'WebPage', '@id': abs(a.url) },
     ...(a.section ? { articleSection: a.section } : {}),
