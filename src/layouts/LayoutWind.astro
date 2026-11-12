@@ -1,5 +1,5 @@
 ---
-const SITE_URL = 'https://www.thesecondspring.org';
+import { organizationSchema, SITE_URL, ORG_ID } from '../lib/schema';
 
 interface Props {
   title?: string;
@@ -32,7 +32,8 @@ const orgNode = {
   name: 'His Midlife',
   url: `${SITE_URL}/wind`,
   logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-wind.svg` },
-  description: "India's private companion for men navigating andropause and midlife hormonal change, honest, science-backed support for Indian men.",
+  description: "Education about andropause, age-related hormonal changes, energy, mood, strength, and midlife health for men in India.",
+  parentOrganization: { '@id': ORG_ID },
   email: 'thesecondspringofficial@gmail.com',
   areaServed: 'IN',
 };
@@ -46,7 +47,7 @@ const websiteNode = {
 };
 const jsonLdGraph = {
   '@context': 'https://schema.org',
-  '@graph': [orgNode, websiteNode, ...pageNodes],
+  '@graph': [organizationSchema(), orgNode, websiteNode, ...pageNodes],
 };
 const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
 ---
