@@ -29,7 +29,7 @@ const canonicalUrl = canonical || `${SITE_URL}${canonicalPath}`;
 
 // Build a single JSON-LD @graph: global nodes + whatever the page passed in.
 const herMidlifeOrganization = programOrganizationSchema('her');
-
+const pageNodes = structuredData
   ? (Array.isArray(structuredData) ? structuredData : [structuredData])
   : [];
 const jsonLdGraph = {
