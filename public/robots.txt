@@ -1,6 +1,8 @@
 # Everyone is welcome: search engines, AI assistants and AI search.
 User-agent: *
 Allow: /
+Disallow: /studio
+Disallow: /api/studio/
 
 # Search engines
 User-agent: Googlebot
