@@ -1,13 +1,15 @@
 ---
 const title = 'Perimenopause, Andropause & Longevity Support for India';
 const description = 'Choose your path: perimenopause and menopause support for Indian women, andropause and testosterone care for Indian men, and longevity guidance for everyone.';
-import { organizationSchema, websiteSchema, SITE_URL, ORG_ID, SITE_ID, PROGRAMS } from '../lib/schema';
+import { organizationSchema, websiteSchema, webPageSchema, programOrganizationSchema, SITE_URL, ORG_ID, PROGRAMS } from '../lib/schema';
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     organizationSchema(),
     websiteSchema(),
+    ...PROGRAMS.map((program) => programOrganizationSchema(program.slug)),
+    webPageSchema({ name: title, description, url: '/' }),
     {
       '@type': 'ItemList',
       '@id': `${SITE_URL}/#programmes`,
