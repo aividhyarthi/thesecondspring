@@ -10,18 +10,21 @@ export const SITE_ID = `${SITE_URL}/#website`;
 
 export const PROGRAMS = [
   {
+    slug: 'her',
     name: 'Her Midlife',
     url: `${SITE_URL}/spring`,
     logo: `${SITE_URL}/favicon.svg`,
     description: 'Education and support about perimenopause, menopause, symptoms, and midlife health for women in India.',
   },
   {
+    slug: 'his',
     name: 'His Midlife',
     url: `${SITE_URL}/wind`,
     logo: `${SITE_URL}/favicon-wind.svg`,
     description: 'Education about andropause, age-related hormonal changes, energy, mood, strength, and midlife health for men in India.',
   },
   {
+    slug: 'longevity',
     name: 'Life Begins After 40',
     url: `${SITE_URL}/longevity`,
     logo: `${SITE_URL}/favicon-longevity.svg`,
@@ -53,12 +56,27 @@ export function organizationSchema() {
     email: 'thesecondspringofficial@gmail.com',
     areaServed: { '@type': 'Country', name: 'India' },
     subOrganization: PROGRAMS.map((program) => ({
-      '@type': 'Organization',
       '@id': `${program.url}#organization`,
-      name: program.name,
-      url: program.url,
-      description: program.description,
     })),
+  };
+}
+
+export type ProgramSlug = 'her' | 'his' | 'longevity';
+
+/** A stable, reusable Organization node for each programme under the parent platform. */
+export function programOrganizationSchema(slug: ProgramSlug) {
+  const program = PROGRAMS.find((item) => item.slug === slug);
+  if (!program) throw new Error(`Unknown programme: ${slug}`);
+
+  return {
+    '@type': 'Organization',
+    '@id': `${program.url}#organization`,
+    name: program.name,
+    url: program.url,
+    logo: { '@type': 'ImageObject', url: program.logo },
+    description: program.description,
+    parentOrganization: { '@id': ORG_ID },
+    areaServed: { '@type': 'Country', name: 'India' },
   };
 }
 
