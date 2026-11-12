@@ -1,5 +1,5 @@
 ---
-import { organizationSchema, websiteSchema, SITE_URL } from '../lib/schema';
+import { organizationSchema, websiteSchema, programOrganizationSchema, SITE_URL } from '../lib/schema';
 
 interface Props {
   title?: string;
@@ -28,12 +28,13 @@ const canonicalPath = path !== '/' && path.endsWith('/') ? path.slice(0, -1) : p
 const canonicalUrl = canonical || `${SITE_URL}${canonicalPath}`;
 
 // Build a single JSON-LD @graph: global nodes + whatever the page passed in.
+const herMidlifeOrganization = programOrganizationSchema('her');
 const pageNodes = structuredData
   ? (Array.isArray(structuredData) ? structuredData : [structuredData])
   : [];
 const jsonLdGraph = {
   '@context': 'https://schema.org',
-  '@graph': [organizationSchema(), websiteSchema(), ...pageNodes],
+  '@graph': [organizationSchema(), websiteSchema(), herMidlifeOrganization, ...pageNodes],
 };
 // Escape "<" so the serialised JSON can never break out of the <script> tag.
 const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');

@@ -97,3 +97,5 @@ Do not infer or disclose personal health information about readers. Do not treat
 - News sitemap: https://www.thesecondspring.org/news-sitemap.xml
 - Robots instructions: https://www.thesecondspring.org/robots.txt
 - AI content policy: https://www.thesecondspring.org/ai-content-policy.md
+- Knowledge base and entity reference: https://www.thesecondspring.org/knowledge-base.md
+- Machine-readable HTML reference: https://www.thesecondspring.org/ai-reference.html

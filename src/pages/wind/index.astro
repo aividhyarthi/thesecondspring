@@ -1,13 +1,17 @@
 ---
 import Layout from '../../layouts/LayoutWind.astro';
+import { webPageSchema, breadcrumbSchema } from '../../lib/schema';
 
 const structuredData = [
-  {
-    '@type': 'WebPage',
+  webPageSchema({
     name: 'His Midlife – Andropause & Midlife Vitality for Indian Men',
     description: 'Testosterone decline, energy, mood, and strength in midlife, explained clearly for Indian men.',
-    url: 'https://www.thesecondspring.org/wind',
-  },
+    url: '/wind',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'His Midlife', url: '/wind' },
+  ]),
 ];
 ---
 

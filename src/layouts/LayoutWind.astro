@@ -1,5 +1,5 @@
 ---
-const SITE_URL = 'https://www.thesecondspring.org';
+import { organizationSchema, websiteSchema, programOrganizationSchema, SITE_URL } from '../lib/schema';
 
 interface Props {
   title?: string;
@@ -26,27 +26,10 @@ const canonicalUrl = canonical || `${SITE_URL}${canonicalPath}`;
 const pageNodes = structuredData
   ? (Array.isArray(structuredData) ? structuredData : [structuredData])
   : [];
-const orgNode = {
-  '@type': 'Organization',
-  '@id': `${SITE_URL}/wind#organization`,
-  name: 'His Midlife',
-  url: `${SITE_URL}/wind`,
-  logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-wind.svg` },
-  description: "India's private companion for men navigating andropause and midlife hormonal change, honest, science-backed support for Indian men.",
-  email: 'thesecondspringofficial@gmail.com',
-  areaServed: 'IN',
-};
-const websiteNode = {
-  '@type': 'WebSite',
-  '@id': `${SITE_URL}/wind#website`,
-  url: `${SITE_URL}/wind`,
-  name: 'His Midlife',
-  inLanguage: 'en-IN',
-  publisher: { '@id': `${SITE_URL}/wind#organization` },
-};
+const orgNode = programOrganizationSchema('his');
 const jsonLdGraph = {
   '@context': 'https://schema.org',
-  '@graph': [orgNode, websiteNode, ...pageNodes],
+  '@graph': [organizationSchema(), websiteSchema(), orgNode, ...pageNodes],
 };
 const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
 ---

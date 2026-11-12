@@ -1,61 +1,29 @@
 ---
 const title = 'Perimenopause, Andropause & Longevity Support for India';
 const description = 'Choose your path: perimenopause and menopause support for Indian women, andropause and testosterone care for Indian men, and longevity guidance for everyone.';
-const SITE_URL = 'https://www.thesecondspring.org';
+import { organizationSchema, websiteSchema, webPageSchema, programOrganizationSchema, SITE_URL, ORG_ID, PROGRAMS } from '../lib/schema';
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': 'WebSite',
-      '@id': `${SITE_URL}/#hub-website`,
-      url: `${SITE_URL}/`,
-      name: 'The Second Spring',
-      description,
-      inLanguage: 'en-IN',
-    },
+    organizationSchema(),
+    websiteSchema(),
+    ...PROGRAMS.map((program) => programOrganizationSchema(program.slug)),
+    webPageSchema({ name: title, description, url: '/' }),
     {
       '@type': 'ItemList',
-      name: 'The Second Spring family of platforms',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          item: {
-            '@type': 'Brand',
-            name: 'Her Midlife',
-            url: `${SITE_URL}/spring`,
-            logo: `${SITE_URL}/favicon.svg`,
-            slogan: 'Perimenopause and menopause support for Indian women',
-          },
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          item: {
-            '@type': 'Brand',
-            name: 'His Midlife',
-            url: `${SITE_URL}/wind`,
-            logo: `${SITE_URL}/favicon-wind.svg`,
-            slogan: 'Andropause and testosterone support for Indian men',
-          },
-        },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          item: {
-            '@type': 'Brand',
-            name: 'Life Begins After 40',
-            url: `${SITE_URL}/longevity`,
-            logo: `${SITE_URL}/favicon-longevity.svg`,
-            slogan: 'Longevity and healthy ageing guidance for every stage of life',
-          },
-        },
-      ],
+      '@id': `${SITE_URL}/#programmes`,
+      name: 'The Second Spring family of programmes',
+      itemListElement: PROGRAMS.map((program, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: { '@id': `${program.url}#organization` },
+
+      })),
     },
   ],
 };
-const jsonLdString = JSON.stringify(jsonLd);
+const jsonLdString = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>

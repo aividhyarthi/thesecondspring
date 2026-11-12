@@ -1,5 +1,5 @@
 ---
-const SITE_URL = 'https://www.thesecondspring.org';
+import { organizationSchema, websiteSchema, programOrganizationSchema, SITE_URL } from '../lib/schema';
 
 interface Props {
   title?: string;
@@ -26,27 +26,10 @@ const canonicalUrl = canonical || `${SITE_URL}${canonicalPath}`;
 const pageNodes = structuredData
   ? (Array.isArray(structuredData) ? structuredData : [structuredData])
   : [];
-const orgNode = {
-  '@type': 'Organization',
-  '@id': `${SITE_URL}/longevity#organization`,
-  name: 'Life Begins After 40',
-  url: `${SITE_URL}/longevity`,
-  logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-longevity.svg` },
-  description: "Practical, India-rooted longevity guidance, food, Ayurveda, and daily habits for a longer, steadier life.",
-  email: 'thesecondspringofficial@gmail.com',
-  areaServed: 'IN',
-};
-const websiteNode = {
-  '@type': 'WebSite',
-  '@id': `${SITE_URL}/longevity#website`,
-  url: `${SITE_URL}/longevity`,
-  name: 'Life Begins After 40',
-  inLanguage: 'en-IN',
-  publisher: { '@id': `${SITE_URL}/longevity#organization` },
-};
+const orgNode = programOrganizationSchema('longevity');
 const jsonLdGraph = {
   '@context': 'https://schema.org',
-  '@graph': [orgNode, websiteNode, ...pageNodes],
+  '@graph': [organizationSchema(), websiteSchema(), orgNode, ...pageNodes],
 };
 const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
 ---
