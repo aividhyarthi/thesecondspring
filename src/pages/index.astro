@@ -17,15 +17,8 @@ const jsonLd = {
       itemListElement: PROGRAMS.map((program, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        item: {
-          '@type': 'Organization',
-          '@id': `${program.url}#organization`,
-          name: program.name,
-          url: program.url,
-          logo: { '@type': 'ImageObject', url: program.logo },
-          description: program.description,
-          parentOrganization: { '@id': ORG_ID },
-        },
+        item: { '@id': `${program.url}#organization` },
+
       })),
     },
   ],
