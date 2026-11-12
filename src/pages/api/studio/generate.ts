@@ -149,6 +149,9 @@ export const POST: APIRoute = async ({ request }) => {
   } catch (error: any) {
     console.error('[content-studio] generation failed:', error);
     const message = String(error?.message || '');
+    if (message.toLowerCase().includes('credit balance is too low') || message.toLowerCase().includes('insufficient credits')) {
+      return json({ error: 'Your Anthropic API account has run out of prepaid credits. Add API credits in Anthropic Console under Plans & Billing, then try again. This is separate from a Claude Pro or Max subscription.' }, 402);
+    }
     if (message.includes('authentication') || message.includes('invalid x-api-key')) {
       return json({ error: 'The AI service rejected its API key. Please check the ANTHROPIC_API_KEY setting.' }, 502);
     }
