@@ -20,28 +20,27 @@ const title = 'Human Content Studio';
     .brand strong{display:block;font-size:15px;letter-spacing:-.2px}.brand span{display:block;color:#778078;font-size:12px;margin-top:3px}
     .private{font-size:12px;color:#63736a;border:1px solid #dce2d9;border-radius:30px;padding:8px 12px;background:#fff}
     h1{font-family:Georgia,serif;font-size:clamp(34px,5vw,49px);font-weight:500;letter-spacing:-1.7px;margin:0 0 10px}
-    .intro{color:#667169;line-height:1.65;max-width:700px;margin:0 0 27px}
+    .intro{color:#667169;line-height:1.65;max-width:760px;margin:0 0 27px}
     .tabs{display:flex;gap:8px;margin-bottom:18px}.tab{border:1px solid #d9dfd7;background:#fff;color:#526057;border-radius:9px;padding:11px 16px;font-weight:600}.tab.active{background:#244a3b;color:#fff;border-color:#244a3b}
-    .panel{background:#fff;border:1px solid #e4e7e0;border-radius:16px;padding:22px;box-shadow:0 8px 30px rgba(35,49,39,.035)}
+    .panel{background:#fff;border:1px solid #e4e7e0;border-radius:16px;padding:22px;box-shadow:0 8px 30px rgba(35,49,39,.035);margin-bottom:18px}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:15px}.field label{font-size:12px;font-weight:700;color:#4b584f;letter-spacing:.2px}
     input,select,textarea{width:100%;border:1px solid #dfe4dc;border-radius:9px;padding:12px 13px;color:#20251f;background:#fff;outline:none}
     input:focus,select:focus,textarea:focus{border-color:#71917e;box-shadow:0 0 0 3px rgba(113,145,126,.13)}
-    textarea{min-height:150px;resize:vertical;line-height:1.55}.draft{min-height:270px}
+    textarea{min-height:150px;resize:vertical;line-height:1.55}.draft{min-height:260px}.prompt{min-height:360px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
     .hint{font-size:12px;color:#879087;line-height:1.5;margin-top:-4px}
     .checks{display:flex;align-items:center;gap:9px;margin:4px 0 18px;font-size:13px;color:#58645b}.checks input{width:16px;height:16px;accent-color:#244a3b}
     .primary{border:0;border-radius:9px;padding:13px 19px;background:#244a3b;color:white;font-weight:700}.primary:disabled{opacity:.55;cursor:wait}
     .secondary{border:1px solid #dce2d9;border-radius:9px;padding:10px 13px;background:#fff;color:#405047;font-weight:600}
     .status{font-size:13px;color:#6c776e;margin-left:10px}.error{color:#a43d32;background:#fff4f1;border:1px solid #f0d5ce;padding:12px;border-radius:9px;margin:12px 0}
-    .result{margin-top:25px;display:none}.result-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:15px}
-    .result-head h2{font-family:Georgia,serif;font-weight:500;font-size:27px;margin:0}.score{display:inline-flex;align-items:center;gap:8px;border-radius:30px;background:#edf4ee;color:#28523b;padding:8px 12px;font-size:13px;font-weight:700}
-    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:15px}.metric{background:#f7f8f5;border:1px solid #e8ebe5;border-radius:10px;padding:13px}.metric b{display:block;font-size:22px;font-family:Georgia,serif;font-weight:500}.metric span{font-size:11px;color:#748076}
-    .report{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}.report-card{border:1px solid #e7eae4;border-radius:11px;padding:15px}.report-card h3{font-size:13px;margin:0 0 9px}.report-card ul{margin:0;padding-left:18px;color:#657067;font-size:13px;line-height:1.6}
+    .step{display:flex;align-items:center;gap:10px;margin:0 0 14px}.step-num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#eaf0eb;color:#244a3b;font-weight:700}.step h2{font-family:Georgia,serif;font-weight:500;font-size:25px;margin:0}
+    .actions{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:15px 0}.metric{background:#f7f8f5;border:1px solid #e8ebe5;border-radius:10px;padding:13px}.metric b{display:block;font-size:22px;font-family:Georgia,serif;font-weight:500}.metric span{font-size:11px;color:#748076}
+    .report-card{border:1px solid #e7eae4;border-radius:11px;padding:15px;margin:12px 0}.report-card h3{font-size:13px;margin:0 0 9px}.report-card ul{margin:0;padding-left:18px;color:#657067;font-size:13px;line-height:1.7}
     .article{white-space:pre-wrap;line-height:1.72;font-size:14px;max-height:900px;overflow:auto;background:#fbfcfa;border:1px solid #e6eae3;border-radius:11px;padding:20px}
-    .meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}.source-list{font-size:12px;line-height:1.7;color:#68746b;padding-left:20px}
-    .source-list a{color:#315e48;overflow-wrap:anywhere}
+    .meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:15px 0}
     .login-wrap{max-width:420px;margin:10vh auto}.login-wrap .panel{padding:28px}.login-wrap h1{font-size:34px}
     .hidden{display:none!important}.foot{font-size:11px;color:#8b948b;text-align:center;margin-top:28px}
-    @media(max-width:720px){.shell{padding:18px 14px 50px}.grid,.report,.meta-grid{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.panel{padding:16px}.private{display:none}.top{margin-bottom:25px}}
+    @media(max-width:720px){.shell{padding:18px 14px 50px}.grid,.meta-grid{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.panel{padding:16px}.private{display:none}.top{margin-bottom:25px}}
   </style>
 </head>
 <body>
@@ -51,7 +50,6 @@ const title = 'Human Content Studio';
       <div class="private">Private access · Not indexed</div>
       <button id="logout" class="secondary hidden">Sign out</button>
     </header>
-
     <section id="login" class="login-wrap hidden">
       <div class="panel">
         <h1>Welcome back.</h1>
@@ -62,10 +60,9 @@ const title = 'Human Content Studio';
         </form>
       </div>
     </section>
-
     <section id="workspace" class="hidden">
       <h1>Make every article worth reading.</h1>
-      <p class="intro">Research, create or improve an existing draft. The studio checks the evidence, strengthens the editorial voice and prepares the article for your review.</p>
+      <p class="intro">Prepare a detailed writing brief for ChatGPT, improve an existing draft, and run practical editorial checks before publishing. Your existing ChatGPT account does the writing. This studio does not call a paid AI API.</p>
       <div class="tabs">
         <button class="tab active" data-mode="create">Create new content</button>
         <button class="tab" data-mode="humanise">Improve existing draft</button>
@@ -80,59 +77,71 @@ const title = 'Human Content Studio';
           </div>
         </div>
         <div id="topicField" class="field"><label for="topic">TOPIC OR WORKING TITLE</label><input id="topic" placeholder="Example: How perimenopause affects sleep in Indian women" /></div>
-        <div id="draftField" class="field hidden"><label for="draft">PASTE YOUR EXISTING ARTICLE</label><textarea id="draft" class="draft" placeholder="Paste the complete draft you want the studio to improve..."></textarea><div class="hint">The studio will preserve the meaning and important details while improving the editorial construction.</div></div>
+        <div id="draftField" class="field hidden"><label for="draft">PASTE YOUR EXISTING ARTICLE</label><textarea id="draft" class="draft" placeholder="Paste the complete draft you want to improve..."></textarea><div class="hint">The prompt will ask ChatGPT to preserve meaning, facts and useful detail while improving the writing.</div></div>
         <div class="grid">
           <div class="field"><label for="primaryKeyword">PRIMARY KEYWORD</label><input id="primaryKeyword" placeholder="Optional" /></div>
           <div class="field"><label for="secondaryKeywords">SECONDARY KEYWORDS</label><input id="secondaryKeywords" placeholder="Separate with commas" /></div>
         </div>
         <div class="field"><label for="audience">TARGET AUDIENCE (OPTIONAL)</label><input id="audience" placeholder="Who should this article help?" /></div>
-        <div class="field"><label for="brief">ADDITIONAL INSTRUCTIONS</label><textarea id="brief" style="min-height:90px" placeholder="Any angle, questions to answer, sources to include, or details to preserve..."></textarea></div>
-        <label class="checks"><input id="research" type="checkbox" checked /> Research current information and include source references</label>
-        <button id="generate" class="primary" type="submit">Research and create article</button><span id="status" class="status"></span><div id="formError" class="error hidden"></div>
+        <div class="field"><label for="brief">ADDITIONAL INSTRUCTIONS</label><textarea id="brief" style="min-height:90px" placeholder="Angle, questions to answer, sources to prioritise, details to preserve..."></textarea></div>
+        <label class="checks"><input id="research" type="checkbox" checked /> Ask ChatGPT to research current information and provide source links</label>
+        <button id="prepare" class="primary" type="submit">Prepare ChatGPT writing brief</button><span id="status" class="status"></span><div id="formError" class="error hidden"></div>
       </form>
-
-      <section id="result" class="result">
-        <div class="result-head"><h2 id="resultTitle">Your article</h2><div class="score" id="score">Editorial score</div></div>
+      <section id="promptPanel" class="panel hidden">
+        <div class="step"><span class="step-num">1</span><h2>Your ChatGPT brief is ready</h2></div>
+        <p class="intro">Copy this complete instruction, open ChatGPT, paste it into a new chat and ask it to complete the article. For research, use ChatGPT with web search enabled and check the source links it provides.</p>
+        <textarea id="chatPrompt" class="prompt" readonly></textarea>
+        <div class="actions"><button id="copyPrompt" class="primary">Copy brief</button><button id="openChatGPT" class="secondary">Open ChatGPT</button></div>
+      </section>
+      <section id="reviewPanel" class="panel hidden">
+        <div class="step"><span class="step-num">2</span><h2>Bring the finished article back</h2></div>
+        <p class="intro">Paste the article returned by ChatGPT below. The studio will run local checks for length, headings, keyword use, repeated wording and missing SEO basics. Your text stays in this browser page and is not sent to a server.</p>
+        <div class="field"><label for="finishedArticle">CHATGPT ARTICLE / MARKDOWN</label><textarea id="finishedArticle" class="draft" placeholder="Paste the complete article here..."></textarea></div>
+        <div class="actions"><button id="checkArticle" class="primary">Check article quality</button><button id="makeReviewPrompt" class="secondary">Prepare another improvement prompt</button></div>
+      </section>
+      <section id="resultPanel" class="panel hidden">
+        <div class="step"><span class="step-num">3</span><h2>Editorial quality check</h2></div>
         <div class="metrics">
-          <div class="metric"><b id="accuracy">—</b><span>Accuracy and evidence</span></div>
-          <div class="metric"><b id="usefulness">—</b><span>Reader usefulness</span></div>
-          <div class="metric"><b id="originality">—</b><span>Originality and depth</span></div>
-          <div class="metric"><b id="voice">—</b><span>Voice and readability</span></div>
+          <div class="metric"><b id="wordMetric">0</b><span>Word count</span></div>
+          <div class="metric"><b id="headingMetric">0</b><span>Headings</span></div>
+          <div class="metric"><b id="keywordMetric">0</b><span>Primary keyword mentions</span></div>
+          <div class="metric"><b id="readMetric">0</b><span>Average words per sentence</span></div>
         </div>
-        <div class="report">
-          <div class="report-card"><h3>What is working</h3><ul id="strengths"></ul></div>
-          <div class="report-card"><h3>What needs your attention</h3><ul id="issues"></ul></div>
-        </div>
+        <div class="report-card"><h3>Checks to review</h3><ul id="checkList"></ul></div>
         <div class="meta-grid">
-          <div class="field"><label>SEO TITLE</label><input id="seoTitle" readonly /></div>
-          <div class="field"><label>META DESCRIPTION</label><input id="metaDescription" readonly /></div>
+          <div class="field"><label>SEO TITLE SUGGESTION</label><input id="seoTitle" readonly /></div>
+          <div class="field"><label>META DESCRIPTION DRAFT</label><input id="metaDescription" readonly /></div>
           <div class="field"><label>SUGGESTED URL SLUG</label><input id="slug" readonly /></div>
           <div class="field"><label>PRIMARY KEYWORD</label><input id="resultKeyword" readonly /></div>
         </div>
-        <div class="result-head"><h2>Article preview</h2><div><button id="copy" class="secondary">Copy article</button> <button id="download" class="secondary">Download Markdown</button></div></div>
-        <div id="article" class="article"></div>
-        <div class="report-card" style="margin-top:15px"><h3>Sources and references</h3><ul id="sources" class="source-list"></ul></div>
-        <p id="reviewNote" class="hint"></p>
+        <div class="actions"><button id="copyArticle" class="secondary">Copy checked article</button><button id="downloadArticle" class="secondary">Download Markdown</button></div>
+        <div id="articlePreview" class="article"></div>
+        <p class="hint">These are mechanical editorial checks, not a guarantee of factual accuracy, originality, rankings or human authorship. Verify every source and important claim before publication.</p>
       </section>
     </section>
-    <div class="foot">Private editorial workspace. Articles remain drafts until you review and approve them.</div>
+    <div class="foot">Private editorial workspace. Nothing is published automatically. You review and approve every article.</div>
   </main>
 <script>
 (() => {
   const $ = (id) => document.getElementById(id);
   let mode = 'create';
-  let latest = null;
+  let currentArticle = '';
   const login = $('login'), workspace = $('workspace');
   const show = (el) => el.classList.remove('hidden');
   const hide = (el) => el.classList.add('hidden');
-  const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const profiles = {
+    'second-spring': `The Second Spring (www.thesecondspring.org). Audience: Indian women navigating perimenopause, menopause, midlife health and wellbeing. Voice: warm, calm, respectful, clear, practical and evidence-led. Use simple English and Indian context where useful. Health safety: this is health education, not diagnosis or personal medical advice. Never invent medical claims, patient stories, quotations, statistics, clinician endorsements or sources. Do not prescribe or recommend changing medicines. Distinguish established evidence from emerging evidence and traditional practices. Flag high-impact medical claims for qualified clinical review. Avoid attributing every midlife symptom to hormones.`,
+    'rudra-kasturi': `Rudra Kasturi. Audience: Indian business, media, technology, SEO, AI, growth and strategy readers. Voice: direct, conversational, thoughtful, analytical and opinionated when evidence supports it. Use specific examples, clear reasoning, Indian context and practical implications. Avoid generic business jargon and empty motivational language. Distinguish fact, interpretation and opinion.`,
+    southwala: `Southwala. Audience: Indian readers exploring Vastu, homes, traditions and practical living. Voice: accessible, culturally respectful, grounded and practical. Explain traditional Vastu beliefs as traditional frameworks, not scientifically proven laws. Do not create fear, make guaranteed predictions, or recommend expensive remedies as necessities. Distinguish cultural belief, practical design advice and established science.`,
+    general: `General editorial. Voice: clear, engaging, original, reader-first and evidence-led. Follow the brief and intended audience. Avoid generic AI-style filler, repetitive structures and unsupported claims.`
+  };
   const setMode = (next) => {
     mode = next;
     document.querySelectorAll('.tab').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
     $('topicField').classList.toggle('hidden', mode !== 'create');
     $('draftField').classList.toggle('hidden', mode !== 'humanise');
-    $('generate').textContent = mode === 'create' ? 'Research and create article' : 'Improve and humanise draft';
-    $('result').style.display = 'none';
+    $('prepare').textContent = mode === 'create' ? 'Prepare ChatGPT writing brief' : 'Prepare ChatGPT improvement brief';
+    hide($('promptPanel')); hide($('reviewPanel')); hide($('resultPanel'));
   };
   document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
 
@@ -141,13 +150,12 @@ const title = 'Human Content Studio';
       const r = await fetch('/api/studio/session', { cache: 'no-store' });
       const data = await r.json();
       if (!data.configured) {
-        login.innerHTML = '<div class="panel"><h1>One-time setup needed.</h1><p class="intro">The private studio needs its password and AI connection configured in Railway before it can open.</p><p class="hint">Required settings: STUDIO_PASSWORD, STUDIO_SESSION_SECRET and ANTHROPIC_API_KEY.</p></div>';
+        login.innerHTML = '<div class="panel"><h1>One-time setup needed.</h1><p class="intro">The private studio needs its password and session security settings configured in Railway.</p><p class="hint">Required settings: STUDIO_PASSWORD and STUDIO_SESSION_SECRET. No AI API key is needed.</p></div>';
         show(login); return;
       }
       if (data.authenticated) { show(workspace); show($('logout')); } else { show(login); }
     } catch { show(login); }
   }
-
   $('loginForm').addEventListener('submit', async (event) => {
     event.preventDefault(); hide($('loginError'));
     const button = $('loginForm').querySelector('button'); button.disabled = true; button.textContent = 'Checking...';
@@ -159,67 +167,134 @@ const title = 'Human Content Studio';
     } catch (e) { $('loginError').textContent = e.message; show($('loginError')); }
     finally { button.disabled = false; button.textContent = 'Open studio'; }
   });
-
   $('logout').addEventListener('click', async () => {
     await fetch('/api/studio/logout', {method:'POST'});
     hide(workspace); hide($('logout')); show(login);
   });
 
-  $('studioForm').addEventListener('submit', async (event) => {
-    event.preventDefault(); hide($('formError')); $('result').style.display = 'none';
-    const button = $('generate'); button.disabled = true;
-    button.textContent = mode === 'create' ? 'Researching and creating...' : 'Reviewing and improving...';
-    $('status').textContent = 'This may take a minute. Keep this page open.';
-    const payload = {
-      mode, brand:$('brand').value, topic:$('topic').value, draft:$('draft').value,
-      primaryKeyword:$('primaryKeyword').value, secondaryKeywords:$('secondaryKeywords').value,
-      audience:$('audience').value, brief:$('brief').value, wordCount:Number($('wordCount').value),
-      research:$('research').checked
-    };
-    try {
-      const response = await fetch('/api/studio/generate', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-      const data = await response.json();
-      if (response.status === 401) { hide(workspace); hide($('logout')); show(login); throw new Error('Your session expired. Please sign in again.'); }
-      if (!response.ok) throw new Error(data.error || 'The article could not be generated.');
-      latest = data;
-      render(data);
-      $('result').style.display = 'block';
-      $('result').scrollIntoView({behavior:'smooth',block:'start'});
-    } catch (e) { $('formError').textContent = e.message; show($('formError')); }
-    finally { button.disabled = false; button.textContent = mode === 'create' ? 'Research and create article' : 'Improve and humanise draft'; $('status').textContent = ''; }
-  });
+  function buildPrompt() {
+    const brand = $('brand').value;
+    const topic = $('topic').value.trim();
+    const draft = $('draft').value.trim();
+    const keyword = $('primaryKeyword').value.trim();
+    const secondary = $('secondaryKeywords').value.trim();
+    const audience = $('audience').value.trim();
+    const brief = $('brief').value.trim();
+    const words = $('wordCount').value;
+    const research = $('research').checked;
+    if (mode === 'create' && !topic) throw new Error('Enter a topic or working title first.');
+    if (mode === 'humanise' && !draft) throw new Error('Paste the existing article first.');
+    const task = mode === 'create'
+      ? 'Create a complete, original, useful article from the topic. Build a clear angle and structure. Do not copy competitor pages.'
+      : 'Edit and humanise the existing draft. Preserve its intended meaning, important facts, useful detail and coverage. Do not shorten it merely to make it sound different. Explain substantial changes and flag any claim that cannot be verified.';
+    return `You are the senior research editor and content quality lead for my private editorial workspace.
 
-  function render(data) {
-    const report = data.editorial_report || {}, scores = report.scores || {};
-    $('resultTitle').textContent = data.title || 'Your article';
-    $('score').textContent = 'Editorial quality: ' + (report.overall_score ?? 'Not scored') + '/100';
-    $('accuracy').textContent = scores.accuracy_and_evidence ?? '—';
-    $('usefulness').textContent = scores.reader_usefulness ?? '—';
-    $('originality').textContent = scores.originality_and_depth ?? '—';
-    $('voice').textContent = scores.voice_and_readability ?? '—';
-    $('seoTitle').value = data.seo_title || '';
-    $('metaDescription').value = data.meta_description || '';
-    $('slug').value = data.suggested_slug || '';
-    $('resultKeyword').value = data.primary_keyword || '';
-    $('article').textContent = data.article_markdown || '';
-    $('strengths').innerHTML = (report.strengths || []).map(x => '<li>'+escapeHtml(x)+'</li>').join('') || '<li>No strengths supplied.</li>';
-    $('issues').innerHTML = (report.issues_to_review || []).map(x => '<li><b>'+escapeHtml(x.severity)+':</b> '+escapeHtml(x.issue)+' '+escapeHtml(x.recommendation)+'</li>').join('') || '<li>No outstanding issues reported.</li>';
-    $('sources').innerHTML = (data.sources || []).map(x => '<li><a href="'+escapeHtml(x.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(x.title || x.url)+'</a> '+escapeHtml(x.publisher || '')+'</li>').join('') || '<li>No sources were returned. Check research notes before publication.</li>';
-    const notes = [...(report.review_notes || [])];
-    if (report.clinical_or_subject_expert_review_required) notes.unshift('Expert review is required before publication.');
-    $('reviewNote').textContent = notes.join(' ');
+EDITORIAL PROFILE
+${profiles[brand]}
+
+TASK
+${task}
+
+CONTENT BRIEF
+Topic or working title: ${topic || 'Improve the supplied draft'}
+Primary keyword: ${keyword || 'Choose the most relevant phrase based on the subject'}
+Secondary keywords: ${secondary || 'Identify naturally relevant supporting terms'}
+Audience: ${audience || 'Use the selected editorial profile'}
+Target length: approximately ${words} words. Do not add filler to reach the number.
+Additional instructions: ${brief || 'No additional instructions'}
+Fresh research requested: ${research ? 'Yes. Use ChatGPT web search where available. Prefer primary research, official guidance, peer-reviewed research and recognised institutions. Provide working source links and connect each important claim to its source.' : 'No. Do not claim fresh research was performed. Clearly flag claims that need verification.'}
+
+EDITORIAL RULES
+1. Write in simple, natural English. Vary sentence length and paragraph structure because the ideas require it.
+2. Avoid formulaic openings, repetitive section templates, generic transitions, inflated conclusions and empty filler.
+3. Add specific examples only when factual and sourced, or clearly label them as hypothetical. Never invent first-person experience, patient stories, quotations, statistics or case studies.
+4. Explain context, implications, trade-offs and practical next steps. Make the article genuinely useful to the reader.
+5. Check for unsupported claims, repetition, contradictions, missing context and safety issues.
+6. Optimise for search intent and answer usefulness without keyword stuffing.
+7. Do not attempt to evade AI detectors or promise a detector score. The goal is authentic editorial quality.
+8. Do not invent sources or citations. If a source cannot be verified, say so.
+9. Return the complete article, not an outline or summary.
+
+OUTPUT FORMAT
+Return the complete article in Markdown, followed by:
+SEO title:
+Meta description:
+Suggested URL slug:
+Primary keyword:
+Secondary keywords:
+Editorial review: list strengths, factual claims needing verification, missing context and any expert review needed.
+Sources: list source title, publisher, date and direct URL. Only include sources actually consulted.
+
+${mode === 'humanise' ? 'EXISTING DRAFT\n---\n' + draft + '\n---' : 'TOPIC\n' + topic}`;
   }
 
-  $('copy').addEventListener('click', async () => {
-    if (!latest) return;
-    await navigator.clipboard.writeText(latest.article_markdown || '');
-    $('copy').textContent = 'Copied'; setTimeout(() => $('copy').textContent = 'Copy article', 1500);
+  $('studioForm').addEventListener('submit', (event) => {
+    event.preventDefault(); hide($('formError'));
+    try {
+      $('chatPrompt').value = buildPrompt();
+      show($('promptPanel')); show($('reviewPanel')); hide($('resultPanel'));
+      $('promptPanel').scrollIntoView({behavior:'smooth',block:'start'});
+    } catch (e) { $('formError').textContent = e.message; show($('formError')); }
   });
-  $('download').addEventListener('click', () => {
-    if (!latest) return;
-    const blob = new Blob([latest.article_markdown || ''], {type:'text/markdown;charset=utf-8'});
+  $('copyPrompt').addEventListener('click', async () => {
+    await navigator.clipboard.writeText($('chatPrompt').value);
+    $('copyPrompt').textContent = 'Copied'; setTimeout(() => $('copyPrompt').textContent = 'Copy brief', 1500);
+  });
+  $('openChatGPT').addEventListener('click', () => window.open('https://chatgpt.com/', '_blank', 'noopener,noreferrer'));
+
+  function runChecks() {
+    const article = $('finishedArticle').value.trim();
+    if (!article) { alert('Paste the finished article first.'); return; }
+    currentArticle = article;
+    const plain = article.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/[#>*_`~]/g, ' ');
+    const words = plain.match(/[\p{L}\p{N}]+(?:['’.-][\p{L}\p{N}]+)*/gu) || [];
+    const sentences = plain.split(/[.!?]+/).map(s => s.trim()).filter(Boolean);
+    const headings = (article.match(/^#{1,6}\s+.+$/gm) || []);
+    const keyword = $('primaryKeyword').value.trim();
+    const keywordCount = keyword ? (plain.toLowerCase().split(keyword.toLowerCase()).length - 1) : 0;
+    const avg = sentences.length ? (words.length / sentences.length) : 0;
+    $('wordMetric').textContent = words.length.toLocaleString();
+    $('headingMetric').textContent = headings.length;
+    $('keywordMetric').textContent = keywordCount;
+    $('readMetric').textContent = avg.toFixed(1);
+    const checks = [];
+    if (words.length < Number($('wordCount').value) * 0.65) checks.push('The article is substantially shorter than the requested length. Check whether important coverage is missing.');
+    if (!/^#\s+/m.test(article)) checks.push('No main Markdown title was detected. Add one clear H1 title.');
+    if (headings.length < 3) checks.push('Few section headings were detected. Check whether the article is easy to scan.');
+    if (keyword && keywordCount === 0) checks.push('The primary keyword does not appear in the article. Use it only if it fits naturally.');
+    if (avg > 25) checks.push('Average sentence length is high. Review long sentences for clarity.');
+    if (avg > 0 && avg < 8) checks.push('Average sentence length is unusually short. Check whether the writing feels choppy.');
+    if (!/https?:\/\//i.test(article)) checks.push('No source URLs were detected in the pasted article. Add and verify sources if the subject requires evidence.');
+    const repeated = words.map(w => w.toLowerCase()).filter(w => w.length > 5).reduce((acc,w) => (acc[w]=(acc[w]||0)+1,acc), {});
+    const repeats = Object.entries(repeated).filter(([,n]) => n >= 12).sort((a,b) => b[1]-a[1]).slice(0,5);
+    if (repeats.length) checks.push('Potentially overused words: ' + repeats.map(([w,n]) => w + ' (' + n + ')').join(', ') + '. Check whether repetition is justified.');
+    if (!checks.length) checks.push('No basic structural warning was found. This is not a factual or source verification.');
+    $('checkList').innerHTML = checks.map(x => '<li>' + x.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])) + '</li>').join('');
+    const title = $('topic').value.trim() || (headings[0] || '').replace(/^#\s*/, '') || 'Article';
+    const slug = title.toLowerCase().normalize('NFKD').replace(/[^\p{L}\p{N}]+/gu,'-').replace(/^-|-$/g,'');
+    $('seoTitle').value = title.slice(0,60);
+    $('metaDescription').value = (plain.replace(/\s+/g,' ').trim().slice(0,155));
+    $('slug').value = slug;
+    $('resultKeyword').value = keyword;
+    $('articlePreview').textContent = article;
+    show($('resultPanel')); $('resultPanel').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  $('checkArticle').addEventListener('click', runChecks);
+  $('makeReviewPrompt').addEventListener('click', () => {
+    const article = $('finishedArticle').value.trim();
+    if (!article) { alert('Paste the finished article first.'); return; }
+    const prompt = `Act as a rigorous senior editor. Improve the article below for clarity, natural voice, accuracy, usefulness and structure. Preserve facts and meaning. Do not invent sources or statistics. Verify important current claims with web search where available and include direct source URLs. Flag uncertainty instead of guessing. Follow this editorial profile: ${profiles[$('brand').value]}. Return the complete revised article in Markdown, then SEO title, meta description, URL slug, primary and secondary keywords, and a short editorial note listing changes and unresolved fact checks. Do not claim to have checked facts unless you actually did.\n\nARTICLE:\n---\n${article}\n---`;
+    $('chatPrompt').value = prompt; show($('promptPanel')); $('promptPanel').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  $('copyArticle').addEventListener('click', async () => {
+    await navigator.clipboard.writeText(currentArticle);
+    $('copyArticle').textContent = 'Copied'; setTimeout(() => $('copyArticle').textContent = 'Copy checked article', 1500);
+  });
+  $('downloadArticle').addEventListener('click', () => {
+    const slug = $('slug').value || 'article';
+    const blob = new Blob([currentArticle], {type:'text/markdown;charset=utf-8'});
     const url = URL.createObjectURL(blob), a = document.createElement('a');
-    a.href = url; a.download = (latest.suggested_slug || 'article') + '.md'; a.click(); URL.revokeObjectURL(url);
+    a.href = url; a.download = slug + '.md'; a.click(); URL.revokeObjectURL(url);
   });
   checkSession();
 })();
