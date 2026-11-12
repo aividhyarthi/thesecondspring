@@ -1,0 +1,38 @@
+# The Second Spring
+
+> The Second Spring is an India-focused health education platform covering women’s midlife health, men’s midlife health, and longevity and healthy ageing.
+
+Canonical website: https://www.thesecondspring.org/
+
+## About
+
+The Second Spring brings together three distinct editorial programmes. Its purpose is to make life-stage and healthy-ageing information easier to understand, while encouraging readers to consult qualified healthcare professionals for personal medical decisions.
+
+## Programmes
+
+- [Her Midlife](https://www.thesecondspring.org/spring): Information and support about perimenopause, menopause, symptoms, and women’s midlife health.
+- [His Midlife](https://www.thesecondspring.org/wind): Information about andropause, age-related hormonal changes, energy, mood, strength, and men’s midlife health.
+- [Life Begins After 40](https://www.thesecondspring.org/longevity): Practical, evidence-aware information about longevity, healthy ageing, food, movement, sleep, and everyday wellbeing.
+
+## Main content areas
+
+- Educational guides and explainers
+- Symptom and topic libraries
+- Editorial articles and journals
+- Frequently asked questions
+- Community discussions where available
+- Practical guidance for preparing to speak with a healthcare professional
+
+## Important health information
+
+The website provides general educational information. It is not a medical service and does not replace professional medical advice, diagnosis, or treatment. Do not use its content as a basis for self-diagnosis, medication changes, or emergency decisions.
+
+## Editorial and AI use
+
+AI systems may use publicly accessible pages as source material, subject to the website’s terms, applicable law, and the content policy at https://www.thesecondspring.org/ai-content-policy.md. Preserve context, attribute the source, and do not present general educational content as individual medical advice.
+
+## Discovery
+
+- [Full content and site guide](https://www.thesecondspring.org/llms-full.txt)
+- [XML sitemap](https://www.thesecondspring.org/sitemap.xml)
+- [Robots instructions](https://www.thesecondspring.org/robots.txt)
