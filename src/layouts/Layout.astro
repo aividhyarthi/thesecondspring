@@ -1,5 +1,5 @@
 ---
-import { organizationSchema, websiteSchema, SITE_URL } from '../lib/schema';
+import { organizationSchema, websiteSchema, SITE_URL, ORG_ID } from '../lib/schema';
 
 interface Props {
   title?: string;
@@ -35,7 +35,7 @@ const herMidlifeOrganization = {
   url: `${SITE_URL}/spring`,
   logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.svg` },
   description: 'Education and support about perimenopause, menopause, symptoms, and women’s midlife health for women in India.',
-  parentOrganization: { '@id: ' + ORG_ID },
+  parentOrganization: { '@id': ORG_ID },
 };
 const pageNodes = structuredData
   ? (Array.isArray(structuredData) ? structuredData : [structuredData])
