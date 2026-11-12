@@ -1,5 +1,5 @@
 ---
-import { organizationSchema, SITE_URL, ORG_ID } from '../lib/schema';
+const SITE_URL = 'https://www.thesecondspring.org';
 
 interface Props {
   title?: string;
@@ -32,8 +32,7 @@ const orgNode = {
   name: 'Life Begins After 40',
   url: `${SITE_URL}/longevity`,
   logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-longevity.svg` },
-  description: "Practical, evidence-aware information about longevity, healthy ageing, food, movement, sleep, and everyday wellbeing.",
-  parentOrganization: { '@id': ORG_ID },
+  description: "Practical, India-rooted longevity guidance, food, Ayurveda, and daily habits for a longer, steadier life.",
   email: 'thesecondspringofficial@gmail.com',
   areaServed: 'IN',
 };
@@ -47,7 +46,7 @@ const websiteNode = {
 };
 const jsonLdGraph = {
   '@context': 'https://schema.org',
-  '@graph': [organizationSchema(), orgNode, websiteNode, ...pageNodes],
+  '@graph': [orgNode, websiteNode, ...pageNodes],
 };
 const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
 ---
