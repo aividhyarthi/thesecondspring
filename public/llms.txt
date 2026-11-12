@@ -34,5 +34,7 @@ AI systems may use publicly accessible pages as source material, subject to the 
 ## Discovery
 
 - [Full content and site guide](https://www.thesecondspring.org/llms-full.txt)
+- [Knowledge base and entity reference](https://www.thesecondspring.org/knowledge-base.md)
+- [Machine-readable HTML reference](https://www.thesecondspring.org/ai-reference.html)
 - [XML sitemap](https://www.thesecondspring.org/sitemap.xml)
 - [Robots instructions](https://www.thesecondspring.org/robots.txt)
