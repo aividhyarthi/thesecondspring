@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { CATEGORIES } from '../lib/blog-categories';
+import { authorUrl, isNamedAuthor } from '../lib/schema';
 
 const SITE = 'https://www.thesecondspring.org';
 
@@ -162,6 +163,20 @@ export const GET: APIRoute = async () => {
       lastmod: formatDate(entry.data.date),
       changefreq: 'monthly',
       priority: '0.6',
+    });
+  }
+
+  // Author profile pages (Person entities referenced from article schema)
+  const authorNames = new Set<string>();
+  for (const p of [...posts, ...windPosts, ...longevityPosts]) {
+    if (isNamedAuthor(p.data.author)) authorNames.add(p.data.author);
+  }
+  xml += urlEntry(`${SITE}/authors`, { lastmod: today, changefreq: 'monthly', priority: '0.5' });
+  for (const name of [...authorNames].sort()) {
+    xml += urlEntry(`${SITE}${authorUrl(name)}`, {
+      lastmod: today,
+      changefreq: 'monthly',
+      priority: '0.5',
     });
   }
 
