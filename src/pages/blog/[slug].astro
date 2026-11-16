@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import { abs, articleSchema, authorUrl, breadcrumbSchema, countWords, faqSchema, isNamedAuthor, parseFaqFromBody } from '../../lib/schema';
+import { abs, articleSchema, breadcrumbSchema, countWords, faqSchema, parseFaqFromBody } from '../../lib/schema';
 import { findRelated, VERTICAL_META } from '../../lib/blog-related';
 import { WOMEN_TOPICS, pickPostGroups } from '../../lib/interlink-topics';
 
@@ -34,7 +34,6 @@ const faqs = parseFaqFromBody(post.body);
 // ─── Structured data ───
 const postUrl = `/blog/${post.slug}`;
 const mdUrl = abs(`${postUrl}.md`);
-const named = isNamedAuthor(post.data.author);
 const structuredData = [
   articleSchema({
     title: post.data.title,
@@ -69,8 +68,7 @@ const structuredData = [
   modifiedTime={(post.data.updatedDate ?? post.data.pubDate).toISOString()}
   section={post.data.tags?.[0]}
   tags={post.data.tags}
-  author={named ? post.data.author : undefined}
-  authorUrl={named ? abs(authorUrl(post.data.author)) : undefined}
+  author={post.data.author}
   markdownUrl={mdUrl}
 >
 
@@ -92,9 +90,7 @@ const structuredData = [
       <div class="post-byline">
         <div class="author-avatar">{post.data.author.charAt(0).toUpperCase()}</div>
         <div class="author-info">
-          {named
-            ? <a class="author-name" href={authorUrl(post.data.author)} rel="author">{post.data.author}</a>
-            : <span class="author-name">{post.data.author}</span>}
+          <span class="author-name">{post.data.author}</span>
           <span class="author-meta">
             <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
             {post.data.updatedDate && (<> · Updated <time datetime={post.data.updatedDate.toISOString()}>{formatDate(post.data.updatedDate)}</time></>)}
@@ -233,8 +229,6 @@ const structuredData = [
   .author-info { display: flex; flex-direction: column; gap: .15rem; }
   .author-name { font-size: .88rem; font-weight: 700; color: #fff; }
   .author-meta { font-size: .78rem; color: rgba(255,255,255,.55); }
-  a.author-name { text-decoration: none; }
-  a.author-name:hover { text-decoration: underline; }
 
   /* ── ARTICLE LAYOUT ── */
   .post-body-section { padding: 4rem 0 5rem; background: #fff; }

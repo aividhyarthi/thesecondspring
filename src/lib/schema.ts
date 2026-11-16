@@ -108,6 +108,51 @@ export function breadcrumbSchema(items: Crumb[]) {
   };
 }
 
+export function countWords(text: string): number {
+  const t = (text || '').replace(/<[^>]*>/g, ' ').replace(/[#*_>`|\-]+/g, ' ').trim();
+  return t ? t.split(/\s+/).length : 0;
+}
+
+/** "8 min read" -> "PT8M" (ISO 8601 duration for schema.org timeRequired). */
+export function readTimeToIso(readTime?: string): string | undefined {
+  const m = /(\d+)\s*min/i.exec(readTime || '');
+  return m ? `PT${m[1]}M` : undefined;
+}
+
+export interface ArticleExtrasInput {
+  wordCount?: number;
+  readTime?: string;
+  /** Absolute or site-relative URL of the plain-Markdown twin of the article. */
+  markdownUrl?: string;
+  keywords?: string[];
+}
+
+/** Extra Article properties that help answer engines: size, time to read, topics, speakable parts, Markdown twin. */
+export function articleExtras(o: ArticleExtrasInput) {
+  const timeRequired = readTimeToIso(o.readTime);
+  return {
+    ...(o.wordCount ? { wordCount: o.wordCount } : {}),
+    ...(timeRequired ? { timeRequired } : {}),
+    ...(o.keywords && o.keywords.length
+      ? { about: o.keywords.slice(0, 3).map((k) => ({ '@type': 'Thing', name: k })) }
+      : {}),
+    ...(o.markdownUrl
+      ? {
+          encoding: {
+            '@type': 'MediaObject',
+            contentUrl: abs(o.markdownUrl),
+            encodingFormat: 'text/markdown',
+          },
+        }
+      : {}),
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.post-title', '.post-desc'],
+    },
+    isAccessibleForFree: true,
+  };
+}
+
 export interface ArticleInput {
   title: string;
   description: string;
@@ -118,6 +163,9 @@ export interface ArticleInput {
   authorName?: string;
   section?: string;
   keywords?: string[];
+  wordCount?: number;
+  readTime?: string;
+  markdownUrl?: string;
 }
 
 export function articleSchema(a: ArticleInput) {
@@ -134,6 +182,12 @@ export function articleSchema(a: ArticleInput) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': abs(a.url) },
     ...(a.section ? { articleSection: a.section } : {}),
     ...(a.keywords && a.keywords.length ? { keywords: a.keywords.join(', ') } : {}),
+    ...articleExtras({
+      wordCount: a.wordCount,
+      readTime: a.readTime,
+      markdownUrl: a.markdownUrl,
+      keywords: a.keywords,
+    }),
     isPartOf: { '@id': SITE_ID },
     inLanguage: 'en-IN',
   };

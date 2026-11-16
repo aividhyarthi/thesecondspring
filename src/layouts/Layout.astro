@@ -10,6 +10,15 @@ interface Props {
   structuredData?: any;
   /** Override the canonical URL (defaults to the current path on the canonical domain). */
   canonical?: string;
+  /** Article-level signals (post pages only). */
+  ogType?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  author?: string;
+  /** Absolute URL of the plain-Markdown twin of this page. */
+  markdownUrl?: string;
 }
 
 const {
@@ -18,6 +27,13 @@ const {
   image = 'https://thesecondspring.org/og-default.jpg',
   structuredData,
   canonical,
+  ogType = 'website',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  author,
+  markdownUrl,
 } = Astro.props;
 
 const path = Astro.url.pathname;
@@ -51,15 +67,25 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Her Midlife" />
+    <meta property="og:locale" content="en_IN" />
     <meta property="og:image" content={image} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={image} />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:url" content={canonicalUrl} />
+    {author && <meta name="author" content={author} />}
+    {ogType === 'article' && publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {ogType === 'article' && modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {ogType === 'article' && section && <meta property="article:section" content={section} />}
+    {ogType === 'article' && tags.map((t) => <meta property="article:tag" content={t} />)}
+    {markdownUrl && <link rel="alternate" type="text/markdown" href={markdownUrl} />}
+    <link rel="alternate" type="application/rss+xml" title="The Second Spring" href="/rss.xml" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
     <script type="application/ld+json" set:html={jsonLd} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

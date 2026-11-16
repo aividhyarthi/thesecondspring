@@ -3,7 +3,7 @@ import Layout from '../../../layouts/LayoutLongevity.astro';
 import { getCollection } from 'astro:content';
 import { findRelated, VERTICAL_META } from '../../../lib/blog-related';
 import { LONGEVITY_TOPICS, pickPostGroups } from '../../../lib/interlink-topics';
-import { abs, articleSchema, authorUrl, countWords, faqSchema, isNamedAuthor, parseFaqFromBody } from '../../../lib/schema';
+import { abs, articleExtras, countWords, faqSchema, parseFaqFromBody } from '../../../lib/schema';
 
 const SITE_URL = 'https://www.thesecondspring.org';
 const now = new Date();
@@ -31,28 +31,34 @@ const related = findRelated(post, 'longevity', {
 
 const interlinkGroups = pickPostGroups(LONGEVITY_TOPICS, post.data.tags);
 const faqs = parseFaqFromBody(post.body);
-const named = isNamedAuthor(post.data.author);
+const isNamedAuthor = post.data.author && post.data.author !== 'Journal Desk';
 
 const postUrl = `/longevity/blog/${post.slug}`;
 const mdUrl = abs(`${postUrl}.md`);
 const structuredData = [
-  articleSchema({
-    title: post.data.title,
+  {
+    '@type': 'BlogPosting',
+    '@id': `${SITE_URL}${postUrl}#article`,
+    headline: post.data.title,
     description: post.data.description,
-    url: postUrl,
-    image: post.data.image,
+    ...(post.data.image ? { image: [post.data.image] } : {}),
     datePublished: post.data.pubDate.toISOString(),
     dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
-    authorName: post.data.author,
-    section: post.data.tags?.[0],
-    keywords: post.data.tags,
-    wordCount: countWords(post.body),
-    readTime: post.data.readTime,
-    markdownUrl: mdUrl,
-    publisherId: `${SITE_URL}/longevity#organization`,
-    siteId: `${SITE_URL}/longevity#website`,
-    fallbackAuthor: { name: 'Life Begins After 40', url: `${SITE_URL}/longevity` },
-  }),
+    author: isNamedAuthor
+      ? { '@type': 'Person', name: post.data.author }
+      : { '@type': 'Organization', name: 'Life Begins After 40', url: `${SITE_URL}/longevity` },
+    publisher: { '@id': `${SITE_URL}/longevity#organization` },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}${postUrl}` },
+    ...(post.data.tags?.length ? { keywords: post.data.tags.join(', ') } : {}),
+    ...articleExtras({
+      wordCount: countWords(post.body),
+      readTime: post.data.readTime,
+      markdownUrl: mdUrl,
+      keywords: post.data.tags,
+    }),
+    isPartOf: { '@id': `${SITE_URL}/longevity#website` },
+    inLanguage: 'en-IN',
+  },
   {
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -75,8 +81,7 @@ const structuredData = [
   modifiedTime={(post.data.updatedDate ?? post.data.pubDate).toISOString()}
   section={post.data.tags?.[0]}
   tags={post.data.tags}
-  author={named ? post.data.author : undefined}
-  authorUrl={named ? abs(authorUrl(post.data.author)) : undefined}
+  author={post.data.author}
   markdownUrl={mdUrl}
 >
 
@@ -95,14 +100,12 @@ const structuredData = [
       <h1 class="post-title">{post.data.title}</h1>
       <p class="post-desc">{post.data.description}</p>
       <div class="post-byline">
-        {named
-          ? <a class="author-name" href={authorUrl(post.data.author)} rel="author">{post.data.author}</a>
-          : <span class="author-name">{post.data.author}</span>}
+        <span class="author-name">{post.data.author}</span>
         <span class="author-meta">
-          · <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
-          {post.data.updatedDate && (<> · Updated <time datetime={post.data.updatedDate.toISOString()}>{formatDate(post.data.updatedDate)}</time></>)}
-          · {post.data.readTime}
-        </span>
+            · <time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time>
+            {post.data.updatedDate && (<> · Updated <time datetime={post.data.updatedDate.toISOString()}>{formatDate(post.data.updatedDate)}</time></>)}
+            · {post.data.readTime}
+          </span>
       </div>
     </div>
   </section>
@@ -148,7 +151,7 @@ const structuredData = [
       </div>
 
       <div class="post-footer">
-        <p class="pf-byline">Written by <strong>{named ? <a href={authorUrl(post.data.author)} rel="author" style="color:inherit">{post.data.author}</a> : post.data.author}</strong></p>
+        <p class="pf-byline">Written by <strong>{post.data.author}</strong></p>
         <div class="pf-disclaimer">
           <p>⚕️ <strong>Medical disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified doctor for personal medical guidance.</p>
         </div>
@@ -191,8 +194,6 @@ const structuredData = [
   .post-desc { font-size: 1.02rem; color: rgba(255,255,255,.78); line-height: 1.7; margin-bottom: 1.25rem; }
   .author-name { font-size: .88rem; font-weight: 700; color: #fff; margin-right: .3rem; }
   .author-meta { font-size: .82rem; color: rgba(255,255,255,.6); }
-  a.author-name { text-decoration: none; }
-  a.author-name:hover { text-decoration: underline; }
 
   .post-body-section { padding: 4rem 0 5rem; background: #fff; }
   .post-layout { display: grid; grid-template-columns: 1fr 290px; gap: 4rem; align-items: start; }
