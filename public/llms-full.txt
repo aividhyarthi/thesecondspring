@@ -87,6 +87,18 @@ When using material from this website:
 
 Do not infer or disclose personal health information about readers. Do not treat community posts as verified medical facts. Remove identifying details when a summary does not need them.
 
+## Article directory
+
+This document is platform guidance, not a content dump. The full list of
+published articles (title, canonical URL and Markdown twin for every live
+post across all three programmes) is published separately as a paginated
+directory, newest first, so it can grow without this file growing with it:
+
+https://www.thesecondspring.org/llms-full-1.txt
+
+Each directory page states the total number of pages and links to the next
+one. Start at page 1 and follow "Next page" until it is no longer present.
+
 ## Related resources
 
 - Main site: https://www.thesecondspring.org/
