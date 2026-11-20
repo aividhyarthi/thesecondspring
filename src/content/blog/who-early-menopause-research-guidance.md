@@ -73,3 +73,10 @@ Seek medical assessment rather than self-diagnosing. Irregular periods or hot fl
 
 1. World Health Organization. *Early menopause: Why better research and global guidance matter for women's health*. 16 October 2026. https://www.who.int/news/item/16-10-2026-early-menopause--why-better-research-and-global-guidance-matter-for-women-s-health
 2. World Health Organization. *Menopause* fact sheet. https://www.who.int/news-room/fact-sheets/detail/menopause
+
+
+---
+
+### Source disclaimer
+
+This article is based on a feature and interview published by the World Health Organization (WHO). The Second Spring did not conduct the interview, provide the personal account or develop a new clinical guideline. The article discusses the experiences described in the WHO feature and the research and care gaps highlighted there. For the original account and further details, please read the [WHO feature on early menopause](https://www.who.int/news/item/16-10-2026-early-menopause--why-better-research-and-global-guidance-matter-for-women-s-health) and the [WHO menopause fact sheet](https://www.who.int/news-room/fact-sheets/detail/menopause).
