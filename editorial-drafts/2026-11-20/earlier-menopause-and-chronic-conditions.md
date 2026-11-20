@@ -69,4 +69,8 @@ Primary paper: Dai T-M, Yuan J, Ma Y-Y, Liu J-J. "Earlier age at menopause is as
 
 Full text: https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1899024/full
 
-**Clinical review required:** Check the paper's definitions of menopause age and multimorbidity, and retain the distinction between association and causation.
+---
+
+### Research source disclaimer
+
+This article reports and explains findings from the study published in *Frontiers in Public Health*. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. For the full paper, including its methods, cohort details, findings and limitations, please read the [original research publication](https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1899024/full).
