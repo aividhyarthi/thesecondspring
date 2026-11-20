@@ -84,3 +84,10 @@ Keep a short record of changes in your menstrual dates, flow or cycle length, sl
 1. American College of Osteopathic Obstetricians and Gynecologists. “Too Young” and “Just Aging”: What Women Hear When They Raise Perimenopause. Posted 2 November 2026. https://www.acoog.org/news/what-women-hear-when-they-raise-perimenopause
 2. ThisIsMenopause survey information: https://www.thisismenopause.com/
 3. World Health Organization. Menopause fact sheet: https://www.who.int/news-room/fact-sheets/detail/menopause
+
+
+---
+
+### Source disclaimer
+
+This article reports and explains findings from an online survey conducted by ThisIsMenopause and summarised by the American College of Osteopathic Obstetricians and Gynecologists (ACOOG). The Second Spring did not conduct the survey, recruit respondents, collect or analyse the responses, or take part in the research. The findings reflect the experiences of the survey respondents and should not be treated as representative of all women in the United States or India. For the original summary and further details, please read the [ACOOG report](https://www.acoog.org/news/what-women-hear-when-they-raise-perimenopause) and the [ThisIsMenopause website](https://www.thisismenopause.com/).
