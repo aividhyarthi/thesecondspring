@@ -1,15 +1,12 @@
 ---
 title: "Why Sleep Matters More as We Age: New Research on the Brain's Night-Time Clearance System"
 description: "MIT researchers reported age-related changes in the brain's waste-clearance processes during sleep. The work adds to sleep research but does not prove that a particular sleep routine prevents dementia."
-plannedPublishDate: "2026-11-29"
-editorialStatus: "draft"
+pubDate: 2026-11-20T09:00:00Z
 author: "Editorial Desk"
 tags: ["longevity", "sleep", "brain health", "healthy ageing", "India"]
-evidenceType: "Preclinical/mechanistic research; verify original paper"
-sourcePublished: "2026-11-18"
+readTime: "4 min read"
+featured: false
 ---
-
-# Why Sleep Matters More as We Age: New Research on the Brain's Night-Time Clearance System
 
 Sleep is not simply a period when the body switches off. During sleep, the brain changes its activity, and several processes involved in maintaining brain tissue and clearing waste products continue to work.
 
@@ -61,16 +58,13 @@ This research does not establish that. Sleep and dementia are connected in compl
 
 Not without considering the cause of the sleep problem and checking safety with a clinician. Supplements can interact with medicines and are not suitable for everyone.
 
----
+## Sources
 
-### Editorial source notes
-
-MIT research coverage, 18 November 2026: "MIT Discovers That Aging Weakens the Brain's Nighttime Cleaning System."
-
-News roundup: https://www.sciencedaily.com/news/health_medicine/healthy_aging/
+1. MIT research coverage, 18 November 2026: "MIT Discovers That Aging Weakens the Brain's Nighttime Cleaning System." https://news.mit.edu/2026/waste-clearing-waves-in-brain-during-sleep-are-impaired-in-older-adults-1113
+2. Peer-reviewed paper (*Nature Aging*): https://www.nature.com/articles/s43587-026-01270-4
 
 ---
 
-### Research source disclaimer
+### Source disclaimer
 
 This article reports and explains findings from research conducted by MIT researchers and published in *Nature Aging*. The Second Spring did not conduct this study, recruit participants, collect or analyse the data, or take part in the research. For the original findings, methods, participant details and limitations, please read the [peer-reviewed research paper](https://www.nature.com/articles/s43587-026-01270-4) and the [MIT News report](https://news.mit.edu/2026/waste-clearing-waves-in-brain-during-sleep-are-impaired-in-older-adults-1113).

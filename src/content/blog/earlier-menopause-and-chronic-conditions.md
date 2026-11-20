@@ -1,15 +1,12 @@
 ---
 title: "Earlier Menopause and Long-Term Health: What a Study of Three Countries Found"
 description: "A study pooling data from 6,576 women in the United States, England and Mexico found an association between menopause before 46 and later multiple chronic conditions. It is a risk signal, not a diagnosis."
-plannedPublishDate: "2026-11-25"
-editorialStatus: "draft"
+pubDate: 2026-11-20T05:00:00Z
 author: "Editorial Desk"
 tags: ["menopause", "women's health", "healthy ageing", "chronic conditions", "India"]
-evidenceType: "Harmonised longitudinal cohort analysis"
-sourcePublished: "2026-11-16"
+readTime: "4 min read"
+featured: false
 ---
-
-# Earlier Menopause and Long-Term Health: What a Study of Three Countries Found
 
 For some women, menopause arrives earlier than expected. It may happen naturally, or it may follow surgery or medical treatment. A new study suggests that the age at which natural menopause occurs may offer doctors one clue about a woman's health later in life.
 
@@ -61,16 +58,13 @@ No. The study found an association with a combined outcome of multiple chronic c
 
 They should discuss an appropriate preventive health plan with a clinician. The checks depend on age, symptoms, family history and existing health conditions.
 
----
+## Sources
 
-### Editorial source notes
-
-Primary paper: Dai T-M, Yuan J, Ma Y-Y, Liu J-J. "Earlier age at menopause is associated with incident multimorbidity during later-life follow-up: a harmonized longitudinal analysis of three aging cohorts." *Frontiers in Public Health*. Published 16 November 2026. DOI: 10.3389/fpubh.2026.1899024.
-
-Full text: https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1899024/full
+1. Dai T-M, Yuan J, Ma Y-Y, Liu J-J. "Earlier age at menopause is associated with incident multimorbidity during later-life follow-up: a harmonized longitudinal analysis of three aging cohorts." *Frontiers in Public Health*. Published 16 November 2026. DOI: 10.3389/fpubh.2026.1899024.
+2. Full text: https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1899024/full
 
 ---
 
-### Research source disclaimer
+### Source disclaimer
 
 This article reports and explains findings from the study published in *Frontiers in Public Health*. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. For the full paper, including its methods, cohort details, findings and limitations, please read the [original research publication](https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1899024/full).

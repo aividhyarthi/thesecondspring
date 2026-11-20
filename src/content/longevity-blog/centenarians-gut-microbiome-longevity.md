@@ -1,15 +1,12 @@
 ---
 title: "What Can the Gut Microbiome of Centenarians Teach Us About Healthy Ageing?"
 description: "UC San Diego researchers found a gut microbial activity pattern in centenarians and tested a related intervention in aged mice. The results are promising biology, not a probiotic recommendation for people."
-plannedPublishDate: "2026-11-30"
-editorialStatus: "draft"
+pubDate: 2026-11-20T10:00:00Z
 author: "Editorial Desk"
 tags: ["longevity", "gut health", "microbiome", "healthy ageing", "India"]
-evidenceType: "Human observational research plus mouse experiments"
-sourcePublished: "2026-11-16"
+readTime: "4 min read"
+featured: false
 ---
-
-# What Can the Gut Microbiome of Centenarians Teach Us About Healthy Ageing?
 
 People who live beyond 100 often attract attention for their diets, daily routines and family histories. Scientists are also studying another part of the picture: the trillions of microbes living in the gut and the chemical work they perform.
 
@@ -57,16 +54,12 @@ This study does not show that commercial probiotics extend human lifespan.
 
 Some fermented foods can contribute to dietary variety, but effects differ by food and person. They are not a proven longevity treatment.
 
----
+## Sources
 
-### Editorial source notes
-
-University of California San Diego, 16 November 2026: "Gut Microbiome Activity Linked to Exceptional Longevity May Support Healthier Aging."
-
-https://today.ucsd.edu/story/gut-microbiome-activity-linked-to-exceptional-longevity-may-support-healthier-aging
+1. University of California San Diego, 16 November 2026: "Gut Microbiome Activity Linked to Exceptional Longevity May Support Healthier Aging." https://today.ucsd.edu/story/gut-microbiome-activity-linked-to-exceptional-longevity-may-support-healthier-aging
 
 ---
 
-### Research source disclaimer
+### Source disclaimer
 
 This article reports and explains findings described by the University of California San Diego. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. The human findings and the mouse experiments should be read separately. For the research team's account, please read the [original UC San Diego research report](https://today.ucsd.edu/story/gut-microbiome-activity-linked-to-exceptional-longevity-may-support-healthier-aging).
