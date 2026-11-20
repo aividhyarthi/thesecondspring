@@ -78,3 +78,9 @@ Not automatically. The study was conducted in China with a specific hormone regi
 1. Chen C, Hao L, Xie W, et al. *Heterogeneity of microbiome responses to menopausal hormone therapy among perimenopausal women*. Nature Medicine. Published 3 November 2026. https://www.nature.com/articles/s41591-026-04737-4
 2. PubMed record: https://pubmed.ncbi.nlm.nih.gov/42977757/
 3. Research briefing, Nature Medicine, 13 November 2026: https://www.nature.com/articles/s41591-026-04789-6
+
+---
+
+### Research source disclaimer
+
+This article reports and explains findings from research published in *Nature Medicine*. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. For the full paper, including its methods, participant details and limitations, please read the [original research publication](https://www.nature.com/articles/s41591-026-04737-4).
