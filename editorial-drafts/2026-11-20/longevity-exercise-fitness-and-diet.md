@@ -69,4 +69,8 @@ Research coverage: https://www.longevitybeginners.com/news/
 
 Research roundup: https://agingresearch.news/news/research-news
 
-**Clinical review required:** Retrieve and read the full Mayo Clinic Proceedings paper before publication. Verify the review methodology, exact step-count comparison, effect estimates and whether the cited associations were adjusted for major confounders.
+---
+
+### Research source disclaimer
+
+This article reports and explains findings from a review published in *Mayo Clinic Proceedings* by Glenn A. Gaesser and Robert E. Sallis. The Second Spring did not conduct the review or the studies included in it. For the paper's scope, evidence and limitations, please read the [original research record on PubMed](https://pubmed.ncbi.nlm.nih.gov/43014478/) or the [journal article](https://doi.org/10.1016/j.mayocp.2026.10.010).
