@@ -1,7 +1,7 @@
 ---
 title: "Why Sleep Matters More as We Age: New Research on the Brain's Night-Time Clearance System"
 description: "MIT researchers reported age-related changes in the brain's waste-clearance processes during sleep. The work adds to sleep research but does not prove that a particular sleep routine prevents dementia."
-pubDate: 2026-11-20T09:00:00Z
+pubDate: 2026-11-20T05:35:00Z
 author: "Editorial Desk"
 tags: ["longevity", "sleep", "brain health", "healthy ageing", "India"]
 readTime: "4 min read"

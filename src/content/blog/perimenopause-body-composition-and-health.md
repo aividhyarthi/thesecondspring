@@ -1,7 +1,7 @@
 ---
 title: "Menopause and Body Composition: Why Muscle and Fat Matter More Than the Scale"
 description: "A study of 3,439 women found that body composition was strongly associated with health outcomes around the menopause transition. Here is what the findings mean, and what they do not prove."
-pubDate: 2026-11-20T04:00:00Z
+pubDate: 2026-11-20T05:30:00Z
 author: "Editorial Desk"
 tags: ["perimenopause", "menopause", "muscle health", "heart health", "India"]
 readTime: "4 min read"

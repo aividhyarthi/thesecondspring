@@ -1,7 +1,7 @@
 ---
 title: "For a Longer Life, Does Fitness Matter More Than Diet? What a New Review Says"
 description: "A review highlighted in November 2026 compared evidence on diet quality, physical activity and cardiorespiratory fitness in relation to longevity. The findings are associations, not a reason to neglect nutrition."
-pubDate: 2026-11-20T08:00:00Z
+pubDate: 2026-11-20T05:34:00Z
 author: "Editorial Desk"
 tags: ["longevity", "exercise", "fitness", "nutrition", "healthy ageing", "India"]
 readTime: "4 min read"

@@ -1,7 +1,7 @@
 ---
 title: "What Can the Gut Microbiome of Centenarians Teach Us About Healthy Ageing?"
 description: "UC San Diego researchers found a gut microbial activity pattern in centenarians and tested a related intervention in aged mice. The results are promising biology, not a probiotic recommendation for people."
-pubDate: 2026-11-20T10:00:00Z
+pubDate: 2026-11-20T05:36:00Z
 author: "Editorial Desk"
 tags: ["longevity", "gut health", "microbiome", "healthy ageing", "India"]
 readTime: "4 min read"

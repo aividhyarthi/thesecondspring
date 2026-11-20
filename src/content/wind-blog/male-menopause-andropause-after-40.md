@@ -1,7 +1,7 @@
 ---
 title: "Male Menopause After 40: What Andropause Really Means"
 description: "Testosterone can decline with age, but male menopause is not the same as women's menopause. Understand the symptoms, possible causes and when to seek a medical assessment."
-pubDate: 2026-11-20T07:00:00Z
+pubDate: 2026-11-20T05:33:00Z
 author: "Editorial Desk"
 tags: ["andropause", "men's health", "testosterone", "midlife", "India"]
 readTime: "4 min read"
