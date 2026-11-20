@@ -1,7 +1,7 @@
 ---
 title: "Earlier Menopause and Long-Term Health: What a Study of Three Countries Found"
 description: "A study pooling data from 6,576 women in the United States, England and Mexico found an association between menopause before 46 and later multiple chronic conditions. It is a risk signal, not a diagnosis."
-pubDate: 2026-11-20T05:00:00Z
+pubDate: 2026-11-20T05:31:00Z
 author: "Editorial Desk"
 tags: ["menopause", "women's health", "healthy ageing", "chronic conditions", "India"]
 readTime: "4 min read"

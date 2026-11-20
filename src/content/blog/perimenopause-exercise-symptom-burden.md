@@ -1,7 +1,7 @@
 ---
 title: "Can Exercise Make Perimenopause Easier? What the Research Really Says"
 description: "Research presented at the 2026 Menopause Society meeting found an association between more frequent physical activity and lower perimenopause symptom burden. Here is what the study can and cannot tell us."
-pubDate: 2026-11-20T06:00:00Z
+pubDate: 2026-11-20T05:32:00Z
 author: "Editorial Desk"
 tags: ["perimenopause", "exercise", "women's health", "sleep", "India"]
 readTime: "4 min read"
