@@ -70,6 +70,8 @@ It is not advisable to self-treat. Discuss symptoms and testing with a qualified
 
 NHS overview: https://www.nhs.uk/conditions/male-menopause/
 
-**Editorial positioning:** This is an evergreen explainer, not a claim about a new study published in the last 24 hours. Add a recent peer-reviewed guideline or clinical review before presenting it as a research update.
+---
 
-**Clinical review required:** An endocrinologist or urologist should review diagnostic criteria, testing language, contraindications and fertility cautions before publication.
+### Source disclaimer
+
+This explainer is based on information published by the UK's National Health Service (NHS). The Second Spring did not conduct clinical research or provide the underlying clinical guidance. For further information about the symptoms and medical context discussed here, please read the [NHS overview of male menopause](https://www.nhs.uk/conditions/male-menopause/).
