@@ -79,3 +79,10 @@ No. The study does not show that a woman should undergo a large panel of tests s
 
 1. Pridham G, Hayut Y, Lavi-Shoseyov N, et al. *Population-scale reconstruction of menopause dynamics reveals a physiological cliff at the final menstrual period*. Nature Medicine. Published 12 October 2026. https://www.nature.com/articles/s41591-026-04614-0
 2. Nature Portfolio press release, 13 October 2026: https://www.natureasia.com/en/info/press-releases/detail/9458
+
+
+---
+
+### Research source disclaimer
+
+This article reports and explains findings from research published in *Nature Medicine*. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. The findings are based on population-level laboratory data and should not be interpreted as an individual diagnosis or prediction. For the full study, including its methods, data, findings and limitations, please read the [original research paper](https://www.nature.com/articles/s41591-026-04614-0) and the [Nature Portfolio research announcement](https://www.natureasia.com/en/info/press-releases/detail/9458).
