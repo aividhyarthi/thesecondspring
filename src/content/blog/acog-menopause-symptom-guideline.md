@@ -70,3 +70,9 @@ No. It is an American clinical document, not an Indian government guideline, so 
 1. American College of Obstetricians and Gynecologists. *Clinical Practice Guideline No. 13: Management of Menopause-Related Vasomotor, Sleep, and Mood Symptoms*. November 2026. https://doi.org/10.1097/AOG.0000000000006428
 2. PubMed record: https://pubmed.ncbi.nlm.nih.gov/42878500/
 3. ACOG guideline PDF: https://www.qualityhealth.org/bree/wp-content/uploads/sites/8/2026/11/acog-clinical-practice-guideline-management-of-1.pdf
+
+---
+
+### Source disclaimer
+
+This article summarises clinical guidance published by the American College of Obstetricians and Gynecologists (ACOG). The Second Spring did not develop the guideline or conduct the evidence review behind it. For the full recommendations, evidence grading and clinical context, please read the [original ACOG guideline](https://doi.org/10.1097/AOG.0000000000006428) or its [PubMed record](https://pubmed.ncbi.nlm.nih.gov/42878500/).
