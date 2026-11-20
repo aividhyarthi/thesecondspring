@@ -75,3 +75,9 @@ Not automatically. Brain fog during perimenopause can have several contributors,
 
 1. Wood Alexander M, Rabin JS, Caunca M, et al. *Blood proteomics of menopause map to brain aging and dementia risk*. Nature Medicine. Published 22 September 2026. https://www.nature.com/articles/s41591-026-04648-4
 2. PubMed record: https://pubmed.ncbi.nlm.nih.gov/42773212/
+
+---
+
+### Research source disclaimer
+
+This article reports and explains findings from research published in *Nature Medicine*. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. For the full paper, including its methods, participant details and limitations, please read the [original research publication](https://www.nature.com/articles/s41591-026-04648-4).
