@@ -67,4 +67,8 @@ https://menopause.org/wp-content/uploads/press-release/FINAL-Physical-activity-a
 
 Research interview and coverage: https://www.contemporaryobgyn.net/view/liudmila-zhaunova-on-the-case-for-perimenopause-activity-trials
 
-**Clinical review required:** Obtain the conference abstract or full study details before publication. Verify the exact activity categories, symptom measure and statistical adjustments. This is not a last-24-hours study; it is a recent October finding suitable for an evergreen explainer.
+---
+
+### Research source disclaimer
+
+This article reports and explains findings presented by The Menopause Society. The Second Spring did not conduct the research, recruit participants, collect or analyse the data, or take part in the study. For the source announcement and further context, please read [The Menopause Society's research release](https://menopause.org/wp-content/uploads/press-release/FINAL-Physical-activity-and-perimenopause-symptoms-10-20-26.pdf) and the [research interview published by Contemporary OB/GYN](https://www.contemporaryobgyn.net/view/liudmila-zhaunova-on-the-case-for-perimenopause-activity-trials).
