@@ -73,4 +73,8 @@ Primary paper: Liang I, Flynn S, Watson K, Horwich T, Karlamangla A, Srikanthan 
 
 Research summary: https://news.longevitydocs.org/research/fat-mass-fat-free-mass-mortality-menopause-transition-mesa-2026
 
-**Clinical review required:** Verify the full paper, terminology for the menopause-phase grouping and all effect estimates before publication. Avoid implying that muscle gain or fat loss has been proven to change mortality.
+---
+
+### Research source disclaimer
+
+This article reports and explains findings from the Multi-Ethnic Study of Atherosclerosis analysis published in *Menopause*. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. For the full findings, methods and limitations, please read the [original journal paper](https://doi.org/10.1097/GME.0000000000002932).
