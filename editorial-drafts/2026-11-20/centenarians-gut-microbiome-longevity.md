@@ -65,4 +65,8 @@ University of California San Diego, 16 November 2026: "Gut Microbiome Activity L
 
 https://today.ucsd.edu/story/gut-microbiome-activity-linked-to-exceptional-longevity-may-support-healthier-aging
 
-**Clinical review required:** Retrieve the original *Cell Metabolism* paper and verify cohort details, microbial pathway, engineered organism, mouse model and measured metabolic outcomes. Keep human observational findings separate from mouse intervention results.
+---
+
+### Research source disclaimer
+
+This article reports and explains findings described by the University of California San Diego. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. The human findings and the mouse experiments should be read separately. For the research team's account, please read the [original UC San Diego research report](https://today.ucsd.edu/story/gut-microbiome-activity-linked-to-exceptional-longevity-may-support-healthier-aging).
