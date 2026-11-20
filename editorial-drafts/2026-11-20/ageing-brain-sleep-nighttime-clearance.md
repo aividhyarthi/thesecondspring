@@ -69,4 +69,8 @@ MIT research coverage, 18 November 2026: "MIT Discovers That Aging Weakens the B
 
 News roundup: https://www.sciencedaily.com/news/health_medicine/healthy_aging/
 
-**Source verification required:** The original MIT release and peer-reviewed paper must be located and read before publication. Confirm species, sample size, methods and whether findings were in humans or animals. Do not publish mechanistic claims based only on a news headline.
+---
+
+### Research source disclaimer
+
+This article reports and explains findings from research conducted by MIT researchers and published in *Nature Aging*. The Second Spring did not conduct this study, recruit participants, collect or analyse the data, or take part in the research. For the original findings, methods, participant details and limitations, please read the [peer-reviewed research paper](https://www.nature.com/articles/s43587-026-01270-4) and the [MIT News report](https://news.mit.edu/2026/waste-clearing-waves-in-brain-during-sleep-are-impaired-in-older-adults-1113).
