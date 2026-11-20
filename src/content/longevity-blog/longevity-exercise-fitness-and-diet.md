@@ -1,15 +1,12 @@
 ---
 title: "For a Longer Life, Does Fitness Matter More Than Diet? What a New Review Says"
 description: "A review highlighted in November 2026 compared evidence on diet quality, physical activity and cardiorespiratory fitness in relation to longevity. The findings are associations, not a reason to neglect nutrition."
-plannedPublishDate: "2026-11-28"
-editorialStatus: "draft"
+pubDate: 2026-11-20T08:00:00Z
 author: "Editorial Desk"
 tags: ["longevity", "exercise", "fitness", "nutrition", "healthy ageing", "India"]
-evidenceType: "Review of comparative observational evidence"
-sourcePublished: "2026-11-19"
+readTime: "4 min read"
+featured: false
 ---
-
-# For a Longer Life, Does Fitness Matter More Than Diet? What a New Review Says
 
 Longevity advice often focuses on what to eat. But a review discussed in research coverage on 19 November 2026 asks us to pay closer attention to physical activity and cardiorespiratory fitness when thinking about how long people live.
 
@@ -59,18 +56,13 @@ Walking can improve activity and cardiovascular fitness, but a broader routine t
 
 No. Exercise and nutrition support health in different ways. Neither fully replaces the other.
 
----
+## Sources
 
-### Editorial source notes
-
-Research item reported 19 November 2026: "Diet Quality Versus Physical Activity and Cardiorespiratory Fitness for Longevity: A Review of Comparative Evidence", *Mayo Clinic Proceedings*.
-
-Research coverage: https://www.longevitybeginners.com/news/
-
-Research roundup: https://agingresearch.news/news/research-news
+1. Gaesser GA, Sallis RE. "Diet Quality Versus Physical Activity and Cardiorespiratory Fitness for Longevity: A Review of Comparative Evidence." *Mayo Clinic Proceedings*. Published online 19 November 2026. DOI: 10.1016/j.mayocp.2026.10.010.
+2. Research record: https://pubmed.ncbi.nlm.nih.gov/43014478/
 
 ---
 
-### Research source disclaimer
+### Source disclaimer
 
 This article reports and explains findings from a review published in *Mayo Clinic Proceedings* by Glenn A. Gaesser and Robert E. Sallis. The Second Spring did not conduct the review or the studies included in it. For the paper's scope, evidence and limitations, please read the [original research record on PubMed](https://pubmed.ncbi.nlm.nih.gov/43014478/) or the [journal article](https://doi.org/10.1016/j.mayocp.2026.10.010).

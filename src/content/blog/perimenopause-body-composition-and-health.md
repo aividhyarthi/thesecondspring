@@ -1,15 +1,12 @@
 ---
 title: "Menopause and Body Composition: Why Muscle and Fat Matter More Than the Scale"
 description: "A study of 3,439 women found that body composition was strongly associated with health outcomes around the menopause transition. Here is what the findings mean, and what they do not prove."
-plannedPublishDate: "2026-11-24"
-editorialStatus: "draft"
+pubDate: 2026-11-20T04:00:00Z
 author: "Editorial Desk"
 tags: ["perimenopause", "menopause", "muscle health", "heart health", "India"]
-evidenceType: "Human observational cohort"
-sourcePublished: "2026-11-17"
+readTime: "4 min read"
+featured: false
 ---
-
-# Menopause and Body Composition: Why Muscle and Fat Matter More Than the Scale
 
 A weighing scale gives one number. It does not tell you how much of that weight is muscle, how much is fat, or where the fat is stored. That distinction may become especially important around menopause, when many women notice changes in their waistline, strength and body shape even if their eating habits have not changed much.
 
@@ -65,16 +62,13 @@ No. It found associations in an observational cohort. It did not test an exercis
 
 The study does not establish that everyone needs a scan. Ask a clinician which measurements are useful given your health history and risk factors.
 
----
+## Sources
 
-### Editorial source notes
-
-Primary paper: Liang I, Flynn S, Watson K, Horwich T, Karlamangla A, Srikanthan P. "Body composition and mortality across the reproductive cycle: findings from the Multi-Ethnic Study of Atherosclerosis." *Menopause*. Published online 17 November 2026. DOI: 10.1097/GME.0000000000002932.
-
-Research summary: https://news.longevitydocs.org/research/fat-mass-fat-free-mass-mortality-menopause-transition-mesa-2026
+1. Liang I, Flynn S, Watson K, Horwich T, Karlamangla A, Srikanthan P. "Body composition and mortality across the reproductive cycle: findings from the Multi-Ethnic Study of Atherosclerosis." *Menopause*. Published online 17 November 2026. DOI: 10.1097/GME.0000000000002932.
+2. Research summary: https://news.longevitydocs.org/research/fat-mass-fat-free-mass-mortality-menopause-transition-mesa-2026
 
 ---
 
-### Research source disclaimer
+### Source disclaimer
 
 This article reports and explains findings from the Multi-Ethnic Study of Atherosclerosis analysis published in *Menopause*. The Second Spring did not conduct the study, recruit participants, collect or analyse the data, or take part in the research. For the full findings, methods and limitations, please read the [original journal paper](https://doi.org/10.1097/GME.0000000000002932).

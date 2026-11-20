@@ -1,14 +1,12 @@
 ---
 title: "Male Menopause After 40: What Andropause Really Means"
 description: "Testosterone can decline with age, but male menopause is not the same as women's menopause. Understand the symptoms, possible causes and when to seek a medical assessment."
-plannedPublishDate: "2026-11-27"
-editorialStatus: "draft"
+pubDate: 2026-11-20T07:00:00Z
 author: "Editorial Desk"
 tags: ["andropause", "men's health", "testosterone", "midlife", "India"]
-evidenceType: "Clinical explainer; not a breaking-news report"
+readTime: "4 min read"
+featured: false
 ---
-
-# Male Menopause After 40: What Andropause Really Means
 
 Men in their 40s and 50s sometimes notice changes in energy, mood, strength, sleep or sexual interest. It is common to hear these changes described as "male menopause". The phrase is familiar, but it can give the wrong impression.
 
@@ -64,11 +62,9 @@ It can be one possible contributor, but tiredness has many other causes, includi
 
 It is not advisable to self-treat. Discuss symptoms and testing with a qualified clinician before taking hormone products or supplements.
 
----
+## Sources
 
-### Editorial source notes
-
-NHS overview: https://www.nhs.uk/conditions/male-menopause/
+1. NHS overview: https://www.nhs.uk/conditions/male-menopause/
 
 ---
 

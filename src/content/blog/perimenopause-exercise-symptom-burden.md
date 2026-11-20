@@ -1,15 +1,12 @@
 ---
 title: "Can Exercise Make Perimenopause Easier? What the Research Really Says"
 description: "Research presented at the 2026 Menopause Society meeting found an association between more frequent physical activity and lower perimenopause symptom burden. Here is what the study can and cannot tell us."
-plannedPublishDate: "2026-11-26"
-editorialStatus: "draft"
+pubDate: 2026-11-20T06:00:00Z
 author: "Editorial Desk"
 tags: ["perimenopause", "exercise", "women's health", "sleep", "India"]
-evidenceType: "Observational app-based study; conference presentation"
-sourcePublished: "2026-10-20"
+readTime: "4 min read"
+featured: false
 ---
-
-# Can Exercise Make Perimenopause Easier? What the Research Really Says
 
 Exercise is often recommended during midlife for heart health, bone strength, mood and sleep. Researchers are also asking whether physical activity may be associated with the overall burden of perimenopause symptoms.
 
@@ -57,18 +54,13 @@ The study does not establish a guaranteed frequency for symptom relief. Choose a
 
 No. Exercise supports general health but should not be treated as a substitute for clinical assessment or evidence-based treatment when symptoms are troublesome.
 
----
+## Sources
 
-### Editorial source notes
-
-The Menopause Society press release, 20 October 2026: "Higher Physical Activity Frequency Associated with Lower Symptom Burden in Perimenopause."
-
-https://menopause.org/wp-content/uploads/press-release/FINAL-Physical-activity-and-perimenopause-symptoms-10-20-26.pdf
-
-Research interview and coverage: https://www.contemporaryobgyn.net/view/liudmila-zhaunova-on-the-case-for-perimenopause-activity-trials
+1. The Menopause Society press release, 20 October 2026: "Higher Physical Activity Frequency Associated with Lower Symptom Burden in Perimenopause." https://menopause.org/wp-content/uploads/press-release/FINAL-Physical-activity-and-perimenopause-symptoms-10-20-26.pdf
+2. Research interview and coverage: https://www.contemporaryobgyn.net/view/liudmila-zhaunova-on-the-case-for-perimenopause-activity-trials
 
 ---
 
-### Research source disclaimer
+### Source disclaimer
 
 This article reports and explains findings presented by The Menopause Society. The Second Spring did not conduct the research, recruit participants, collect or analyse the data, or take part in the study. For the source announcement and further context, please read [The Menopause Society's research release](https://menopause.org/wp-content/uploads/press-release/FINAL-Physical-activity-and-perimenopause-symptoms-10-20-26.pdf) and the [research interview published by Contemporary OB/GYN](https://www.contemporaryobgyn.net/view/liudmila-zhaunova-on-the-case-for-perimenopause-activity-trials).
