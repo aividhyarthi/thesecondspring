@@ -1,13 +1,12 @@
 ---
 title: "Menopause Hormone Therapy and the Vaginal Microbiome: What a Study of 356 Women Found"
 description: "A six-month study of 356 perimenopausal women found that oral menopausal hormone therapy was associated with changes in vaginal and urinary microbial communities. The findings are promising but do not yet justify microbiome testing to choose treatment."
-pubDate: 2026-11-21T00:00:00Z
+pubDate: 2026-11-21T02:01:00Z
 author: "Editorial Desk"
 tags: ["perimenopause", "menopause hormone therapy", "vaginal microbiome", "urinary health", "women's health"]
 readTime: "7 min read"
+featured: false
 ---
-
-# Menopause Hormone Therapy and the Vaginal Microbiome: What a Study of 356 Women Found
 
 Menopause hormone therapy is usually discussed in terms of symptoms such as hot flashes, night sweats and vaginal or urinary discomfort. Researchers are now examining another part of the picture: how hormone treatment may be associated with the communities of microbes living in different parts of the body.
 
@@ -77,27 +76,33 @@ For now, the practical message is to understand the science without turning it i
 
 ## Frequently asked questions
 
-### What is the vaginal microbiome?
+**What is the vaginal microbiome?**
+
 It is the community of microorganisms living in the vaginal environment. Its composition varies between individuals and across life stages, including the menopause transition.
 
-### Did this study include women taking hormone therapy?
+**Did this study include women taking hormone therapy?**
+
 Yes. It examined 356 perimenopausal women receiving oral estradiol and dydrogesterone for six months.
 
-### Did hormone therapy change the gut microbiome?
+**Did hormone therapy change the gut microbiome?**
+
 The researchers reported minimal gut changes compared with more pronounced changes in the vaginocervical and urinary microbial communities.
 
-### Does this mean women should get a vaginal microbiome test before hormone therapy?
+**Does this mean women should get a vaginal microbiome test before hormone therapy?**
+
 No. The study does not establish microbiome testing as a standard way to select or monitor menopause treatment.
 
-### Can probiotics replace menopause hormone therapy?
+**Can probiotics replace menopause hormone therapy?**
+
 This study did not test probiotics as a replacement for hormone therapy. It provides no basis for substituting supplements for prescribed treatment.
 
-## Research source and editorial disclaimer
+## Sources
 
-This article reports findings shared in the research paper *Heterogeneity of microbiome responses to menopausal hormone therapy among perimenopausal women*, published in *Nature Medicine* on 3 November 2026. The Second Spring was not involved in the research. We are reporting the findings for general health education, not providing individual treatment advice. Please consult the original research for full methods, outcomes and limitations, and discuss treatment decisions with a qualified healthcare professional.
+1. Heterogeneity of microbiome responses to menopausal hormone therapy among perimenopausal women. *Nature Medicine*. Published 3 November 2026. DOI: 10.1038/s41591-026-04737-4.
+2. Trial registration: https://www.chictr.org.cn/ (ChiCTR2100049768)
 
-Original research: https://doi.org/10.1038/s41591-026-04737-4
+---
 
-Trial registration: https://www.chictr.org.cn/
+### Source disclaimer
 
-**Editorial review status:** Clinical review required before publication. Verify the complete paper's methods, adverse-event reporting, outcome definitions and population characteristics.
+This article reports findings shared in the research paper *Heterogeneity of microbiome responses to menopausal hormone therapy among perimenopausal women*, published in *Nature Medicine*. The Second Spring was not involved in the research. This is general health education, not individual treatment advice. For full methods, outcomes and limitations, please read the [original research paper](https://doi.org/10.1038/s41591-026-04737-4) and discuss treatment decisions with a qualified healthcare professional.

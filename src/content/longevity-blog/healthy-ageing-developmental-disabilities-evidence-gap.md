@@ -1,13 +1,12 @@
 ---
 title: "Who Gets Left Out of Longevity Research? A Review Finds Gaps in Healthy Ageing Trials"
 description: "A participatory review of 79 randomised trials involving 8,221 adults with developmental disabilities found that healthy ageing research often overlooks life-course transitions, participation and strengths-based approaches."
-pubDate: 2026-11-21T00:00:00Z
+pubDate: 2026-11-21T02:03:00Z
 author: "Editorial Desk"
 tags: ["healthy ageing", "longevity", "developmental disabilities", "inclusive healthcare", "public health", "ageing"]
 readTime: "7 min read"
+featured: false
 ---
-
-# Who Gets Left Out of Longevity Research? A Review Finds Gaps in Healthy Ageing Trials
 
 Longevity is often discussed through the experiences of people who have access to preventive healthcare, fitness programmes, nutrition advice and regular medical monitoring. But healthy ageing is not equally studied across all groups. Adults with developmental disabilities can face a higher burden of health problems and shorter life expectancy, yet the research on interventions that support their ageing needs is limited.
 
@@ -78,25 +77,32 @@ A meaningful longevity agenda must ask not only how long people live, but whethe
 
 ## Frequently asked questions
 
-### What are developmental disabilities?
+**What are developmental disabilities?**
+
 The term refers to a group of conditions that begin during the developmental period and can affect physical, learning, language or behavioural functioning. The specific definition and eligibility criteria vary across research and services.
 
-### How many studies were included in this review?
+**How many studies were included in this review?**
+
 The researchers included 79 randomised controlled trials involving 8,221 adults with developmental disabilities.
 
-### Did the review prove that a particular healthy ageing programme works?
+**Did the review prove that a particular healthy ageing programme works?**
+
 No. It was a scoping review that mapped trials and assessed how they incorporated different healthy ageing principles. It did not establish one intervention as superior.
 
-### What is a strengths-based approach?
+**What is a strengths-based approach?**
+
 It focuses on a person's abilities, preferences, relationships and resources, rather than defining them only by limitations or support needs.
 
-### Does this research include Indian participants?
+**Does this research include Indian participants?**
+
 The review does not provide an India-specific estimate. Its findings can inform questions for Indian policy and research, but local studies are needed.
 
-## Research source and editorial disclaimer
+## Sources
 
-This article reports findings shared in the review *Closing the evidence gap: a life course and neurodiversity-informed participatory scoping review of healthy ageing randomised controlled trials in adults with developmental disabilities*, published online in *The Lancet Healthy Longevity* on 19 November 2026. The Second Spring was not involved in the research. We are reporting the review's findings for general health and public-interest education. Please consult the original source for the full methods, definitions and limitations.
+1. Closing the evidence gap: a life course and neurodiversity-informed participatory scoping review of healthy ageing randomised controlled trials in adults with developmental disabilities. *The Lancet Healthy Longevity*. Published online 19 November 2026. DOI: 10.1016/j.lanhl.2026.100935.
 
-Original research: https://doi.org/10.1016/j.lanhl.2026.100935
+---
 
-**Editorial review status:** Review by a disability health specialist or researcher recommended. Check terminology against the journal's preferred language and relevant Indian context before publication.
+### Source disclaimer
+
+This article reports findings shared in a review published in *The Lancet Healthy Longevity*. The Second Spring was not involved in the research. For the full methods, definitions and limitations, please read the [original review](https://doi.org/10.1016/j.lanhl.2026.100935).

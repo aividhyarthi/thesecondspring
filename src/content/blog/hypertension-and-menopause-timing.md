@@ -1,13 +1,12 @@
 ---
 title: "Can High Blood Pressure Affect When Menopause Begins? A South Asian Study Offers a Clue"
 description: "A 14-year study of 2,225 South Asian women found that hypertension was associated with earlier natural menopause. Here is what the research shows, what it cannot prove, and why blood pressure matters in midlife."
-pubDate: 2026-11-21T00:00:00Z
+pubDate: 2026-11-21T02:00:00Z
 author: "Editorial Desk"
 tags: ["perimenopause", "menopause", "blood pressure", "hypertension", "South Asian women", "heart health"]
 readTime: "6 min read"
+featured: false
 ---
-
-# Can High Blood Pressure Affect When Menopause Begins? A South Asian Study Offers a Clue
 
 Menopause is usually discussed as a reproductive milestone. But the timing of menopause may also carry information about a woman's wider health. A new prospective study of South Asian women has examined whether cardiometabolic conditions during the reproductive years are associated with when natural menopause occurs. One finding stood out: women with hypertension reached natural menopause earlier, on average, than women without hypertension.
 
@@ -71,25 +70,32 @@ For women, the immediate message is straightforward: blood pressure deserves att
 
 ## Frequently asked questions
 
-### Does high blood pressure cause early menopause?
+**Does high blood pressure cause early menopause?**
+
 This study found an association between hypertension and earlier natural menopause. It did not prove that high blood pressure causes menopause to occur earlier.
 
-### How many women were included?
+**How many women were included?**
+
 The researchers analysed 2,225 South Asian women aged 30 to 50 at baseline, followed using CARRS cohort data from 2010 to 2024.
 
-### How much earlier was menopause among women with hypertension?
+**How much earlier was menopause among women with hypertension?**
+
 The study reported that women with hypertension reached natural menopause approximately one year earlier on average. This is a group-level finding, not an individual prediction.
 
-### Did diabetes or obesity also affect menopause timing?
+**Did diabetes or obesity also affect menopause timing?**
+
 The study did not find a difference in menopause timing based on baseline diabetes, weight or non-HDL cholesterol. This should not be interpreted as evidence that these conditions do not affect health.
 
-### Should women take blood pressure medicines to delay menopause?
+**Should women take blood pressure medicines to delay menopause?**
+
 No. The study did not test whether blood pressure treatment delays menopause. Medication decisions should be made with a qualified clinician for established health reasons.
 
-## Research source and editorial disclaimer
+## Sources
 
-This article reports findings shared in the research paper *Cardiometabolic dysfunction and age at natural menopause: a prospective study*, published in the *International Journal of Epidemiology* on 4 November 2026. The Second Spring was not involved in the research. We are interpreting the published findings for general health education. Please consult the original research for its full methods, analysis and limitations, and speak with a qualified healthcare professional about personal medical decisions.
+1. Cardiometabolic dysfunction and age at natural menopause: a prospective study. *International Journal of Epidemiology*. Published 4 November 2026. DOI: 10.1093/ije/dyag247.
 
-Original research: https://doi.org/10.1093/ije/dyag247
+---
 
-**Editorial review status:** Research-led draft. Clinical review recommended, particularly for interpretation of hypertension and menopause timing.
+### Source disclaimer
+
+This article reports findings shared in the research paper *Cardiometabolic dysfunction and age at natural menopause: a prospective study*, published in the *International Journal of Epidemiology*. The Second Spring was not involved in the research. For the full methods, analysis and limitations, please read the [original research paper](https://doi.org/10.1093/ije/dyag247).

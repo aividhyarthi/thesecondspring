@@ -1,13 +1,12 @@
 ---
 title: "Sleep Is More Than Hours: A New Study Links Sleep-Wake Patterns with Dementia Risk"
 description: "A 12-year UK cohort study of 3,973 older adults found that combinations of disrupted daily rhythms, low activity and poor sleep were associated with higher dementia risk. The study does not prove that changing sleep patterns prevents dementia."
-pubDate: 2026-11-21T00:00:00Z
+pubDate: 2026-11-21T02:05:00Z
 author: "Editorial Desk"
 tags: ["sleep", "brain health", "dementia", "healthy ageing", "longevity", "cognitive health"]
 readTime: "7 min read"
+featured: false
 ---
-
-# Sleep Is More Than Hours: A New Study Links Sleep-Wake Patterns with Dementia Risk
 
 When people talk about sleep and brain health, the discussion often begins and ends with one number: how many hours a person sleeps. A new study suggests that the wider pattern may matter too. Researchers examined sleep, daytime activity, rest-activity rhythms and chronotype together, then followed older adults for more than a decade to assess dementia and cognitive outcomes.
 
@@ -73,25 +72,32 @@ The practical lesson is not to chase a perfect sleep score or fear an occasional
 
 ## Frequently asked questions
 
-### How many people were included in the study?
+**How many people were included in the study?**
+
 The study included 3,973 dementia-free adults aged 60 and older, with a median follow-up of 12.3 years.
 
-### Did poor sleep double the risk of dementia?
+**Did poor sleep double the risk of dementia?**
+
 Two specific sleep-wake profiles were associated with hazard ratios close to 1.9 compared with the reference profile. This does not mean that poor sleep alone doubles an individual's risk.
 
-### Does sleeping eight hours prevent dementia?
+**Does sleeping eight hours prevent dementia?**
+
 This study did not test an eight-hour sleep target or show that a specific duration prevents dementia.
 
-### Why did researchers measure daytime activity?
+**Why did researchers measure daytime activity?**
+
 The researchers examined the sleep-wake cycle as a combination of rest-activity rhythms, daytime movement, sleep and chronotype. Some risk patterns involved both low activity and disrupted sleep.
 
-### Does the study apply directly to Indian adults?
+**Does the study apply directly to Indian adults?**
+
 Not necessarily. It used a UK cohort. Similar research in more diverse populations is needed before drawing population-specific conclusions.
 
-## Research source and editorial disclaimer
+## Sources
 
-This article reports findings shared in the research paper *Sleep-Wake Cycle Profiles and Incident Dementia and Cognitive Decline in Older Adults*, published online in *JAMA Network Open* on 18 November 2026. The Second Spring was not involved in the research. We are reporting the published findings for general education. Please consult the original research for complete methods, subgroup analyses and limitations. This article does not diagnose sleep disorders or dementia.
+1. Sleep-Wake Cycle Profiles and Incident Dementia and Cognitive Decline in Older Adults. *JAMA Network Open*. Published online 18 November 2026. DOI: 10.1001/jamanetworkopen.2026.44843.
 
-Original research: https://doi.org/10.1001/jamanetworkopen.2026.44843
+---
 
-**Editorial review status:** Clinical review recommended. Verify the full supplementary material and profile definitions before publication.
+### Source disclaimer
+
+This article reports findings shared in a research paper published in *JAMA Network Open*. The Second Spring was not involved in the research. This article does not diagnose sleep disorders or dementia. For complete methods, subgroup analyses and limitations, please read the [original research paper](https://doi.org/10.1001/jamanetworkopen.2026.44843).
