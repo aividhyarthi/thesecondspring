@@ -1,13 +1,12 @@
 ---
 title: "Can Food Really Extend Your Life? A New Review Separates Longevity Evidence from Hype"
 description: "A November 2026 review examines diet patterns, fasting, supplements and biological-age markers. It finds strong evidence for cardiovascular risk reduction, but no proof that a specific diet or supplement extends maximum human lifespan."
-pubDate: 2026-11-21T00:00:00Z
+pubDate: 2026-11-21T02:04:00Z
 author: "Editorial Desk"
 tags: ["longevity", "healthy ageing", "nutrition", "cardiovascular health", "intermittent fasting", "supplements"]
 readTime: "7 min read"
+featured: false
 ---
-
-# Can Food Really Extend Your Life? A New Review Separates Longevity Evidence from Hype
 
 The longevity market is full of confident promises. A supplement may claim to slow ageing. A fasting routine may be promoted as a way to reset the body. A biological-age test may suggest that a person is getting younger. But what does the human evidence actually show?
 
@@ -85,25 +84,32 @@ Whole dietary patterns and management of established cardiovascular risks have a
 
 ## Frequently asked questions
 
-### Can a diet make people live longer?
+**Can a diet make people live longer?**
+
 Healthy dietary patterns can reduce cardiovascular risk and support health. This review does not establish that any specific diet extends maximum human lifespan.
 
-### Is intermittent fasting proven to slow ageing?
+**Is intermittent fasting proven to slow ageing?**
+
 No. The review describes modest clinical results and no proof that a fasting protocol extends human lifespan.
 
-### Do longevity supplements work?
+**Do longevity supplements work?**
+
 Some supplements have specific medical uses, such as correcting deficiencies. But no dietary supplement has demonstrated an extension of human healthspan or lifespan in a randomised trial as of 2026, according to the review.
 
-### What is the strongest nutrition evidence for heart health?
+**What is the strongest nutrition evidence for heart health?**
+
 The review highlights whole dietary patterns such as Mediterranean and DASH diets, sodium reduction and management of established cardiovascular risk factors.
 
-### Should people with diabetes try fasting?
+**Should people with diabetes try fasting?**
+
 Not without individual medical advice. Meal timing can affect glucose levels and medication needs. People with diabetes should discuss fasting with their treating clinician.
 
-## Research source and editorial disclaimer
+## Sources
 
-This article reports findings and interpretations from the review *Nutrition, metabolism, and cardiovascular longevity—what is established, what is hypothesis?*, published in *Herz* on 20 November 2026. The Second Spring was not involved in the research. We are reporting what the authors have shared in their review and are not presenting this as original research conducted by us. Please read the original source for further details and consult a qualified healthcare professional before making medical or dietary changes.
+1. Rossmeißl A, Timper K. "Nutrition, metabolism, and cardiovascular longevity: what is established, what is hypothesis?" *Herz*. Published 20 November 2026. DOI: 10.1007/s00059-026-05400-x.
 
-Original research: https://doi.org/10.1007/s00059-026-05400-x
+---
 
-**Editorial review status:** Clinical review recommended, especially for discussion of cardiovascular outcomes, GLP-1 medicines, fasting and supplements.
+### Source disclaimer
+
+This article reports findings and interpretations from a review published in *Herz* by A. Rossmeißl and K. Timper. The Second Spring was not involved in the research. For the full discussion and limitations, please read the [original review](https://doi.org/10.1007/s00059-026-05400-x) and consult a qualified healthcare professional before making medical or dietary changes.

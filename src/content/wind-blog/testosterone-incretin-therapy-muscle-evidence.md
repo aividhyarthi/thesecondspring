@@ -1,13 +1,12 @@
 ---
 title: "Testosterone Alongside Weight-Loss Medicines: Does It Protect Muscle in Men After 40?"
 description: "A systematic review published in November 2026 found very low-certainty evidence on adding testosterone to incretin-based weight-loss treatment in men. It did not establish an extra benefit for muscle or body composition."
-pubDate: 2026-11-21T00:00:00Z
+pubDate: 2026-11-21T02:02:00Z
 author: "Editorial Desk"
 tags: ["men's health", "testosterone", "midlife men", "obesity", "muscle health", "healthy ageing"]
 readTime: "7 min read"
+featured: false
 ---
-
-# Testosterone Alongside Weight-Loss Medicines: Does It Protect Muscle in Men After 40?
 
 Weight-loss medicines that act on incretin pathways have changed the treatment landscape for obesity. But weight reduction can involve changes in both fat mass and lean mass. This has led to a question in men's health: could testosterone treatment help preserve muscle when men use these medicines?
 
@@ -71,25 +70,32 @@ For men after 40, the sensible approach is to assess the reason for symptoms, ma
 
 ## Frequently asked questions
 
-### Does testosterone help men lose more weight with GLP-1 medicines?
+**Does testosterone help men lose more weight with GLP-1 medicines?**
+
 The review did not establish that adding testosterone provides an additional weight-loss or body-composition benefit.
 
-### Can testosterone prevent muscle loss during weight reduction?
+**Can testosterone prevent muscle loss during weight reduction?**
+
 This review found very low-certainty evidence and did not establish that testosterone prevents lean-mass loss in men using incretin treatment.
 
-### Should every man over 40 test testosterone?
+**Should every man over 40 test testosterone?**
+
 Age alone does not mean every man needs testing. Testing is generally considered when symptoms or clinical signs suggest deficiency, with results interpreted by a qualified clinician.
 
-### Is tiredness a sign of low testosterone?
+**Is tiredness a sign of low testosterone?**
+
 Tiredness has many possible causes. It is not enough on its own to diagnose testosterone deficiency.
 
-### Is testosterone a general anti-ageing treatment?
+**Is testosterone a general anti-ageing treatment?**
+
 No. Testosterone should be used only when there is a recognised clinical indication and after an appropriate assessment. This review does not support using it solely to preserve lean mass during weight-loss treatment.
 
-## Research source and editorial disclaimer
+## Sources
 
-This article reports findings shared in the systematic review *Testosterone Added to Incretin Therapy in Men With Overweight or Obesity: A Systematic Review of Body Composition Evidence and Gaps*, published online in *Diabetes, Obesity and Metabolism* on 19 November 2026. The Second Spring was not involved in the research. We are reporting the authors' review of available evidence and are not presenting this as original research conducted by us. Please consult the original source for its full methods, evidence tables and limitations. Treatment decisions should be discussed with a qualified healthcare professional.
+1. Testosterone Added to Incretin Therapy in Men With Overweight or Obesity: A Systematic Review of Body Composition Evidence and Gaps. *Diabetes, Obesity and Metabolism*. Published online 19 November 2026. DOI: 10.1111/dom.71565.
 
-Original research: https://doi.org/10.1111/dom.71565
+---
 
-**Editorial review status:** Clinical review required, particularly for testosterone diagnostic criteria, incretin medicines and safety considerations.
+### Source disclaimer
+
+This article reports findings shared in a systematic review published in *Diabetes, Obesity and Metabolism*. The Second Spring was not involved in the research and is not presenting this as research conducted by us. For the full methods, evidence tables and limitations, please read the [original review](https://doi.org/10.1111/dom.71565) and discuss treatment decisions with a qualified healthcare professional.
