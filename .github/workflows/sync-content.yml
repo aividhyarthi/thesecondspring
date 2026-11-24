@@ -18,7 +18,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check staging branch still exists
+        run: |
+          STAGING_BRANCH="claude/perimenopause-chat-app-kgml4"
+          if git ls-remote --exit-code --heads "https://github.com/aividhyarthi/grievance-insight-engine" "$STAGING_BRANCH" >/dev/null 2>&1; then
+            echo "SKIP=false" >> "$GITHUB_ENV"
+          else
+            echo "SKIP=true" >> "$GITHUB_ENV"
+            echo "::warning::Staging branch $STAGING_BRANCH no longer exists in grievance-insight-engine. Skipping today's sync; the live site keeps whatever was published last time. Point this workflow at the new staging branch (or source) to resume syncing."
+          fi
+
       - name: Download staging repo
+        if: env.SKIP != 'true'
         run: |
           curl -fsSL "https://codeload.github.com/aividhyarthi/grievance-insight-engine/tar.gz/refs/heads/claude/perimenopause-chat-app-kgml4" -o /tmp/repo.tar.gz
           mkdir -p /tmp/extracted
@@ -26,6 +37,7 @@ jobs:
           echo "SRC=/tmp/extracted/$(ls /tmp/extracted)/tmp" >> "$GITHUB_ENV"
 
       - name: Sanity check
+        if: env.SKIP != 'true'
         run: |
           if ! head -1 "$SRC/blog/blood-clots-periods-perimenopause.md" | grep -q "^---"; then
             echo "ERROR: downloaded blog files look corrupt. Aborting."
@@ -33,6 +45,7 @@ jobs:
           fi
 
       - name: Copy ads.txt and favicon
+        if: env.SKIP != 'true'
         run: |
           # Core layouts, homepage schema, and robots.txt are maintained in this repository.
           # Do not replace them from staging: doing so would erase local AEO/schema improvements.
@@ -41,12 +54,14 @@ jobs:
           cp "$SRC/ss-favicon.svg" "public/favicon.svg"
 
       - name: Copy symptoms, check, quiz pages
+        if: env.SKIP != 'true'
         run: |
           cp "$SRC/ss-symptoms-cards.astro" "src/pages/symptoms.astro"
           cp "$SRC/ss-check.astro" "src/pages/check.astro"
           cp "$SRC/ss-quiz.astro" "src/pages/quiz.astro"
 
       - name: Copy rebranded pages (color fix)
+        if: env.SKIP != 'true'
         run: |
           mkdir -p src/pages/guide src/pages/community
           mkdir -p src/pages/spring src/pages/wind src/pages/longevity
@@ -76,6 +91,7 @@ jobs:
           cp "$SRC/ss-news-sitemap.ts"                    "src/pages/news-sitemap.xml.ts"
 
       - name: Copy Second Wind + Longevity guide pages
+        if: env.SKIP != 'true'
         run: |
           mkdir -p src/pages/wind/guide src/pages/longevity/guide
           cp "$SRC/ss-wind-how-it-works.astro"           "src/pages/wind/how-it-works.astro"
@@ -95,6 +111,7 @@ jobs:
           cp "$SRC/ss-longevity-guide-ayurveda.astro"    "src/pages/longevity/guide/ayurveda.astro"
 
       - name: Copy Second Wind + Longevity journals
+        if: env.SKIP != 'true'
         run: |
           mkdir -p src/pages/wind/blog src/pages/longevity/blog
           cp "$SRC/ss-content-config.ts"                 "src/content/config.ts"
@@ -109,10 +126,12 @@ jobs:
           cp "$SRC"/longevity-blog/*.md src/content/longevity-blog/ 2>/dev/null || echo "  (no longevity-blog posts yet)"
 
       - name: Remove chat (costs API credits per message; source kept in staging for later)
+        if: env.SKIP != 'true'
         run: |
           rm -f src/pages/chat.astro src/pages/api/chat.ts
 
       - name: Copy voices pages
+        if: env.SKIP != 'true'
         run: |
           rm -f src/pages/voices.astro
           mkdir -p src/pages/voices
@@ -120,16 +139,19 @@ jobs:
           cp "$SRC/ss-voices-slug.astro"  "src/pages/voices/[slug].astro"
 
       - name: Copy blog post template (rebrand fix)
+        if: env.SKIP != 'true'
         run: |
           cp "$SRC/ss-blog-slug.astro" "src/pages/blog/[slug].astro"
 
       - name: Copy blog categories and posts
+        if: env.SKIP != 'true'
         run: |
           cp "$SRC/ss-blog-categories.ts" "src/lib/blog-categories.ts"
           mkdir -p src/content/blog
           cp "$SRC"/blog/*.md src/content/blog/
 
       - name: Commit and push
+        if: env.SKIP != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
