@@ -19,6 +19,8 @@ interface Props {
   author?: string;
   /** Absolute URL of the plain-Markdown twin of this page. */
   markdownUrl?: string;
+  /** Skip the global nav/footer/mobile bottom nav for a full-bleed, immersive page (e.g. story viewer). */
+  bareLayout?: boolean;
 }
 
 const {
@@ -34,6 +36,7 @@ const {
   tags = [],
   author,
   markdownUrl,
+  bareLayout = false,
 } = Astro.props;
 
 const path = Astro.url.pathname;
@@ -103,12 +106,13 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
   </head>
   <body>
 
+    {!bareLayout && (
     <nav class="navbar" id="navbar">
       <div class="container navbar-inner">
 
         <a href="/spring" class="brand">
           <svg class="brand-icon" width="28" height="28" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 4 C21 9 25 12 25 18 C25 23.5 21 27 16 27 C11 27 7 23.5 7 18 C7 12 11 9 16 4Z" fill="#E8899F"/>
+            <path d="M16 4 C21 9 25 12 25 18 C25 23.5 21 27 16 27 C11 27 7 23.5 7 18 C7 12 11 9 16 4Z" fill="#7A2541"/>
             <circle cx="16" cy="18" r="4" fill="#FFFFFF"/>
           </svg>
           <span class="brand-second">Her</span>
@@ -119,6 +123,7 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
           <li><a href="/spring" class:list={[{ active: isActive('/spring') && path === '/spring' }]}>Home</a></li>
           <li><a href="/how-it-works" class:list={[{ active: isActive('/how-it-works') }]}>How It Works</a></li>
           <li><a href="/community" class:list={[{ active: isActive('/community') }]}>Community</a></li>
+          <li><a href="/stories" class:list={[{ active: isActive('/stories') }]}>Stories</a></li>
 
           <!-- Guide dropdown -->
           <li class="has-dropdown">
@@ -240,6 +245,10 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
                   <span class="di-icon">🗣️</span>
                   <span><span class="di-title">Voices</span><span class="di-desc">Real stories from women like you</span></span>
                 </a>
+                <a href="/stories" class="dropdown-item">
+                  <span class="di-icon">📱</span>
+                  <span><span class="di-title">Visual Stories</span><span class="di-desc">Swipeable, 1-minute versions</span></span>
+                </a>
               </div>
             </div>
           </li>
@@ -262,11 +271,13 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
 
       </div>
     </nav>
+    )}
 
-    <main>
+    <main class:list={[{ 'bare-main': bareLayout }]}>
       <slot />
     </main>
 
+    {!bareLayout && (
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
@@ -343,7 +354,9 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
         </div>
       </div>
     </footer>
+    )}
 
+    {!bareLayout && (
     <!-- Quiz lead popup -->
     <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-label="Take the symptom quiz">
       <div class="popup-card" id="popup-card">
@@ -351,10 +364,10 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
         <div class="popup-blossom" aria-hidden="true">
           <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(32,32)">
-              <ellipse rx="7" ry="13" fill="#E8899F" opacity=".18"/>
-              <ellipse rx="7" ry="13" fill="#E8899F" opacity=".18" transform="rotate(60)"/>
-              <ellipse rx="7" ry="13" fill="#E8899F" opacity=".18" transform="rotate(120)"/>
-              <circle r="7.5" fill="#E8899F" opacity=".22"/>
+              <ellipse rx="7" ry="13" fill="#7A2541" opacity=".18"/>
+              <ellipse rx="7" ry="13" fill="#7A2541" opacity=".18" transform="rotate(60)"/>
+              <ellipse rx="7" ry="13" fill="#7A2541" opacity=".18" transform="rotate(120)"/>
+              <circle r="7.5" fill="#7A2541" opacity=".22"/>
             </g>
           </svg>
         </div>
@@ -405,7 +418,9 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
         <span>More</span>
       </button>
     </nav>
+    )}
 
+    {!bareLayout && (
     <script>
       const toggle    = document.getElementById('mobile-toggle')!;
       const links     = document.getElementById('nav-links')!;
@@ -565,27 +580,28 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
         });
       })();
     </script>
+    )}
 
   </body>
 </html>
 
 <style is:global>
-  /* ── Design tokens (white & blush pink) ── */
+  /* ── Design tokens (white & deep maroon) ── */
   :root {
-    --green:          #D46E86;
-    --green-dark:     #B85268;
-    --green-mid:      #E8899F;
-    --green-light:    #FDF0F3;
-    --peach:          #F0AEBE;
-    --peach-dark:     #D98CA0;
-    --peach-light:    #FCE8ED;
+    --green:          #7A2541;
+    --green-dark:     #5C1C30;
+    --green-mid:      #93354F;
+    --green-light:    #FBEEF1;
+    --peach:          #9C7A3C;
+    --peach-dark:     #7C5F2E;
+    --peach-light:    #F3ECDD;
     --cream:          #FFFFFF;
-    --cream-mid:      #FDF0F3;
-    --border:         #F5DEE4;
-    --border-light:   #FAE6EB;
-    --text:           #2B2226;
-    --text-secondary: #5C4850;
-    --text-muted:     #8C7278;
+    --cream-mid:      #FAFAF9;
+    --border:         #E7E5E2;
+    --border-light:   #EEECE8;
+    --text:           #1A1A1A;
+    --text-secondary: #5B5B5B;
+    --text-muted:     #8A8A8A;
     --radius-sm:      8px;
     --radius:         14px;
     --radius-lg:      22px;

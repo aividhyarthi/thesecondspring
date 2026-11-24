@@ -2,6 +2,18 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import { webPageSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import { CATEGORIES } from '../../lib/blog-categories';
+
+const topicCards = [
+  ...CATEGORIES.map(c => ({ icon: c.icon, title: c.label, desc: c.desc, href: `/blog/category/${c.slug}` })),
+  { icon: '🩺', title: 'Guide & Doctor Prep', desc: 'The full guide, FAQs, and how to prepare for an appointment.', href: '/guide' },
+];
+
+const myths = [
+  { myth: '"Perimenopause only starts after 45."', fact: 'It can begin in your mid-30s — early onset is far more common than most women are told.', href: '/blog/early-premature-menopause-before-45' },
+  { myth: '"If your blood tests are normal, nothing is wrong."', fact: 'Perimenopause is mostly a clinical diagnosis — hormone levels swing daily and often look "fine" even with real symptoms.', href: '/blog/cognitive-symptoms-normal-hormone-tests' },
+  { myth: '"HRT is dangerous — better to just push through."', fact: 'For most healthy women, modern HRT is considered safe and effective. Talk to a doctor who treats menopause.', href: '/blog/common-hrt-myths-debunked' },
+];
 
 const faqs = [
   { q: 'Can menopause start at 35?',              a: 'Yes. Perimenopause, the transition before menopause, can begin in your mid-30s. Early perimenopause is more common than most women are told, and symptoms can appear years before periods stop.' },
@@ -76,6 +88,50 @@ const posts = allPosts
             ></iframe>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 1b. EXPLORE BY TOPIC ── -->
+  <section class="section topics-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Everything in one place</span>
+        <h2 class="section-title">Explore by what you need right now</h2>
+        <p class="section-sub">Guides, symptom explainers, myths vs. facts, and a real community — this is the map, so none of it stays buried.</p>
+      </div>
+      <div class="topics-grid">
+        {topicCards.map(t => (
+          <a href={t.href} class="topic-card">
+            <span class="topic-icon">{t.icon}</span>
+            <span class="topic-title">{t.title}</span>
+            <span class="topic-desc">{t.desc}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 1c. MYTHS VS FACTS ── -->
+  <section class="section myths-section">
+    <div class="container">
+      <div class="myths-header">
+        <div>
+          <span class="label-gold">Myth vs. fact</span>
+          <h2 class="section-title">What everyone gets wrong</h2>
+        </div>
+        <a href="/myths" class="myths-all-link">See all 12 myths →</a>
+      </div>
+      <div class="myths-grid">
+        {myths.map(m => (
+          <a href={m.href} class="myth-card">
+            <span class="myth-label">Myth</span>
+            <span class="myth-text">{m.myth}</span>
+            <span class="myth-divider"></span>
+            <span class="fact-label">Fact</span>
+            <span class="fact-text">{m.fact}</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
@@ -200,10 +256,10 @@ const posts = allPosts
         <div class="reassurance-deco" aria-hidden="true">
           <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g transform="translate(60,60)">
-              <ellipse rx="14" ry="26" fill="#F0AEBE" opacity=".15"/>
-              <ellipse rx="14" ry="26" fill="#F0AEBE" opacity=".15" transform="rotate(60)"/>
-              <ellipse rx="14" ry="26" fill="#F0AEBE" opacity=".15" transform="rotate(120)"/>
-              <circle r="15" fill="#F0AEBE" opacity=".18"/>
+              <ellipse rx="14" ry="26" fill="#7A2541" opacity=".1"/>
+              <ellipse rx="14" ry="26" fill="#7A2541" opacity=".1" transform="rotate(60)"/>
+              <ellipse rx="14" ry="26" fill="#7A2541" opacity=".1" transform="rotate(120)"/>
+              <circle r="15" fill="#7A2541" opacity=".12"/>
             </g>
           </svg>
         </div>
@@ -544,10 +600,47 @@ const posts = allPosts
   .trust-heading { font-size: 1.25rem; font-weight: 800; color: #fff; text-align: center; margin-bottom: 2rem; letter-spacing: -.01em; }
   .trust-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem 3rem; }
   .trust-item { display: flex; align-items: center; gap: .6rem; font-size: .95rem; color: rgba(255,255,255,.88); font-weight: 500; }
-  .trust-check { font-size: 1.1rem; color: #FFB6C9; font-weight: 900; flex-shrink: 0; }
+  .trust-check { font-size: 1.1rem; color: #E8C9D2; font-weight: 900; flex-shrink: 0; }
+
+  /* ── EXPLORE BY TOPIC ── */
+  .topics-section { background: #fff; }
+  .topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .topic-card {
+    display: flex; flex-direction: column; gap: .6rem;
+    padding: 1.4rem 1.3rem; background: var(--cream-mid);
+    border: 1px solid var(--border); border-radius: var(--radius);
+    text-decoration: none; transition: all .18s;
+  }
+  .topic-card:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(122,37,65,.08); }
+  .topic-icon { font-size: 1.5rem; }
+  .topic-title { font-weight: 700; font-size: .92rem; color: var(--text); }
+  .topic-desc { font-size: .8rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── MYTHS VS FACTS ── */
+  .myths-section { background: var(--cream); }
+  .myths-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+  .label-gold { display: inline-flex; font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--peach-dark); background: var(--peach-light); padding: .3rem .85rem; border-radius: 100px; margin-bottom: .85rem; }
+  .myths-all-link { font-size: .88rem; font-weight: 700; color: var(--text); border-bottom: 2px solid var(--peach); flex-shrink: 0; }
+  .myths-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .myth-card {
+    display: flex; flex-direction: column; gap: .7rem;
+    padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius);
+    text-decoration: none; transition: all .18s;
+  }
+  .myth-card:hover { border-color: var(--peach-dark); box-shadow: 0 8px 24px rgba(156,122,60,.1); }
+  .myth-label { font-size: .68rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: #B14A4A; }
+  .myth-text { font-size: .92rem; color: var(--text); line-height: 1.55; }
+  .myth-divider { height: 1px; background: var(--border); display: block; }
+  .fact-label { font-size: .68rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: #3D7A5F; }
+  .fact-text { font-size: .92rem; color: var(--text-secondary); line-height: 1.55; }
+
+  @media (max-width: 860px) {
+    .topics-grid { grid-template-columns: repeat(2, 1fr); }
+    .myths-grid { grid-template-columns: 1fr; }
+  }
 
   /* ── REASSURANCE ── */
-  .reassurance-section { background: var(--peach-light); border-top: 1px solid #FCE8ED; border-bottom: 1px solid #FCE8ED; }
+  .reassurance-section { background: var(--peach-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .reassurance-inner { display: grid; grid-template-columns: 180px 1fr; gap: 4rem; align-items: center; max-width: 820px; margin: 0 auto; }
   .reassurance-deco { width: 120px; height: 120px; opacity: .8; }
   .reassurance-content { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
@@ -710,5 +803,6 @@ const posts = allPosts
   @media (max-width: 420px) {
     .symptoms-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-4 { grid-template-columns: 1fr; }
+    .topics-grid { grid-template-columns: 1fr; }
   }
 </style>

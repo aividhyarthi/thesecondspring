@@ -1,0 +1,42 @@
+{
+  "title": "HRT myths, debunked",
+  "description": "Hormone therapy carries decades of outdated fear, much of it traced to one widely misread study. Here's what current evidence actually says.",
+  "coverImage": "https://images.unsplash.com/photo-1550572017-edd951b55104?w=1200&h=1600&fit=crop&q=80",
+  "coverImageAlt": "Woman researching the facts and myths around hormone therapy for perimenopause",
+  "accent": "#5C1C30",
+  "pubDate": "2026-11-20",
+  "relatedHref": "/blog/common-hrt-myths-debunked",
+  "relatedLabel": "Read the full article",
+  "slides": [
+    {
+      "eyebrow": "Myth 1 of 5",
+      "headline": "\"HRT causes cancer.\"",
+      "body": "For most women starting within ten years of menopause, the risk picture is far more favourable than early headlines suggested — and it varies by hormone type and personal history.",
+      "bg": "#5C1C30"
+    },
+    {
+      "eyebrow": "Myth 2 of 5",
+      "headline": "\"It's only for severe hot flashes.\"",
+      "body": "It's also used for sleep, mood, joint aches, bone protection, and vaginal and urinary symptoms. Many women are surprised it can help with brain fog, too.",
+      "bg": "#1A1A1A"
+    },
+    {
+      "eyebrow": "Myth 3 of 5",
+      "headline": "\"You must stop after a few years.\"",
+      "body": "The old five-year rule of thumb is gone. Duration is now individualised — some women use it for a few years, others continue for a decade or more under supervision.",
+      "bg": "#3D7A5F"
+    },
+    {
+      "eyebrow": "Myth 4 of 5",
+      "headline": "\"It's unnatural.\"",
+      "body": "HRT replaces hormones your own body produced until recently, often at doses designed to be closer to natural levels than a typical menstrual cycle.",
+      "bg": "#9C7A3C"
+    },
+    {
+      "eyebrow": "Myth 5 of 5",
+      "headline": "In India, these myths spread through family, not facts",
+      "body": "Many Indian women are discouraged from even asking about HRT by well-meaning relatives repeating decades-old fears. A real conversation with a gynaecologist is worth having before ruling it out.",
+      "bg": "#402837"
+    }
+  ]
+}

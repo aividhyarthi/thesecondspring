@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { webPageSchema, breadcrumbSchema } from '../../lib/schema';
+
+const { slug } = Astro.params;
+const stories = await getCollection('stories');
+const story = stories.find(s => s.id === slug);
+
+if (!story) return Astro.redirect('/stories');
+
+const sorted = [...stories].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const idx = sorted.findIndex(s => s.id === slug);
+const next = sorted[(idx + 1) % sorted.length];
+
+const structuredData = [
+  webPageSchema({
+    name: `${story.data.title} — The Second Spring Stories`,
+    description: story.data.description,
+    url: `/stories/${story.id}`,
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/spring' },
+    { name: 'Stories', url: '/stories' },
+    { name: story.data.title, url: `/stories/${story.id}` },
+  ]),
+];
+---
+
+<Layout
+  title={`${story.data.title} — The Second Spring Stories`}
+  description={story.data.description}
+  structuredData={structuredData}
+  bareLayout
+>
+  <div class="story-viewer" id="storyViewer">
+
+    <div class="story-progress" id="storyProgress">
+      {story.data.slides.map((_, i) => (
+        <div class="story-progress-seg" data-seg={i}><div class="story-progress-fill"></div></div>
+      ))}
+    </div>
+
+    <div class="story-top">
+      <div class="story-brand">
+        <span class="story-brand-dot">SS</span>
+        <span class="story-brand-name">The Second Spring</span>
+      </div>
+      <a href="/stories" class="story-close" aria-label="Close story">✕</a>
+    </div>
+
+    {story.data.slides.map((slide, i) => (
+      <section class="story-slide" data-slide={i} style={`background:${slide.bg || story.data.accent}`}>
+        <div class="story-slide-inner">
+          {slide.eyebrow && <span class="story-eyebrow">{slide.eyebrow}</span>}
+          <h1 class="story-headline">{slide.headline}</h1>
+          {slide.body && <p class="story-body">{slide.body}</p>}
+        </div>
+      </section>
+    ))}
+
+    <div class="story-tapzone story-tapzone-prev" id="tapPrev" aria-hidden="true"></div>
+    <div class="story-tapzone story-tapzone-next" id="tapNext" aria-hidden="true"></div>
+
+    <div class="story-bottom">
+      {story.data.relatedHref && (
+        <a href={story.data.relatedHref} class="story-cta">{story.data.relatedLabel || 'Read more'} →</a>
+      )}
+      <a href={`/stories/${next.id}`} class="story-next-link">Next story: {next.data.title} →</a>
+    </div>
+
+  </div>
+</Layout>
+
+<script define:vars={{ totalSlides: 0 }}></script>
+<script>
+  (function () {
+    const viewer = document.getElementById('storyViewer');
+    if (!viewer) return;
+    const slides = Array.from(viewer.querySelectorAll('.story-slide')) as HTMLElement[];
+    const segs = Array.from(viewer.querySelectorAll('.story-progress-seg')) as HTMLElement[];
+    let current = 0;
+
+    function render() {
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+      segs.forEach((seg, i) => {
+        seg.classList.toggle('is-done', i < current);
+        seg.classList.toggle('is-current', i === current);
+      });
+    }
+
+    function go(delta: number) {
+      const n = current + delta;
+      if (n < 0) return;
+      if (n >= slides.length) {
+        const nextLink = document.querySelector('.story-next-link') as HTMLAnchorElement | null;
+        if (nextLink) window.location.href = nextLink.href;
+        return;
+      }
+      current = n;
+      render();
+    }
+
+    document.getElementById('tapPrev')?.addEventListener('click', () => go(-1));
+    document.getElementById('tapNext')?.addEventListener('click', () => go(1));
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') go(1);
+      if (e.key === 'ArrowLeft') go(-1);
+      if (e.key === 'Escape') window.location.href = '/stories';
+    });
+
+    let touchStartX = 0;
+    viewer.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    viewer.addEventListener('touchend', (e) => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) < 40) return;
+      go(dx < 0 ? 1 : -1);
+    }, { passive: true });
+
+    render();
+  })();
+</script>
+
+<style>
+  .story-viewer {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    height: 100dvh;
+    overflow: hidden;
+    background: #000;
+    font-family: 'Work Sans', sans-serif;
+  }
+  .story-progress {
+    position: absolute; top: 14px; left: 14px; right: 14px; z-index: 5;
+    display: flex; gap: 5px;
+  }
+  .story-progress-seg { flex: 1; height: 3px; border-radius: 3px; background: rgba(255,255,255,.3); overflow: hidden; }
+  .story-progress-seg.is-done, .story-progress-seg.is-current { background: rgba(255,255,255,.95); }
+  .story-top {
+    position: absolute; top: 30px; left: 14px; right: 14px; z-index: 5;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .story-brand { display: flex; align-items: center; gap: 8px; }
+  .story-brand-dot {
+    width: 26px; height: 26px; border-radius: 50%; background: #7A2541;
+    color: #fff; font-size: 11px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .story-brand-name { color: #fff; font-size: 12.5px; font-weight: 700; }
+  .story-close { color: #fff; font-size: 20px; text-decoration: none; opacity: .9; line-height: 1; }
+
+  .story-slide {
+    position: absolute; inset: 0;
+    display: none;
+    align-items: flex-end;
+    padding: 0 24px 100px;
+  }
+  .story-slide.is-active { display: flex; }
+  .story-slide-inner { display: flex; flex-direction: column; gap: 14px; max-width: 360px; }
+  .story-eyebrow { color: rgba(255,255,255,.75); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .story-headline { margin: 0; font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.9rem; line-height: 1.2; color: #fff; }
+  .story-body { margin: 0; font-size: .92rem; line-height: 1.6; color: rgba(255,255,255,.88); }
+
+  .story-tapzone { position: absolute; top: 70px; bottom: 90px; z-index: 4; cursor: pointer; }
+  .story-tapzone-prev { left: 0; width: 30%; }
+  .story-tapzone-next { right: 0; width: 70%; }
+
+  .story-bottom {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 5;
+    padding: 18px 24px 24px;
+    display: flex; flex-direction: column; gap: 10px;
+    background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.55));
+  }
+  .story-cta {
+    align-self: flex-start;
+    padding: 11px 20px; background: #fff; color: #1A1A1A;
+    border-radius: 30px; font-size: 13.5px; font-weight: 700; text-decoration: none;
+  }
+  .story-next-link { color: rgba(255,255,255,.75); font-size: 12px; text-decoration: none; }
+
+  @media (min-width: 481px) {
+    .story-viewer { border-radius: 20px; margin-top: 2vh; height: 96dvh; box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+  }
+</style>
