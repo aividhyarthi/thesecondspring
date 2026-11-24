@@ -1,0 +1,42 @@
+{
+  "title": "Why you wake up at 3am",
+  "description": "So many perimenopausal women wake at almost exactly the same hour that it can't be a coincidence. Here's what's actually happening in the body.",
+  "coverImage": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1200&h=1600&fit=crop&q=80",
+  "coverImageAlt": "Woman lying awake in bed in the early hours, eyes open in the dark",
+  "accent": "#1F2937",
+  "pubDate": "2026-11-20",
+  "relatedHref": "/blog/why-does-everyone-wake-up-at-3am-perimenopause",
+  "relatedLabel": "Read the full article",
+  "slides": [
+    {
+      "eyebrow": "1 of 5",
+      "headline": "You fall asleep fine. Then, like a switch flips.",
+      "body": "Somewhere between 2:30 and 3:30am, your eyes open. Not gradually — suddenly. Your mind is instantly, unhelpfully alert. If this happens to you most nights, you're far from alone.",
+      "bg": "#1F2937"
+    },
+    {
+      "eyebrow": "2 of 5",
+      "headline": "It's not a coincidence, and it isn't \"just stress\"",
+      "body": "Ask around perimenopause communities and you'll find women comparing notes on the exact hour their body wakes them — as if it were a scheduled appointment nobody remembers booking.",
+      "bg": "#7A2541"
+    },
+    {
+      "eyebrow": "3 of 5",
+      "headline": "Falling progesterone loses its calming effect",
+      "body": "Progesterone has a natural, sleep-supporting effect on the brain. As it declines through perimenopause, that nightly calming effect weakens — especially in the second half of the night.",
+      "bg": "#3D7A5F"
+    },
+    {
+      "eyebrow": "4 of 5",
+      "headline": "Cortisol rises earlier than it should",
+      "body": "Add a shifting overnight cortisol rhythm and small overnight blood-sugar dips, both of which can trigger a stress-hormone wake-up call right in the early hours.",
+      "bg": "#9C7A3C"
+    },
+    {
+      "eyebrow": "5 of 5",
+      "headline": "Usually it's two or three causes, overlapping",
+      "body": "Oestrogen changes also disrupt body-temperature regulation, affecting your deepest sleep stages. It's rarely one single cause — which is exactly why it helps to know what's really going on.",
+      "bg": "#402837"
+    }
+  ]
+}

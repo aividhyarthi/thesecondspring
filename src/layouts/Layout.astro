@@ -19,6 +19,8 @@ interface Props {
   author?: string;
   /** Absolute URL of the plain-Markdown twin of this page. */
   markdownUrl?: string;
+  /** Skip the global nav/footer/mobile bottom nav for a full-bleed, immersive page (e.g. story viewer). */
+  bareLayout?: boolean;
 }
 
 const {
@@ -34,6 +36,7 @@ const {
   tags = [],
   author,
   markdownUrl,
+  bareLayout = false,
 } = Astro.props;
 
 const path = Astro.url.pathname;
@@ -103,6 +106,7 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
   </head>
   <body>
 
+    {!bareLayout && (
     <nav class="navbar" id="navbar">
       <div class="container navbar-inner">
 
@@ -262,11 +266,13 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
 
       </div>
     </nav>
+    )}
 
-    <main>
+    <main class:list={[{ 'bare-main': bareLayout }]}>
       <slot />
     </main>
 
+    {!bareLayout && (
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
@@ -343,7 +349,9 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
         </div>
       </div>
     </footer>
+    )}
 
+    {!bareLayout && (
     <!-- Quiz lead popup -->
     <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-label="Take the symptom quiz">
       <div class="popup-card" id="popup-card">
@@ -405,7 +413,9 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
         <span>More</span>
       </button>
     </nav>
+    )}
 
+    {!bareLayout && (
     <script>
       const toggle    = document.getElementById('mobile-toggle')!;
       const links     = document.getElementById('nav-links')!;
@@ -565,6 +575,7 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
         });
       })();
     </script>
+    )}
 
   </body>
 </html>

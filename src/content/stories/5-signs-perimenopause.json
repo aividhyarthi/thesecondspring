@@ -1,0 +1,42 @@
+{
+  "title": "5 signs it's perimenopause, not stress",
+  "description": "The five symptoms Indian women most often mistake for 'just stress' or 'just getting older' — and the hormonal reason behind each one.",
+  "coverImage": "https://images.unsplash.com/photo-1599599810694-b8b1f01ff0d8?w=1200&h=1600&fit=crop&q=80",
+  "coverImageAlt": "Woman sitting quietly, reflecting",
+  "accent": "#1A1A1A",
+  "pubDate": "2026-11-20",
+  "relatedHref": "/guide/symptoms",
+  "relatedLabel": "Open the full Symptom Library",
+  "slides": [
+    {
+      "eyebrow": "Sign 1 of 5",
+      "headline": "Mood swings that feel out of character",
+      "body": "Oestrogen helps regulate serotonin, the brain chemical that stabilises mood. As it fluctuates, sudden irritability or tearfulness can appear with no obvious trigger — it's hormonal, not a personality change.",
+      "bg": "#1A1A1A"
+    },
+    {
+      "eyebrow": "Sign 2 of 5",
+      "headline": "You wake up at 3am for no reason",
+      "body": "Falling asleep is fine. Staying asleep is the problem. Falling progesterone, an earlier cortisol rise, and shifting body temperature all converge in the early hours — it's one of the most common and most precise symptoms women report.",
+      "bg": "#7A2541"
+    },
+    {
+      "eyebrow": "Sign 3 of 5",
+      "headline": "Brain fog at the worst possible moments",
+      "body": "Forgetting words mid-sentence or losing your train of thought in a meeting isn't a sign something is wrong with you. Hormonal shifts affect memory and focus directly — and it usually improves once levels settle.",
+      "bg": "#3D7A5F"
+    },
+    {
+      "eyebrow": "Sign 4 of 5",
+      "headline": "Weight that won't move, no matter what you try",
+      "body": "Declining oestrogen changes where your body stores fat, often shifting it to the abdomen. Diet and exercise still matter, but they're not the whole story — hormones are too.",
+      "bg": "#9C7A3C"
+    },
+    {
+      "eyebrow": "Sign 5 of 5",
+      "headline": "Periods that stop following the rules",
+      "body": "Lighter, heavier, shorter, skipped entirely — changing cycles are often the very first sign of perimenopause, sometimes years before any other symptom shows up.",
+      "bg": "#402837"
+    }
+  ]
+}

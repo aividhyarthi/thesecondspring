@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { webPageSchema, breadcrumbSchema } from '../../lib/schema';
+
+const stories = (await getCollection('stories')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const structuredData = [
+  webPageSchema({
+    name: 'Visual Stories — The Second Spring',
+    description: 'Quick, swipeable visual stories on perimenopause — for anyone who would rather look than read.',
+    url: '/stories',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/spring' },
+    { name: 'Stories', url: '/stories' },
+  ]),
+];
+---
+
+<Layout
+  title="Visual Stories — The Second Spring"
+  description="Quick, swipeable visual stories on perimenopause — for anyone who would rather look than read."
+  structuredData={structuredData}
+>
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-inner">
+        <span class="page-eyebrow">📱 Watch instead of read</span>
+        <h1>Visual Stories</h1>
+        <p>The same real answers from our guide and journal, in a quick, swipeable format — tap through in under a minute.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container">
+      <div class="stories-grid">
+        {stories.map(story => (
+          <a href={`/stories/${story.id}`} class="story-card" style={`background:${story.data.accent}`}>
+            <span class="story-card-title">{story.data.title}</span>
+            <span class="story-card-desc">{story.data.description}</span>
+            <span class="story-card-count">{story.data.slides.length} slides</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .story-card {
+    aspect-ratio: 9 / 16;
+    border-radius: 16px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: .4rem;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .story-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.45) 100%);
+  }
+  .story-card-title, .story-card-desc, .story-card-count {
+    position: relative;
+    z-index: 1;
+  }
+  .story-card-title { font-weight: 800; font-size: .98rem; line-height: 1.35; }
+  .story-card-desc { font-size: .78rem; line-height: 1.5; opacity: .9; }
+  .story-card-count { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; opacity: .75; margin-top: .2rem; }
+
+  @media (max-width: 860px) {
+    .stories-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
