@@ -123,6 +123,7 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
           <li><a href="/spring" class:list={[{ active: isActive('/spring') && path === '/spring' }]}>Home</a></li>
           <li><a href="/how-it-works" class:list={[{ active: isActive('/how-it-works') }]}>How It Works</a></li>
           <li><a href="/community" class:list={[{ active: isActive('/community') }]}>Community</a></li>
+          <li><a href="/stories" class:list={[{ active: isActive('/stories') }]}>Stories</a></li>
 
           <!-- Guide dropdown -->
           <li class="has-dropdown">
@@ -243,6 +244,10 @@ const jsonLd = JSON.stringify(jsonLdGraph).replace(/</g, '\\u003c');
                 <a href="/voices" class="dropdown-item">
                   <span class="di-icon">🗣️</span>
                   <span><span class="di-title">Voices</span><span class="di-desc">Real stories from women like you</span></span>
+                </a>
+                <a href="/stories" class="dropdown-item">
+                  <span class="di-icon">📱</span>
+                  <span><span class="di-title">Visual Stories</span><span class="di-desc">Swipeable, 1-minute versions</span></span>
                 </a>
               </div>
             </div>
