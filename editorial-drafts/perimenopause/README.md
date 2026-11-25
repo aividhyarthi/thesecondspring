@@ -6,25 +6,36 @@ Status: Editorial drafts only. Nothing in this folder is published or approved f
 ## New article drafts
 
 1. [Does Your Weight Affect How Severe Perimenopause Symptoms Become?](01-bmi-and-perimenopause-symptom-burden.md)  
-   Based on a cross-sectional global study of 1,988 women published online in *Menopause* on 24 November 2026.
+   Based on a cross-sectional global study of 1,988 women published online in *Menopause* on 24 November 2026.  
+   Illustration: [bmi-symptom-burden.svg](../../public/images/editorial-drafts/perimenopause/bmi-symptom-burden.svg)
 
 2. [What Should You Ask Your Doctor Before Starting Menopause Hormone Therapy?](02-what-to-ask-before-menopause-hormone-therapy.md)  
-   Based on the MenoMEC modified Delphi consensus paper published online on 24 November 2026.
+   Based on the MenoMEC modified Delphi consensus paper published online on 24 November 2026.  
+   Illustration: [hormone-therapy-consultation.svg](../../public/images/editorial-drafts/perimenopause/hormone-therapy-consultation.svg)
 
 3. [Are Menopause Treatment Guidelines Giving Women Consistent Advice?](03-are-menopause-treatment-guidelines-consistent.md)  
-   Based on a systematic review of 13 US menopause treatment guidelines published online on 24 November 2026.
+   Based on a systematic review of 13 US menopause treatment guidelines published online on 24 November 2026.  
+   Illustration: [menopause-guidelines-books.svg](../../public/images/editorial-drafts/perimenopause/menopause-guidelines-books.svg)
 
 ## Existing article update briefs
 
 4. [ACOG's 2026 Menopause Symptom Guideline](04-update-existing-acog-guideline-article.md)  
-   Update the existing `acog-menopause-symptom-guideline.md` page. Do not create a second URL.
+   Update the existing `acog-menopause-symptom-guideline.md` page. Do not create a second URL.  
+   Illustration: [acog-sleep-hot-flashes-mood.svg](../../public/images/editorial-drafts/perimenopause/acog-sleep-hot-flashes-mood.svg)
 
 5. [Body Composition and Cardiometabolic Evidence](05-update-existing-body-composition-article.md)  
-   Update the existing body-composition and India heart-health pages. Do not create competing URLs.
+   Update the existing body-composition and India heart-health pages. Do not create competing URLs.  
+   Illustration: [cardiometabolic-heart-health.svg](../../public/images/editorial-drafts/perimenopause/cardiometabolic-heart-health.svg)
 
-## Image assets
+## Illustration system
 
-The five original SVG illustrations are in `public/images/editorial-drafts/perimenopause/`. They are editorial draft assets and should be checked at page size before publication.
+These drafts now use a consistent visual direction inspired by the supplied reference: hand-drawn coloured-pencil and light-watercolour artwork, warm Indian context, white backgrounds, muted earthy colours and distinct article-specific scenes.
+
+- [Read the illustration style guide](../ILLUSTRATION-STYLE-GUIDE.md)
+- [View the signature style reference](../../public/images/editorial-drafts/perimenopause/signature-style-reference.svg)
+- [Browse all five article illustrations](../../public/images/editorial-drafts/perimenopause/)
+
+Each draft's frontmatter already points to its matching image and includes descriptive alt text. The SVGs are stored as editorial assets, not published blog content.
 
 ## Publication checklist
 
