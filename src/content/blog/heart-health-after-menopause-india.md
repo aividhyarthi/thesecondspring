@@ -2,6 +2,7 @@
 title: "Heart Health After Menopause, What Indian Women Need to Know About Cardiovascular Risk"
 description: "Oestrogen protects the heart. After menopause, that protection goes. For Indian women (who already carry elevated cardiac risk) understanding what changes and what to do about it is not optional."
 pubDate: 2026-06-03
+updatedDate: 2026-11-25T09:30:00Z
 author: "Lakshmi Subramaniam"
 tags: ["menopause", "heart health", "post-menopause", "understanding", "India"]
 image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=1200&h=675&fit=crop&q=80"
@@ -143,6 +144,16 @@ The current consensus from cardiologists and gynaecologists who study this most 
 This means the timing of any decision about hormone therapy matters enormously. If you are in the early perimenopause or early post-menopause years, the conversation about hormone therapy and cardiac health is worth having with a gynaecologist who is up to date on this evidence.
 
 This is not a decision for a single appointment. It is a nuanced discussion that takes your full risk profile into account.
+
+---
+
+## Why Perimenopause Is a Useful Time to Review Metabolic Health
+
+A review published in *Climacteric* in November 2026 pulled together the evidence on what changes during perimenopause itself, not just after the final period: lipids, insulin sensitivity, body composition, vascular function, vasomotor symptoms and sleep all shift during this window, and several of these changes track with less favourable cardiometabolic profiles later.
+
+The authors are clear that major evidence gaps remain. There are not yet enough intervention studies during perimenopause to say that treating a metabolic marker will reduce hot flashes or improve sleep, or vice versa. The relationships may be connected, but which one drives the other, and what to do about it, is still being worked out.
+
+For Indian women, the practical takeaway is the same one this article has already made: perimenopause, not just the post-menopause years, is a sensible time to start the conversation above, blood pressure, lipids, blood glucose, smoking, sleep, activity, family history and waist measurement, rather than waiting for periods to stop first. There is no single screening panel that applies to every woman; what matters is raising it with a clinician before symptoms or risk factors have had years to build up.
 
 ---
 

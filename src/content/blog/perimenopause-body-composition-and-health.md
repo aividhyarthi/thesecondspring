@@ -2,6 +2,7 @@
 title: "Menopause and Body Composition: Why Muscle and Fat Matter More Than the Scale"
 description: "A study of 3,439 women found that body composition was strongly associated with health outcomes around the menopause transition. Here is what the findings mean, and what they do not prove."
 pubDate: 2026-11-20T05:30:00Z
+updatedDate: 2026-11-25T09:30:00Z
 author: "Editorial Desk"
 tags: ["perimenopause", "menopause", "muscle health", "heart health", "India"]
 readTime: "4 min read"
@@ -44,6 +45,19 @@ In India, midlife women may be managing work, caregiving and household responsib
 
 The practical message is not that women should chase a particular body weight. It is that preserving strength and understanding body composition may be important parts of health through the menopause transition.
 
+## A new study looks at BMI and symptom burden
+
+A study published online in November 2026 examined data from 1,988 women in perimenopause and found that obesity classes I to III were associated with higher overall and physical symptom scores compared with the normal-weight reference group. The association was not independently observed for psychological or urogenital scores after adjustment.
+
+The same analysis found that anxiety and depression were strong predictors of symptom burden, while more frequent physical activity was associated with lower symptom scores.
+
+This was a cross-sectional analysis. It cannot establish whether BMI causes more severe symptoms or whether weight change would improve them. It also does not justify blaming women for symptoms or prescribing weight loss as a menopause treatment. Read more in our [full report on the BMI and symptom burden study](/blog/does-bmi-affect-perimenopause-symptom-severity).
+
+| What the research supports | What it does not prove |
+|---|---|
+| BMI was associated with higher overall and physical symptom scores in one cross-sectional perimenopause study. | That BMI causes symptoms or that weight loss will cure them. |
+| Physical activity was associated with lower symptom burden in the same study. | That a specific exercise programme was tested or proven by that study. |
+
 ## Frequently asked questions
 
 **Does menopause automatically cause weight gain?**
@@ -66,6 +80,7 @@ The study does not establish that everyone needs a scan. Ask a clinician which m
 
 1. Liang I, Flynn S, Watson K, Horwich T, Karlamangla A, Srikanthan P. "Body composition and mortality across the reproductive cycle: findings from the Multi-Ethnic Study of Atherosclerosis." *Menopause*. Published online 17 November 2026. DOI: 10.1097/GME.0000000000002932.
 2. Research summary: https://news.longevitydocs.org/research/fat-mass-fat-free-mass-mortality-menopause-transition-mesa-2026
+3. Castaneda R, Cunningham AC, Hewings-Martin Y, et al. "Association between body mass index and perimenopause symptom burden: a cross-sectional global study using the Flo App." *Menopause*. Published online 24 November 2026. DOI: [10.1097/GME.0000000000002941](https://doi.org/10.1097/GME.0000000000002941).
 
 ---
 
