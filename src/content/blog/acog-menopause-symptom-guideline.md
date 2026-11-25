@@ -2,6 +2,7 @@
 title: "ACOG Publishes New Guideline on Menopause Symptoms: What Women Should Know"
 description: "ACOG's November 2026 guideline updates care for menopause-related hot flashes, sleep and mood symptoms. Understand its scope and relevance for Indian women."
 pubDate: 2026-11-19T04:00:00Z
+updatedDate: 2026-11-25T08:30:00Z
 author: "Meera Pillai"
 tags: ["menopause", "perimenopause", "ACOG", "menopause treatment", "clinical guidelines"]
 readTime: "5 min read"
@@ -23,6 +24,26 @@ The document focuses on three symptom areas that can have a substantial effect o
 ACOG says the guideline considers both pharmacological and non-pharmacological interventions. Recommendations are graded according to the strength of the evidence, and the document also includes good-practice points where the evidence is not sufficient for a formal recommendation.
 
 That distinction is important. Not every treatment has the same level of supporting evidence, and a guideline is not a one-size-fits-all prescription. The right approach depends on a woman's symptoms, medical history, preferences and individual risk factors.
+
+## What does ACOG recommend for treatment?
+
+The guideline recommends systemic menopausal hormone therapy for vasomotor symptoms in people without contraindications. For someone with a uterus, the regimen generally includes estrogen and a progestogen; estrogen alone may be used when endometrial protection is not needed. ACOG also recommends systemic hormone therapy for sleep disturbance associated with vasomotor symptoms in eligible individuals.
+
+For people who do not want hormone therapy or have a contraindication, ACOG recommends SSRIs or SNRIs and neurokinin receptor antagonists for vasomotor symptoms and vasomotor-related sleep disturbance. Gabapentin is suggested when other recommended non-hormonal medicines are ineffective or poorly tolerated.
+
+The guideline also suggests cognitive behavioural therapy for vasomotor symptoms, sleep disturbance and mood symptoms. Mindfulness-based interventions and physical exercise are suggested for sleep and mood symptoms. Clinical hypnosis and acupuncture receive conditional recommendations with lower-quality evidence.
+
+These are guideline recommendations, not instructions for an individual reader to start a medicine or therapy. The strength of recommendation and evidence quality differ by intervention. Depression that meets criteria for major depressive disorder, or is the predominant symptom, should be assessed and treated using depression care guidance; hormone therapy should not be presented as a substitute for appropriate depression treatment. Persistent or unscheduled bleeding after starting hormone therapy needs clinical evaluation.
+
+**Questions to ask your clinician**
+
+1. Which of my symptoms are we trying to treat?
+2. Am I eligible for hormone therapy, given my medical history?
+3. If not, which evidence-based non-hormonal options are suitable?
+4. What benefits should I expect, and what side effects should I watch for?
+5. When should we review the treatment?
+
+The guideline comes from a US professional organisation, so Indian clinicians generally interpret it alongside Indian Menopause Society guidance and local prescribing practice.
 
 ## Does this mean every woman should take hormone therapy?
 
@@ -70,6 +91,7 @@ No. It is an American clinical document, not an Indian government guideline, so 
 1. American College of Obstetricians and Gynecologists. *Clinical Practice Guideline No. 13: Management of Menopause-Related Vasomotor, Sleep, and Mood Symptoms*. November 2026. https://doi.org/10.1097/AOG.0000000000006428
 2. PubMed record: https://pubmed.ncbi.nlm.nih.gov/42878500/
 3. ACOG guideline PDF: https://www.qualityhealth.org/bree/wp-content/uploads/sites/8/2026/11/acog-clinical-practice-guideline-management-of-1.pdf
+4. Indian Menopause Society. "Clinical Practice Guidelines for Menopause: An Executive Summary and Recommendations: Indian Menopause Society 2026." *Journal of Mid-Life Health*. 2026. DOI: [10.4103/jmh.jmh_302_25](https://doi.org/10.4103/jmh.jmh_302_25).
 
 ---
 
