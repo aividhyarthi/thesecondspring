@@ -2,7 +2,6 @@
 title: "Why Can't I Sleep? Insomnia and Sleep Problems in Perimenopause"
 description: "Trouble falling asleep, waking at 3am wide awake, night sweats that soak the sheets — sleep problems are one of the most common and most exhausting parts of perimenopause. Here is why it happens and what genuinely helps."
 pubDate: 2026-07-05
-updatedDate: 2026-11-26T05:30:00Z
 author: "Divya Krishnan"
 image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1200&h=675&fit=crop&q=80"
 imageAlt: "Woman lying awake at night with insomnia during perimenopause"
@@ -58,16 +57,6 @@ Several hormonal changes hit sleep at once, which is why it can feel like it col
 
 **Consider the hormonal angle.** Because the root cause is hormonal, treating the hormones can transform sleep. HRT eases night sweats and, for many women, sleep along with them. This is worth discussing with your gynaecologist, especially if night sweats are the main disruptor.
 
-## Not Every Night-Time Awakening Is a Hot Flash
-
-A 2026 narrative review in *Obstetrics & Gynecology* looked at sleep disruption across the menopausal transition and postmenopause, searching literature published from January 2015 to March 2026. Its central point is that sleep disruption during midlife has multiple possible causes, and insomnia is only one of them. Alongside insomnia, the review discusses obstructive sleep apnoea, restless legs syndrome and periodic limb movement disorder, as well as the biological, psychological and social contributors that run alongside hormonal change.
-
-Restless legs syndrome involves an urge to move the legs, often with uncomfortable sensations that are worse at rest and in the evening, which is a different pattern from the racing-mind 3am wake-up described above. Periodic limb movements during sleep are easy to miss without specialist assessment, since the person having them is often unaware.
-
-The review describes insomnia assessment using clinical history, a sleep questionnaire and a one-to-two-week sleep diary. Polysomnography (an overnight sleep study) is not routinely required for uncomplicated insomnia, but your doctor may suggest one if another sleep disorder, such as sleep apnoea or restless legs syndrome, is suspected.
-
-In India, practical barriers such as shift work, caregiving responsibilities and limited access to sleep clinics can make assessment harder. You do not need to name a specific disorder to raise it, describing what you notice, snoring, leg discomfort, medicines you take, work hours, or how tired you feel in the day, is enough to start the conversation.
-
 ## When to See a Doctor
 
 **Routine appointment** if poor sleep is affecting your daily life, mood, or ability to function. Sleep problems are treatable, and both hormonal and non-hormonal options exist. This is absolutely worth raising.
@@ -77,10 +66,6 @@ In India, practical barriers such as shift work, caregiving responsibilities and
 **Reach out** if lost sleep is tipping into persistent low mood, hopelessness, or overwhelming anxiety. In India you can call the iCall helpline on 9152987821 for free, confidential support, or 112 in an emergency.
 
 Exhaustion makes everything harder to bear, so fixing sleep often lifts far more than sleep alone. You do not have to simply endure broken nights as part of this stage — there is real, effective help.
-
-## Sources
-
-1. Lyu AC, Kravitz HM. "Sleep Disruption in the Menopausal Transition and Postmenopause: A Narrative Review." *Obstetrics & Gynecology*. 2026;148(5):616-625. DOI: [10.1097/AOG.0000000000006420](https://doi.org/10.1097/AOG.0000000000006420).
 
 ---
 
