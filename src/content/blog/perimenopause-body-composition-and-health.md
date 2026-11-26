@@ -2,7 +2,7 @@
 title: "Menopause and Body Composition: Why Muscle and Fat Matter More Than the Scale"
 description: "A study of 3,439 women found that body composition was strongly associated with health outcomes around the menopause transition. Here is what the findings mean, and what they do not prove."
 pubDate: 2026-11-20T05:30:00Z
-updatedDate: 2026-11-25T09:30:00Z
+updatedDate: 2026-11-26T06:30:00Z
 author: "Editorial Desk"
 tags: ["perimenopause", "menopause", "muscle health", "heart health", "India"]
 readTime: "4 min read"
@@ -45,6 +45,24 @@ In India, midlife women may be managing work, caregiving and household responsib
 
 The practical message is not that women should chase a particular body weight. It is that preserving strength and understanding body composition may be important parts of health through the menopause transition.
 
+## The evidence is strongest for changes in where fat is stored
+
+A contemporary review published in November 2026 in *Current Obstetrics and Gynecology Reports* examined 16 studies of body composition during midlife and menopause. It found the clearest menopause-specific evidence for an increase in central and visceral fat during the menopause transition itself, using the final menstrual period as a reference point: accumulation accelerated during the transition, then slowed after menopause.
+
+The findings for muscle and bone need more careful interpretation. Lower lean or skeletal muscle mass and declining bone mineral density were observed in some studies, but researchers could not always separate the effects of menopause from those of getting older, since both happen at the same time in a woman's life. Not every change in strength, weight or bone density during this period can be attributed to hormones alone.
+
+The review did find that resistance training improved muscle and abdominal-adiposity outcomes in several included trials, though findings for hormone therapy, sleep and diet varied by outcome. Most of the included studies assessed cardiovascular risk factors rather than clinical cardiovascular events, so the review does not establish that a particular body-composition change causes a heart attack, or that a specific intervention prevents one. For more on the cardiovascular side of this, see our [India-focused heart-health article](/blog/heart-health-after-menopause-india).
+
+| What the review supports | What remains uncertain |
+|---|---|
+| Longitudinal evidence shows accelerated visceral and android fat accumulation during the menopausal transition. | The size of this change for every woman or every population. |
+| Lower lean or skeletal muscle mass is reported in postmenopausal groups. | How much of the difference is caused by menopause rather than chronological ageing. |
+| Bone mineral density declines around the typical age of menopause. | The separate contribution of menopause and ageing in all populations. |
+| Resistance training improved muscle or abdominal adiposity outcomes in several included trials. | The best programme for every woman, or whether it prevents cardiovascular events. |
+| Visceral fat is the body-composition measure with the strongest link to cardiovascular risk factors in this review. | Whether body-composition changes directly cause clinical cardiovascular events. |
+
+The review is not an India-specific study, and its findings should not be read as measurements of Indian women. Women in India may have different diets, activity patterns, healthcare access and chronic disease profiles, so more Indian longitudinal research is needed to understand how body composition changes across the menopause transition in different communities.
+
 ## A new study looks at BMI and symptom burden
 
 A study published online in November 2026 examined data from 1,988 women in perimenopause and found that obesity classes I to III were associated with higher overall and physical symptom scores compared with the normal-weight reference group. The association was not independently observed for psychological or urogenital scores after adjustment.
@@ -81,6 +99,7 @@ The study does not establish that everyone needs a scan. Ask a clinician which m
 1. Liang I, Flynn S, Watson K, Horwich T, Karlamangla A, Srikanthan P. "Body composition and mortality across the reproductive cycle: findings from the Multi-Ethnic Study of Atherosclerosis." *Menopause*. Published online 17 November 2026. DOI: 10.1097/GME.0000000000002932.
 2. Research summary: https://news.longevitydocs.org/research/fat-mass-fat-free-mass-mortality-menopause-transition-mesa-2026
 3. Castaneda R, Cunningham AC, Hewings-Martin Y, et al. "Association between body mass index and perimenopause symptom burden: a cross-sectional global study using the Flo App." *Menopause*. Published online 24 November 2026. DOI: [10.1097/GME.0000000000002941](https://doi.org/10.1097/GME.0000000000002941).
+4. Reyes H, Aggarwal B. "Changes in Body Composition During the Menopausal Transition and Cardiovascular Health Implications: A Contemporary Review." *Current Obstetrics and Gynecology Reports*. Published 23 November 2026. DOI: [10.1007/s13669-026-00503-y](https://doi.org/10.1007/s13669-026-00503-y).
 
 ---
 
