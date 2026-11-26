@@ -2,6 +2,7 @@
 title: "Snoring and Sleep Apnea in Perimenopause: A Different Kind of Sleep Problem"
 description: "If you have started snoring, or wake gasping or unrefreshed despite enough hours in bed, this may not be ordinary perimenopausal insomnia. Sleep apnea becomes more common around this stage, and it needs its own kind of attention."
 pubDate: 2026-07-11
+updatedDate: 2026-11-26T05:30:00Z
 author: "Sunita Reddy"
 image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=1200&h=675&fit=crop&q=80"
 imageAlt: "Woman concerned about snoring and sleep apnea during perimenopause"
@@ -46,6 +47,14 @@ Sleep apnea, by contrast, often involves:
 
 If snoring, witnessed breathing pauses, or unrefreshing sleep despite enough time in bed feature strongly, sleep apnea is worth specifically investigating, rather than assuming it is simply more perimenopausal insomnia.
 
+## Sleep Apnoea Doesn't Always Look the Way You'd Expect
+
+A 2026 narrative review in *Obstetrics & Gynecology*, which looked at sleep disruption across the menopausal transition and postmenopause, notes that obstructive sleep apnoea can present differently in women than the classic picture of loud snoring and witnessed breathing pauses. Alongside those, women may report daytime sleepiness, morning headaches, low energy, insomnia, nightmares, mood symptoms or memory difficulties.
+
+These are not a self-diagnosis checklist, and the review is clear that sleep disruption in midlife has multiple possible causes beyond sleep apnoea alone, including insomnia, restless legs syndrome and periodic limb movements, as well as biological, psychological and social contributors. If this list of symptoms sounds familiar and is worrying you, that is a reason to raise it with a clinician who can assess whether a sleep study or referral is appropriate, not a reason to conclude you have sleep apnoea on your own.
+
+In India, practical barriers such as access to sleep clinics, shift work and competing caregiving demands can make this harder to act on. You can still describe what you notice, snoring, gasping, leg discomfort, medicines, work hours and daytime sleepiness, in your own words at a consultation; naming a specific disorder yourself is not required to get assessed.
+
 ## Why It Matters to Get It Diagnosed
 
 Untreated sleep apnea does more than cause tiredness. It is linked to higher risk of high blood pressure, heart disease, and stroke over time, and it significantly affects quality of life, mood, and concentration. Because perimenopause already raises some of these same risks, identifying and treating sleep apnea if present is a genuinely important part of protecting your long-term health, not simply about feeling more rested.
@@ -71,6 +80,10 @@ Untreated sleep apnea does more than cause tiredness. It is linked to higher ris
 **Also mention** morning headaches, excessive daytime sleepiness, or high blood pressure alongside sleep concerns, as these together strengthen the case for investigating sleep apnea specifically.
 
 Not every sleep problem in perimenopause is simply hormonal wakefulness. If snoring, witnessed breathing pauses, or genuinely unrefreshing sleep are part of your picture, it is worth getting properly checked, because sleep apnea, unlike some perimenopause symptoms, does not resolve on its own and responds very well once identified and treated.
+
+## Sources
+
+1. Lyu AC, Kravitz HM. "Sleep Disruption in the Menopausal Transition and Postmenopause: A Narrative Review." *Obstetrics & Gynecology*. 2026;148(5):616-625. DOI: [10.1097/AOG.0000000000006420](https://doi.org/10.1097/AOG.0000000000006420).
 
 ---
 
