@@ -46,3 +46,13 @@ Each draft's frontmatter already points to its matching image and includes descr
 - [ ] Review title, description, internal links and image alt text.
 - [ ] Confirm that the Astro content collection and live publishing workflow are not affected.
 - [ ] Approve and move only the final version into the live content collection.
+
+
+## Additional drafts added 28 November 2026
+
+6. [Perimenopause Treatment Is Not the Same as Menopause Treatment](06-perimenopause-hormonal-options-clinician-toolkit.md)  
+   Based on a 2026 clinical toolkit about hormonal options and individualised treatment during perimenopause.
+7. [Does Modern Menopause Hormone Therapy Increase Heart Risk?](07-modern-hormone-therapy-heart-risk-52000-women.md)  
+   Based on a preliminary conference abstract involving 52,330 women. It is not a peer-reviewed full paper.
+
+Additional original illustrations: `perimenopause-hormonal-options.svg` and `hormone-therapy-heart-study.svg`.
